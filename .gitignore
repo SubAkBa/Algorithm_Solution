@@ -3,3 +3,4 @@
 .LSOverride
 *.exe
 *.exec
+/.metadata/
