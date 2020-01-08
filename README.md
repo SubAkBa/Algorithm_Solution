@@ -1,4 +1,4 @@
-# Algorithm_Solution
+# Algorithm Solution
 
 ### Programmers Directory
 - Programmers Coding Problem Solution.  
