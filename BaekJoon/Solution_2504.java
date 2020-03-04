@@ -1,59 +1,83 @@
 import java.util.*;
+import java.io.*;
 
-public class week2assignment2 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		char[] input = sc.nextLine().toCharArray();
-		
-		Stack stack = new Stack();
-		char pops;
-		int temp = 1;
-		int result = 0;
-		
-		mainloop: for(int i=0;i<input.length;i++) {
-			switch(input[i]) 
-			{
-			case '(':
-				stack.push(input[i]);
-				temp *= 2;
-				break;
+public class Solution_2504 {
+	
+	public static int solution(String str) {
+		Stack<Character> pair = new Stack<>();
+
+		char[] ctr = str.toCharArray();
+		boolean err = false;
+		int sum = 0, temp = 1;
+
+		for (int i = 0; i < ctr.length && !err; i++) {
+
+			switch (ctr[i]) {
 			case '[':
-				stack.push(input[i]);
+				pair.push(ctr[i]);
 				temp *= 3;
 				break;
-			case ')':
-				try {
-					pops = (char) stack.pop();
-					if(pops == '[')
-						throw new Exception();
-				} catch(Exception e) {
-					result = 0;
-					break mainloop;
-				}
-				if(input[i - 1] == '(')
-					result += temp;
-				temp /= 2;
+			case '(':
+				pair.push(ctr[i]);
+				temp *= 2;
 				break;
 			case ']':
-				try {
-					pops = (char) stack.pop();
-					if(pops == '(')
-						throw new Exception();
-				} catch(Exception e) {
-					result = 0;
-					break mainloop;
+				if (pair.isEmpty()) {
+					err = true;
+					sum = 0;
+					continue;
 				}
-				if(input[i - 1] == '[')
-					result += temp;
+
+				if (pair.peek() == '[') {
+					if(ctr[i - 1] != ']' && ctr[i - 1] != ')')
+						sum += temp;
+					pair.pop();
+				} else {
+					err = true;
+					sum = 0;
+					continue;
+				}
+				
 				temp /= 3;
+				break;
+			case ')':
+				if (pair.isEmpty()) {
+					err = true;
+					sum = 0;
+					continue;
+				}
+
+				if (pair.peek() == '(') {
+					if(ctr[i - 1] != ']' && ctr[i - 1] != ')')
+						sum += temp;
+					pair.pop();
+				} else {
+					err = true;
+					sum = 0;
+					continue;
+				}
+				
+				temp /= 2;
 				break;
 			}
 		}
+
+		if (!pair.isEmpty())
+			sum = 0;
 		
-		if(!stack.isEmpty())
-			result = 0;
+		return sum;
+	}
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		String str = br.readLine();
 		
-		System.out.println(result);
+
+		bw.write(solution(str) + " ");
+		bw.flush();
+		bw.close();
+		br.close();
 	}
 
 }
