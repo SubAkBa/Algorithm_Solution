@@ -1,85 +1,86 @@
 import java.util.*;
 import java.io.*;
 
-public class dijkstra_1753_solution {
-	static ArrayList<Graph>[] list;
-	static int[] dist;
-	static int vertex, edge, INF = 987654321;
+public class Solution_1753 {
+	static int V, E;
+	static ArrayList<Element>[] graph;
+	static int[] cost;
 
 	public static void Dijkstra(int start) {
-		PriorityQueue<Graph> pq = new PriorityQueue<>();
-		dist[start] = 0;
+		PriorityQueue<Element> pq = new PriorityQueue<>();
 
-		pq.offer(new Graph(start, dist[start]));
+		cost[start] = 0;
+		pq.offer(new Element(start, cost[start]));
 
 		while (!pq.isEmpty()) {
-			Graph from = pq.poll();
+			Element from = pq.poll();
 
-			if (from.dist > dist[from.idx])
+			if (from.cost > cost[from.idx])
 				continue;
 
-			for (int i = 0; i < list[from.idx].size(); i++) {
-				Graph to = list[from.idx].get(i);
+			for (int i = 0; i < graph[from.idx].size(); i++) {
+				Element to = graph[from.idx].get(i);
 				
-				if (dist[to.idx] > dist[from.idx] + to.dist) {
-					dist[to.idx] = dist[from.idx] + to.dist;
-					pq.offer(new Graph(to.idx, dist[to.idx]));
+				if (cost[to.idx] > cost[from.idx] + to.cost) {
+					cost[to.idx] = cost[from.idx] + to.cost;
+					pq.offer(new Element(to.idx, cost[to.idx]));
 				}
 			}
 		}
+	}
+
+	public static class Element implements Comparable<Element> {
+		int idx, cost;
+
+		public Element(int idx, int cost) {
+			this.idx = idx;
+			this.cost = cost;
+		}
+
+		@Override
+		public int compareTo(Element e) {
+			return this.cost - e.cost;
+		}
+
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-
-		vertex = Integer.parseInt(st.nextToken());
-		edge = Integer.parseInt(st.nextToken());
-
+		V = Integer.parseInt(st.nextToken());
+		E = Integer.parseInt(st.nextToken());
 		int start = Integer.parseInt(br.readLine());
 
-		list = new ArrayList[vertex + 1];
-		dist = new int[vertex + 1];
+		graph = new ArrayList[V + 1];
+		cost = new int[V + 1];
 
-		Arrays.fill(dist, INF);
+		for (int i = 1; i <= V; i++)
+			graph[i] = new ArrayList<>();
+		Arrays.fill(cost, Integer.MAX_VALUE);
 
-		for (int i = 1; i <= vertex; i++)
-			list[i] = new ArrayList<>();
-
-		for (int i = 0; i < edge; i++) {
+		for (int i = 0; i < E; i++) {
 			st = new StringTokenizer(br.readLine());
 
 			int from = Integer.parseInt(st.nextToken());
 			int to = Integer.parseInt(st.nextToken());
-			int dist = Integer.parseInt(st.nextToken());
+			int cost = Integer.parseInt(st.nextToken());
 
-			list[from].add(new Graph(to, dist));
+			graph[from].add(new Element(to, cost));
 		}
 
 		Dijkstra(start);
 
-		for (int i = 1; i <= vertex; i++) {
-			if (dist[i] == INF)
-				System.out.println("INF");
+		for (int i = 1; i <= V; i++) {
+			if (cost[i] == Integer.MAX_VALUE)
+				bw.write("INF\n");
 			else
-				System.out.println(dist[i]);
+				bw.write(cost[i] + "\n");
 		}
-	}
 
-}
-
-class Graph implements Comparable<Graph> {
-	int idx, dist;
-
-	public Graph(int idx, int dist) {
-		this.idx = idx;
-		this.dist = dist;
-	}
-
-	@Override
-	public int compareTo(Graph o) {
-		return (dist <= o.dist ? -1 : 1);
+		bw.flush();
+		bw.close();
+		br.close();
 	}
 
 }

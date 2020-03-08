@@ -1,73 +1,82 @@
 import java.util.*;
 import java.io.*;
 
-public class dijkstra_1916_solution {
-	static int[][] map;
-	static boolean[] visited;
-	static long[] cost;
-	static int city;
-	
-	public static void Dijkstra(int start, int end) {
+public class Solution_1916 {
+	static int[][] graph;
+	static int[] cost;
+	static int N, M;
+
+	public static int BusPath(int start, int end) {
+		PriorityQueue<Element> pq = new PriorityQueue<>();
+
 		cost[start] = 0;
+		pq.offer(new Element(start, cost[start]));
 
-		for (int i = 1; i <= city; i++) {
-			long min = Integer.MAX_VALUE;
-			int from = -1;
+		while (!pq.isEmpty()) {
+			Element from = pq.poll();
 
-			for (int j = 1; j <= city; j++) {
-				if (!visited[j] && min > cost[j]) {
-					from = j;
-					min = cost[j];
+			if (from.cost > cost[from.idx])
+				continue;
+
+			for (int to = 1; to <= N; to++) {
+				if (graph[from.idx][to] != Integer.MAX_VALUE) {
+					if (cost[to] > cost[from.idx] + graph[from.idx][to]) {
+						cost[to] = cost[from.idx] + graph[from.idx][to];
+						pq.offer(new Element(to, cost[to]));
+					}
 				}
-			}
-
-			visited[from] = true;
-
-			for (int to = 1; to <= city; to++) {
-				if (map[from][to] != -1 && cost[from] != Integer.MAX_VALUE - 1 && cost[to] > cost[from] + map[from][to])
-					cost[to] = cost[from] + map[from][to];
 			}
 		}
 
-		System.out.println(cost[end]);
+		return cost[end];
+	}
+
+	public static class Element implements Comparable<Element> {
+		int idx, cost;
+
+		public Element(int idx, int cost) {
+			this.idx = idx;
+			this.cost = cost;
+		}
+
+		@Override
+		public int compareTo(Element e) {
+			return this.cost - e.cost;
+		}
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		N = Integer.parseInt(br.readLine());
+		M = Integer.parseInt(br.readLine());
+		graph = new int[N + 1][N + 1];
+		cost = new int[N + 1];
 
-		city = Integer.parseInt(br.readLine());
+		for (int i = 1; i <= N; i++)
+			Arrays.fill(graph[i], Integer.MAX_VALUE);
+		Arrays.fill(cost, Integer.MAX_VALUE);
 
-		map = new int[city + 1][city + 1];
-		visited = new boolean[city + 1];
-		cost = new long[city + 1];
+		for (int i = 0; i < M; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
 
-		for (int i = 1; i <= city; i++)
-			Arrays.fill(map[i], -1);
+			int from = Integer.parseInt(st.nextToken());
+			int to = Integer.parseInt(st.nextToken());
+			int cost = Integer.parseInt(st.nextToken());
 
-		Arrays.fill(visited, false);
-		Arrays.fill(cost, Integer.MAX_VALUE - 1);
-
-		int road = Integer.parseInt(br.readLine());
-
-		for (int i = 0; i < road; i++) {
-			String[] infos = br.readLine().split(" ");
-
-			int from = Integer.parseInt(infos[0]);
-			int to = Integer.parseInt(infos[1]);
-			int cost = Integer.parseInt(infos[2]);
-
-			if (map[from][to] == -1) {
-				map[from][to] = cost;
-			} else if (map[from][to] > cost)
-				map[from][to] = cost;
-
+			if (graph[from][to] == Integer.MAX_VALUE)
+				graph[from][to] = cost;
+			else if (graph[from][to] != Integer.MAX_VALUE && graph[from][to] > cost)
+				graph[from][to] = cost;
 		}
 
-		String[] question = br.readLine().split(" ");
-		int start = Integer.parseInt(question[0]);
-		int end = Integer.parseInt(question[1]);
-		
-		Dijkstra(start, end);
-	}
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int start = Integer.parseInt(st.nextToken());
+		int end = Integer.parseInt(st.nextToken());
 
+		bw.write(BusPath(start, end) + " ");
+		bw.flush();
+		bw.close();
+		br.close();
+	}
 }
