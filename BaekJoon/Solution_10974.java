@@ -1,43 +1,48 @@
 import java.util.*;
 import java.io.*;
 
-public class permutation_10974_solution {
+public class Solution_10974 {
+	static BufferedWriter bw;
 
-	public static void Permutation(int[] arr, int[] out, boolean[] visit, int depth) {
-
-		if (depth == arr.length) {
-			for (int output : out)
-				System.out.print(output + " ");
-			System.out.println();
-
+	public static void Permutation(int N, LinkedList<Integer> list, boolean[] visited) throws IOException {
+		if (list.size() == N) {
+			for (int num : list)
+				bw.write(num + " ");
+			bw.newLine();
+			
 			return;
 		}
 
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < N; i++) {
+			if(visited[i])
+				continue;
+			
+			visited[i] = true;
+			list.add(i + 1);
 
-			if (!visit[i]) {
-				visit[i] = true;
-				out[depth] = arr[i];
-				Permutation(arr, out, visit, depth + 1);
-				visit[i] = false;
-			}
+			Permutation(N, list, visited);
+
+			visited[i] = false;
+			list.removeLast();
 		}
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int N = Integer.parseInt(br.readLine());
+		boolean[] visited = new boolean[N];
+		LinkedList<Integer> list = new LinkedList<>();
+		int[] arr = new int[N];
 
-		int num = Integer.parseInt(br.readLine());
-		int[] arr = new int[num];
-		int[] out = new int[num];
-		boolean[] visit = new boolean[num];
-
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < N; i++)
 			arr[i] = i + 1;
-			visit[i] = false;
-		}
 
-		Permutation(arr, out, visit, 0);
+		Permutation(N, list, visited);
+		
+		bw.flush();
+		bw.close();
+		br.close();
 	}
 
 }
