@@ -7,9 +7,6 @@ public class Solution_9095 {
 		if(n < 0)
 			return 0;
 		
-		if(n == 0)
-			return count[n] = 1;
-		
 		if(count[n] != 0)
 			return count[n];
 		
@@ -19,7 +16,6 @@ public class Solution_9095 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		StringBuilder sb = new StringBuilder();
 
 		int T = Integer.parseInt(br.readLine());
 
@@ -27,12 +23,15 @@ public class Solution_9095 {
 			int n = Integer.parseInt(br.readLine());
 			count = new int[n + 1];
 			
+			count[1] = 1;
+			count[2] = 2;
+			count[3] = 4;
+			
 			ExpressionSum(n);
 			
-			sb.append(count[n] + "\n");
+			bw.write(count[n] + "\n");
 		}
 		
-		bw.write(sb.toString() + " ");
 		bw.flush();
 		bw.close();
 		br.close();
