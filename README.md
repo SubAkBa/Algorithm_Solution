@@ -1,5 +1,7 @@
 # Algorithm Solution
 
+## Directory
+
 ### Programmers Directory
 - Programmers Coding Problem Solution.  
 - Link : [Programmers](https://programmers.co.kr/learn/challenges)
@@ -12,13 +14,15 @@
 - LeetCode Coding Problem Solution.
 - Link : [LeetCode](https://leetcode.com/)
 
-### SWEA (SoftWare Expert Academy)
+### SWEA (SoftWare Expert Academy) Directory
 - SoftWare Expert Academy Coding Problem Solution.
 - Link : [SWEA](https://swexpertacademy.com/main/main.do)
-
+  
+## Blog
 ### My Algorithm Solution Blog
 - Link : [Soobarkbar Blog](https://soobarkbar.tistory.com/category/Algorithm)
-
+  
+## Study
 ### FAs (Fundamental Algorithm study)
 - Google Drive : [Study Data](https://docs.google.com/spreadsheets/d/1kCBttUab8avjl79hWdkAJKsj28cy7K3siyC3kuQwgbw/edit#gid=608074573)
 
