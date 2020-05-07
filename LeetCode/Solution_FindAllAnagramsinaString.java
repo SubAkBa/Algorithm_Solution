@@ -3,26 +3,27 @@ import java.util.*;
 public class Solution_FindAllAnagramsinaString {
 	public static List<Integer> findAnagrams(String s, String p) {
 		LinkedList<Integer> idxlist = new LinkedList<>();
-		int plen = p.length(), slen = s.length();
-		int[] parr = new int[26], sarr = new int[26];
-		
-		if(slen == 0 || plen == 0 || slen < plen)
+		int plen = p.length(), slen = s.length(), left = 0, right = 0;
+		int[] parr = new int[26];
+
+		if (slen == 0 || plen == 0 || slen < plen)
 			return idxlist;
 
-		for (int i = 0; i < plen; i++) {
-			sarr[s.charAt(i) - 'a']++;
+		for (int i = 0; i < plen; i++)
 			parr[p.charAt(i) - 'a']++;
-		}
 
-		if (Arrays.equals(sarr, parr))
-			idxlist.add(0);
+		while (left <= right && right < slen) {
+			parr[s.charAt(right) - 'a']--;
 
-		for (int i = plen; i < slen; i++) {
-			sarr[s.charAt(i - plen) - 'a']--;
-			sarr[s.charAt(i) - 'a']++;
+			while (parr[s.charAt(right) - 'a'] < 0 && left <= right) {
+				parr[s.charAt(left) - 'a']++;
+				left++;
+			}
 
-			if (Arrays.equals(sarr, parr))
-				idxlist.add(i - plen + 1);
+			right++;
+
+			if ((right - left) == plen)
+				idxlist.add(left);
 		}
 
 		return idxlist;
