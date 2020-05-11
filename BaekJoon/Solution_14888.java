@@ -2,75 +2,65 @@ import java.util.*;
 import java.io.*;
 
 public class Solution_14888 {
-	static int[] nums;
-	static long max = Long.MIN_VALUE, min = Long.MAX_VALUE;
+	static int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE, operlen, N;
 
-	public static void Permutation(int n, String str, LinkedList<Character> operlist, boolean[] visited) {
-		if (n == operlist.size()) {
-			int idx = 0;
-			long temp = nums[idx++];
-			for (char oper : operlist) {
-				switch (oper) {
-				case '+':
-					temp += nums[idx++];
-					break;
-				case '-':
-					temp -= nums[idx++];
-					break;
-				case '*':
-					temp *= nums[idx++];
-					break;
-				case '/':
-					if (temp < 0)
-						temp = ((temp * -1) / nums[idx++]) * -1;
-					else
-						temp /= nums[idx++];
-					break;
-				}
-			}
-
-			max = Math.max(temp, max);
-			min = Math.min(temp, min);
-
+	public static void BetweenOperator(int[] nums, int idx, StringBuilder operstr, int calc, boolean[] selected) {
+		if (idx == N) {
+			max = Math.max(max, calc);
+			min = Math.min(min, calc);
 			return;
 		}
 
-		for (int i = 0; i < n; i++) {
-			if (visited[i])
-				continue;
+		for (int i = 0; i < operlen; i++) {
+			if (!selected[i]) {
+				selected[i] = true;
 
-			visited[i] = true;
-			operlist.add(str.charAt(i));
+				switch (operstr.charAt(i)) {
+				case '+':
+					BetweenOperator(nums, idx + 1, operstr, calc + nums[idx], selected);
+					break;
+				case '-':
+					BetweenOperator(nums, idx + 1, operstr, calc - nums[idx], selected);
+					break;
+				case '*':
+					BetweenOperator(nums, idx + 1, operstr, calc * nums[idx], selected);
+					break;
+				case '/':
+					BetweenOperator(nums, idx + 1, operstr, calc / nums[idx], selected);
+					break;
+				}
 
-			Permutation(n, str, operlist, visited);
-
-			visited[i] = false;
-			operlist.removeLast();
+				selected[i] = false;
+			}
 		}
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		N = Integer.parseInt(br.readLine());
+		int[] nums = new int[N];
+		char[] oper = { '+', '-', '*', '/' };
+		StringBuilder operstr = new StringBuilder();
 
-		int N = Integer.parseInt(br.readLine());
-		nums = new int[N];
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < N; i++)
 			nums[i] = Integer.parseInt(st.nextToken());
 
 		st = new StringTokenizer(br.readLine());
-		StringBuilder sb = new StringBuilder();
-		char[] chr = { '+', '-', '*', '/' };
 		for (int i = 0; i < 4; i++) {
-			int count = Integer.parseInt(st.nextToken());
-			for (int j = 0; j < count; j++)
-				sb.append(chr[i]);
+			int opercount = Integer.parseInt(st.nextToken());
+
+			for (int j = 0; j < opercount; j++)
+				operstr.append(oper[i]);
 		}
+		
+		operlen = operstr.length();
 
-		Permutation(N - 1, sb.toString(), new LinkedList<>(), new boolean[N - 1]);
+		BetweenOperator(nums, 1, operstr, nums[0], new boolean[operlen]);
 
-		bw.write(max + "\n" + min);
+		bw.write(max + "\n");
+		bw.write(min + "\n");
 		bw.flush();
 		bw.close();
 		br.close();
