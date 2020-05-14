@@ -18,15 +18,13 @@ public class Solution_stemcellculture {
 				Point curcell = list.pollFirst();
 
 				if (curcell.curlife == 0) {
-					if (curcell.curlife == 0) {
-						for (int i = 0; i < 4; i++) {
-							int nx = curcell.x + dx[i];
-							int ny = curcell.y + dy[i];
+					for (int i = 0; i < 4; i++) {
+						int nx = curcell.x + dx[i];
+						int ny = curcell.y + dy[i];
 
-							if (cellmap[nx][ny] == 0) {
-								cellmap[nx][ny] = cellmap[curcell.x][curcell.y];
-								list.add(new Point(nx, ny, cellmap[nx][ny], cellmap[nx][ny]));
-							}
+						if (cellmap[nx][ny] == 0) {
+							cellmap[nx][ny] = cellmap[curcell.x][curcell.y];
+							list.add(new Point(nx, ny, cellmap[nx][ny], cellmap[nx][ny]));
 						}
 					}
 				}
