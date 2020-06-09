@@ -27,8 +27,10 @@ public class Solution_FlowerPlantingWithNoAdjacent {
 				set.add(answer[to - 1]);
 
 			for (int flowertype = 1; flowertype <= 4; flowertype++) {
-				if (!set.contains(flowertype))
+				if (!set.contains(flowertype)) {
 					answer[from - 1] = flowertype;
+					break;
+				}
 			}
 		}
 
