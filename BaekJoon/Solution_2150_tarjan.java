@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 
 public class Solution_2150_tarjan {
-	static int V, E, id = 0, group = 0;
-	static int[] dfsn, sn;
+	static int V, E, id = 0;
+	static int[] dfsn;
 	static boolean[] finished;
 	static Stack<Integer> stack;
 	static ArrayList<ArrayList<Integer>> scc;
@@ -26,10 +26,9 @@ public class Solution_2150_tarjan {
 
 			while (true) {
 				int to = stack.pop();
+				
 				part.add(to);
-
 				finished[to] = true;
-				sn[to] = group;
 
 				if (to == from)
 					break;
@@ -37,7 +36,6 @@ public class Solution_2150_tarjan {
 
 			Collections.sort(part);
 			scc.add(part);
-			group++;
 		}
 
 		return result;
@@ -54,7 +52,6 @@ public class Solution_2150_tarjan {
 		scc = new ArrayList<>();
 		stack = new Stack<>();
 		dfsn = new int[V + 1];
-		sn = new int[V + 1];
 		finished = new boolean[V + 1];
 		edgelist = new ArrayList[V + 1];
 
