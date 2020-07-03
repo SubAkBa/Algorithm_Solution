@@ -2,48 +2,40 @@ import java.util.*;
 import java.io.*;
 
 public class Solution_11657 {
-	static int[] cost;
-	static ArrayList<Edge>[] edgelist;
-	static boolean[] isinQ;
-	static int N, INF = 987654321;
+	static int N, M;
+	static Edge[] edgelist;
+	static long[] dist;
 
-	public static boolean TimeMachine(int start) {
-		Queue<Edge> queue = new LinkedList<>();
-		int[] cycle = new int[N + 1];
+	public static boolean Time_Machine() {
+		boolean updated = false;
 
-		cost[start] = 0;
-		isinQ[start] = true;
-		cycle[start]++;
-		queue.offer(new Edge(start, cost[start]));
+		dist[1] = 0;
 
-		while (!queue.isEmpty()) {
-			Edge from = queue.poll();
-			isinQ[from.idx] = false;
+		for (int iter = 0; iter < N; iter++) {
+			for (int i = 1; i <= M; i++) {
+				Edge edge = edgelist[i];
 
-			for (Edge to : edgelist[from.idx]) {
-				if (cost[to.idx] > cost[from.idx] + to.cost) {
-					cost[to.idx] = cost[from.idx] + to.cost;
+				if (dist[edge.from] == Integer.MAX_VALUE)
+					continue;
 
-					if (!isinQ[to.idx]) {
-						cycle[to.idx]++;
+				if (dist[edge.to] > dist[edge.from] + edge.cost) {
+					dist[edge.to] = dist[edge.from] + edge.cost;
 
-						if (cycle[to.idx] >= N)
-							return false;
-
-						queue.offer(new Edge(to.idx, cost[to.idx]));
-						isinQ[to.idx] = true;
-					}
+					if (iter == N - 1)
+						updated = true;
 				}
 			}
 		}
-		return true;
+
+		return updated;
 	}
 
 	public static class Edge {
-		int idx, cost;
+		int from, to, cost;
 
-		public Edge(int idx, int cost) {
-			this.idx = idx;
+		public Edge(int from, int to, int cost) {
+			this.from = from;
+			this.to = to;
 			this.cost = cost;
 		}
 	}
@@ -54,41 +46,33 @@ public class Solution_11657 {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
 		N = Integer.parseInt(st.nextToken());
-		int M = Integer.parseInt(st.nextToken());
+		M = Integer.parseInt(st.nextToken());
 
-		isinQ = new boolean[N + 1];
-		cost = new int[N + 1];
-		edgelist = new ArrayList[N + 1];
+		dist = new long[N + 1];
+		edgelist = new Edge[M + 1];
 
-		Arrays.fill(cost, INF);
+		Arrays.fill(dist, Integer.MAX_VALUE);
 
-		for (int i = 1; i <= N; i++)
-			edgelist[i] = new ArrayList<>();
-
-		for (int i = 0; i < M; i++) {
+		for (int i = 1; i <= M; i++) {
 			st = new StringTokenizer(br.readLine());
 
 			int from = Integer.parseInt(st.nextToken());
 			int to = Integer.parseInt(st.nextToken());
 			int cost = Integer.parseInt(st.nextToken());
 
-			edgelist[from].add(new Edge(to, cost));
+			edgelist[i] = new Edge(from, to, cost);
 		}
 
-		if (TimeMachine(1)) {
-			for (int i = 2; i <= N; i++) {
-				if (cost[i] == INF)
-					bw.write("-1\n");
-				else
-					bw.write(cost[i] + "\n");
-			}
-		} else {
-			bw.write("-1");
+		if (Time_Machine())
+			bw.write("-1\n");
+		else {
+			for (int i = 2; i <= N; i++)
+				bw.write((dist[i] == Integer.MAX_VALUE ? -1 : dist[i]) + "\n");
 		}
 
 		bw.flush();
 		bw.close();
 		br.close();
-
 	}
+
 }
