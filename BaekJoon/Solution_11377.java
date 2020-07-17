@@ -2,19 +2,19 @@ import java.util.*;
 import java.io.*;
 
 public class Solution_11377 {
-	static int[] work;
-	static boolean[] matched;
-	static ArrayList<Integer>[] edgelist;
+	static ArrayList<Integer>[] adj;
+	static int[] path;
+	static boolean[] selected;
 
-	public static boolean DFS(int start) {
-		for (int next : edgelist[start]) {
-			if (matched[next])
+	public static boolean Matching(int from) {
+		for (int to : adj[from]) {
+			if (selected[to])
 				continue;
 
-			matched[next] = true;
+			selected[to] = true;
 
-			if (work[next] == 0 || DFS(work[next])) {
-				work[next] = start;
+			if (path[to] == 0 || Matching(path[to])) {
+				path[to] = from;
 				return true;
 			}
 		}
@@ -31,41 +31,41 @@ public class Solution_11377 {
 		int M = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 
-		work = new int[M + 1];
-		edgelist = new ArrayList[N + 1];
-		matched = new boolean[M + 1];
-		int[] workcnt = new int[M + 1];
+		adj = new ArrayList[2 * N + 1];
+		path = new int[M + 1];
+		selected = new boolean[M + 1];
 
-		for (int i = 1; i <= N; i++) {
-			edgelist[i] = new ArrayList<>();
+		for (int i = 1; i <= 2 * N; ++i)
+			adj[i] = new ArrayList<>();
+
+		for (int i = 1; i <= N; ++i) {
 			st = new StringTokenizer(br.readLine());
 
-			int num = Integer.parseInt(st.nextToken());
-			for (int j = 0; j < num; j++)
-				edgelist[i].add(Integer.parseInt(st.nextToken()));
-		}
+			int count = Integer.parseInt(st.nextToken());
 
-		int count = 0;
-
-		for (int i = 1; i <= N; i++) {
-			Arrays.fill(matched, false);
-
-			if (DFS(i)) {
-				count++;
-				workcnt[i]++;
+			for (int j = 0; j < count; ++j) {
+				int next = Integer.parseInt(st.nextToken());
+				adj[i].add(next);
+				adj[N + i].add(next);
 			}
 		}
 
-		for (int i = 1; i <= N; i++) {
-			if (workcnt[i] == 1) {
-				Arrays.fill(matched, false);
+		int answer = 0;
+		for (int i = 1; i <= N; ++i) {
+			Arrays.fill(selected, false);
+			if (Matching(i))
+				++answer;
+		}
 
-				if ((K--) > 0 && DFS(i))
-					count++;
+		for (int i = N + 1; i <= 2 * N && K > 0; ++i) {
+			Arrays.fill(selected, false);
+			if (Matching(i)) {
+				--K;
+				++answer;
 			}
 		}
 
-		bw.write(count + " ");
+		bw.write(answer + "");
 		bw.flush();
 		bw.close();
 		br.close();
