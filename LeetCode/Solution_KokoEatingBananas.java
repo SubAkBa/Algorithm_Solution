@@ -2,15 +2,14 @@
 public class Solution_KokoEatingBananas {
 
 	public static int minEatingSpeed(int[] piles, int H) {
-		int len = piles.length;
 		int left = 1, right = (int) 1e9;
 
 		while (left < right) {
 			int mid = left + (right - left) / 2;
 			int hour = 0;
 
-			for (int i = 0; i < len; ++i)
-				hour += piles[i] / mid + (piles[i] % mid > 0 ? 1 : 0);
+			for (int p : piles)
+				hour += (p - 1) / mid + 1;
 
 			if (hour <= H)
 				right = mid;
