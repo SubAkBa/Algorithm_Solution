@@ -3,28 +3,17 @@ import java.util.*;
 public class Solution_TopKFrequentWords {
 
 	public static List<String> topKFrequent(String[] words, int k) {
-		HashMap<String, Integer> hm = new HashMap<>();
+		HashMap<String, Integer> map = new HashMap<>();
 
 		for (String word : words)
-			hm.put(word, hm.getOrDefault(word, 0) + 1);
+			map.put(word, map.getOrDefault(word, 0) + 1);
 
-		PriorityQueue<String> heap = new PriorityQueue<>(
-				(w1, w2) -> (hm.get(w1) == hm.get(w2) ? w1.compareTo(w2) : hm.get(w2) - hm.get(w1)));
+		List<String> answer = new ArrayList<>(map.keySet());
 
-		heap.addAll(hm.keySet());
+		Collections.sort(answer,
+				(s1, s2) -> map.get(s1) == map.get(s2) ? s1.compareTo(s2) : Integer.compare(map.get(s2), map.get(s1)));
 
-		ArrayList<String> answer = new ArrayList<>();
-
-		while (!heap.isEmpty()) {
-			if (k == 0)
-				break;
-
-			answer.add(heap.poll());
-			k--;
-		}
-
-		return answer;
-
+		return answer.subList(0, k);
 	}
 
 	public static void main(String[] args) {
@@ -32,5 +21,4 @@ public class Solution_TopKFrequentWords {
 		System.out.println(topKFrequent(
 				new String[] { "the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is" }, 4));
 	}
-
 }

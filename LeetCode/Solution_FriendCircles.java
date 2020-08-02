@@ -1,29 +1,36 @@
 
 public class Solution_FriendCircles {
+	
+	static int count = 0;
 
-	public void DFS(int start, int len, int[][] M, boolean[] visited) {
-		visited[start] = true;
+	public static void DFS(int N, int current, int[][] M, boolean[] visited) {
+		visited[current] = true;
 
-		for (int i = 0; i < len; ++i) {
-			if (start == i || visited[i] || M[start][i] == 0)
+		for (int next = 0; next < N; ++next) {
+			if (M[current][next] == 0 || visited[next])
 				continue;
 
-			DFS(i, len, M, visited);
+			DFS(N, next, M, visited);
 		}
 	}
 
-	public int findCircleNum(int[][] M) {
-		int len = M.length, count = 0;
-		boolean[] visited = new boolean[len];
+	public static int findCircleNum(int[][] M) {
+		int N = M.length;
+		boolean[] visited = new boolean[N];
 
-		for (int i = 0; i < len; ++i) {
+		for (int i = 0; i < N; ++i) {
 			if (visited[i])
 				continue;
 
 			++count;
-			DFS(i, len, M, visited);
+			DFS(N, i, M, visited);
 		}
 
 		return count;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(findCircleNum(new int[][] { { 1, 1, 0 }, { 1, 1, 0 }, { 0, 0, 1 } }));
+		System.out.println(findCircleNum(new int[][] { { 1, 1, 0 }, { 1, 1, 1 }, { 0, 1, 1 } }));
 	}
 }
