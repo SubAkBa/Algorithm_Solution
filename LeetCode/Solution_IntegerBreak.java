@@ -27,7 +27,7 @@ public class Solution_IntegerBreak {
 		else if (r == 1)
 			return (int) Math.pow(3, q - 1) * 4;
 		else
-			return (int) Math.pow(3, q - 1) * 2;
+			return (int) Math.pow(3, q) * 2;
 	}
 
 	public static void main(String[] args) {
