@@ -1,86 +1,79 @@
-# 프로그래머스
-| Idx  | Question                                                                | Level | Category | Solution (Time / Space Complexity)                                                                                                                                         | Note |
-| :--: | ----------------------------------------------------------------------- | ----- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-|  1   | [디저트 카페](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu&categoryId=AV5VwAr6APYDFAWu&categoryType=CODE) | 모의 역량 테스트 |     | [O()/O()]() | |
-|  2   | [예상 대진표](https://programmers.co.kr/learn/courses/30/lessons/12985)    | 2     | Math     | [O(logN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%88%EC%83%81%EB%8C%80%EC%A7%84%ED%91%9C.java)                | |
-|  3   | [단어 퍼즐](https://programmers.co.kr/learn/courses/30/lessons/12983)      | 4     | | | |
+### [S/W 문제해결 기본]
+| Idx  | Question                                                                                                                                                      | day  | Level | Solution                                                                                                      | Note |
+| :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ----- | ------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [최빈수 구하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh&categoryId=AV13zo1KAAACFAYh&categoryType=CODE)      | 1일차 | D2    | []()| |
+|  2   | [View](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV134DPqAA8CFAYh&categoryId=AV134DPqAA8CFAYh&categoryType=CODE)           | 1일차 | D3    | []()| |
+|  3   | [Flatten](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV139KOaABgCFAYh&categoryId=AV139KOaABgCFAYh&categoryType=CODE)        | 1일차 | D3    | []()| |
+|  4   | [Sum](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13_BWKACUCFAYh&categoryId=AV13_BWKACUCFAYh&categoryType=CODE)            | 2일차 | D3    | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_Sum.java)              | |
+|  5   | [Ladder1](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14ABYKADACFAYh&categoryId=AV14ABYKADACFAYh&categoryType=CODE)        | 2일차 | D4    | []()| |
+|  6   | [Ladder2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14BgD6AEECFAYh&categoryId=AV14BgD6AEECFAYh&categoryType=CODE)        | 2일차 | D4    | []()| |
+|  7   | [String](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14P0c6AAUCFAYi&categoryId=AV14P0c6AAUCFAYi&categoryType=CODE)         | 3일차 | D3    | []()| |
+|  8   | [회문1](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14QpAaAAwCFAYi&categoryId=AV14QpAaAAwCFAYi&categoryType=CODE)           | 3일차 | D3    | []()| |
+|  9   | [회문2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14Rq5aABUCFAYi&categoryId=AV14Rq5aABUCFAYi&categoryType=CODE)           | 3일차 | D3    | []()| |
+|  10  | [거듭제곱](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14dUIaAAUCFAYD&categoryId=AV14dUIaAAUCFAYD&categoryType=CODE)         | 4일차 | D3    | []()| |
+|  11  | [괄호짝짓기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14eWb6AAkCFAYD&categoryId=AV14eWb6AAkCFAYD&categoryType=CODE)        | 4일차 | D4    | []()| |
+|  12  | [길찾기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14geLqABQCFAYD&categoryId=AV14geLqABQCFAYD&categoryType=CODE)           | 4일차 | D4    | []()| |
+|  13  | [Magnetic](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14hwZqABsCFAYD&categoryId=AV14hwZqABsCFAYD&categoryType=CODE)       | 5일차 | D3    | []()| |
+|  14  | [GNS](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14jJh6ACYCFAYD&categoryId=AV14jJh6ACYCFAYD&categoryType=CODE)            | 5일차 | D3    | []()| |
+|  15  | [계산기1](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14mbSaAEwCFAYD&categoryId=AV14mbSaAEwCFAYD&categoryType=CODE)          | 6일차 | D4    | []()| |
+|  16  | [계산기2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14nnAaAFACFAYD&categoryId=AV14nnAaAFACFAYD&categoryType=CODE)          | 6일차 | D4    | []()| |
+|  17  | [계산기3](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14tDX6AFgCFAYD&categoryId=AV14tDX6AFgCFAYD&categoryType=CODE)          | 6일차 | D4    | []()| |
+|  18  | [암호생성기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14uWl6AF0CFAYD&categoryId=AV14uWl6AF0CFAYD&categoryType=CODE)        | 7일차 | D3    | []()| |
+|  19  | [미로1](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14vXUqAGMCFAYD&categoryId=AV14vXUqAGMCFAYD&categoryType=CODE)           | 7일차 | D4    | []()| |
+|  20  | [미로2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14wL9KAGkCFAYD&categoryId=AV14wL9KAGkCFAYD&categoryType=CODE)           | 7일차 | D4    | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_%EB%AF%B8%EB%A1%9C2.java)| |
+|  21  | [암호문1](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14w-rKAHACFAYD&categoryId=AV14w-rKAHACFAYD&categoryType=CODE)          | 8일차 | D3    | []()| |
+|  22  | [암호문2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14yIsqAHYCFAYD&categoryId=AV14yIsqAHYCFAYD&categoryType=CODE)          | 8일차 | D3    | []()| |
+|  23  | [암호문3](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14zIwqAHwCFAYD&categoryId=AV14zIwqAHwCFAYD&categoryType=CODE)          | 8일차 | D3    | []()| |
+|  24  | [중위순회](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV140YnqAIECFAYD&categoryId=AV140YnqAIECFAYD&categoryType=CODE)          | 9일차 | D4    | []()| |
+|  25  | [사칙연산](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141J8KAIcCFAYD&categoryId=AV141J8KAIcCFAYD&categoryType=CODE)          | 9일차 | D4    | []()| |
+|  26  | [사칙연산 유효성 검사](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141176AIwCFAYD&categoryId=AV141176AIwCFAYD&categoryType=CODE) | 9일차 | D4    | []()| |
+|  27  | [비밀번호](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14_DEKAJcCFAYD&categoryId=AV14_DEKAJcCFAYD&categoryType=CODE)          | 10일차 | D3   | []()| |
+|  28  | [Contact](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15B1cKAKwCFAYD&categoryId=AV15B1cKAKwCFAYD&categoryType=CODE)         | 10일차 | D4   | []()| |
 
-### Summer/Winter Coding(~2018)
-| Idx  | Question                                                                  | Level | Category               | Solution (Time / Space Complexity)                                                                                                                                            | Note |
-| :--: | ------------------------------------------------------------------------- | ----- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-|  1   | [예산](https://programmers.co.kr/learn/courses/30/lessons/12982)           | 1     | Sort                   | [O(NlogN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%88%EC%82%B0.java)                                             | |
-|  2   | [스킬트리](https://programmers.co.kr/learn/courses/30/lessons/49993)        | 2     | Hash Table             | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%8A%A4%ED%82%AC%ED%8A%B8%EB%A6%AC.java)                               | |
-|  3   | [소수 만들기](https://programmers.co.kr/learn/courses/30/lessons/12977)      | 2     | DFS, Combination, Math | [O(3^N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%86%8C%EC%88%98%EB%A7%8C%EB%93%A4%EA%B8%B0.java)                    | |
-|  4   | [점프와 순간 이동](https://programmers.co.kr/learn/courses/30/lessons/12980)  | 2     | Math                   | [O(logN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A0%90%ED%94%84%EC%99%80%EC%88%9C%EA%B0%84%EC%9D%B4%EB%8F%99.java) | |
-|  5   | [영어 끝말잇기](https://programmers.co.kr/learn/courses/30/lessons/12981)    | 2     | Hash Table             | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%81%EC%96%B4%EB%81%9D%EB%A7%90%EC%9E%87%EA%B8%B0.java)              | |
-|  6   | [방문 길이](https://programmers.co.kr/learn/courses/30/lessons/49994)       | 3     | Hash Table             | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B0%A9%EB%AC%B8%EA%B8%B8%EC%9D%B4.java)                                | |
-|  7   | [배달](https://programmers.co.kr/learn/courses/30/lessons/12978)           | 3     | Heap, Dijkstra, Graph  | [O(ElogV)/O(N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B0%B0%EB%8B%AC.java)                                            | |
-|  8   | [기지국 설치](https://programmers.co.kr/learn/courses/30/lessons/12979)      | 3     | | | []() |
-|  9   | [숫자 게임](https://programmers.co.kr/learn/courses/30/lessons/12987)       | 3     | Heap, Greedy           |[O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%88%AB%EC%9E%90%EA%B2%8C%EC%9E%84.java)                            | |
-|  10  | [쿠키 구입](https://programmers.co.kr/learn/courses/30/lessons/49995)       | 4     | Segment Tree           | [O(NlogN)/O(2^(logN + 1))](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%BF%A0%ED%82%A4%EA%B5%AC%EC%9E%85.java)                | |
-|  11  | [스티커 모으기(2)](https://programmers.co.kr/learn/courses/30/lessons/12971) | 4     | Dynamic Programming    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%8A%A4%ED%8B%B0%EC%BB%A4%EB%AA%A8%EC%9C%BC%EA%B8%B0(2).java)          | |
-|  12  | [지형 편집](https://programmers.co.kr/learn/courses/30/lessons/12984)       | 4     | Binary Search          | [O(N^2logN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A7%80%ED%98%95%ED%8E%B8%EC%A7%91.java)                         | |
+### [S/W 문제해결 응용]
+| Idx  | Question                                                                                                                                                      | day  | Level | Solution                                                                                                                                   | Note |
+| :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
+|  1   | [단순 2진 암호코드](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15FZuqAL4CFAYD&categoryId=AV15FZuqAL4CFAYD&categoryType=CODE)  | 1일차 | D3    | []()| |
+|  2   | [암호코드 스캔](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15JEKKAM8CFAYD&categoryId=AV15JEKKAM8CFAYD&categoryType=CODE)      | 1일차 | D5    | []()| |
+|  3   | [최대 상금](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15Khn6AN0CFAYD&categoryId=AV15Khn6AN0CFAYD&categoryType=CODE)         | 2일차 | D3    | []()| |
+|  4   | [균형점](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15MeBKAOgCFAYD&categoryId=AV15MeBKAOgCFAYD&categoryType=CODE)           | 2일차 | D5    | []()| |
+|  5   | [최적 경로](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15OZ4qAPICFAYD&categoryId=AV15OZ4qAPICFAYD&categoryType=CODE)         | 3일차 | D5    |[]()| |
+|  6   | [공통조상](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15PTkqAPYCFAYD&categoryId=AV15PTkqAPYCFAYD&categoryType=CODE)          | 3일차 | D5    | []()| |
+|  7   | [보급로](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15QRX6APsCFAYD&categoryId=AV15QRX6APsCFAYD&categoryType=CODE)           | 4일차 | D4    | []()| |
+|  8   | [하나로](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15StKqAQkCFAYD&categoryId=AV15StKqAQkCFAYD&categoryType=CODE)           | 4일차 | D4    | []()| |
+|  9   | [단순도금비용](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15Tx9aARECFAYD&categoryId=AV15Tx9aARECFAYD&categoryType=CODE)       | 5일차 | D6    |[]()| |
+|  10  | [도금비용](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15V9jKARwCFAYD&categoryId=AV15V9jKARwCFAYD&categoryType=CODE)          | 5일차 | D7    |[]()| |
+|  11  | [K번째 접미어](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18GHd6IskCFAZN&categoryId=AV18GHd6IskCFAZN&categoryType=CODE)       | 6일차 | D5   | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_K%EB%B2%88%EC%A7%B8%EC%A0%91%EB%AF%B8%EC%96%B4.java)| |
+|  12  | [K번째 문자열](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18KWf6ItECFAZN&categoryId=AV18KWf6ItECFAZN&categoryType=CODE)       | 6일차 | D6   | []()| |
+|  13  | [행렬찾기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18LoAqItcCFAZN&categoryId=AV18LoAqItcCFAZN&categoryType=CODE)          | 7일차 | D4   | []()| |
+|  14  | [금속막대](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18NaZqIt8CFAZN&categoryId=AV18NaZqIt8CFAZN&categoryType=CODE)          | 7일차 | D5   | []()| |
+|  15  | [화학물질2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18OR16IuUCFAZN&categoryId=AV18OR16IuUCFAZN&categoryType=CODE)         | 7일차 | D6   | []()| |
+|  16  | [사람 네트워크2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18P2B6Iu8CFAZN&categoryId=AV18P2B6Iu8CFAZN&categoryType=CODE)     | 8일차 | D6   | []()| |
+|  17  | [이미지 유사도 검사](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18Q_MqIvUCFAZN&categoryId=AV18Q_MqIvUCFAZN&categoryType=CODE)  | 8일차 | D6   | []()| |
+|  18  | [달란트2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18R8FKIvoCFAZN&categoryId=AV18R8FKIvoCFAZN&categoryType=CODE)          | 9일차 | D5   | []()| |
+|  19  | [소스 완제품 확률](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18Sx36IwACFAZN&categoryId=AV18Sx36IwACFAZN&categoryType=CODE)    | 9일차 | D6   | []()| |
+|  20  | [작업순서](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18TrIqIwUCFAZN&categoryId=AV18TrIqIwUCFAZN&categoryType=CODE)          | 10일차 | D6  | []()| |
+|  21  | [최종평가](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18U3f6Iw0CFAZN&categoryId=AV18U3f6Iw0CFAZN&categoryType=CODE)          | 10일차 | D6  | []()| |
 
-### Summer/Winter Coding(2019)
-| Idx  | Question                                                                | Level | Category | Solution (Time / Space Complexity)                                                                                                                                | Note |
-| :--: | ----------------------------------------------------------------------- | ----- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-|  1   | [멀쩡한 사각형](https://programmers.co.kr/learn/courses/30/lessons/62048)  | 2     | Math      | [O(1)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%A9%80%EC%A9%A1%ED%95%9C%EC%82%AC%EA%B0%81%ED%98%95.java) | |
-|  2   | [지형 이동](https://programmers.co.kr/learn/courses/30/lessons/62050)     | 4     |  | []() | |
-
-### 2019 카카오 개발자 겨울 인턴십
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                                                            | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-|  1   | [크레인 인형뽑기 게임](https://programmers.co.kr/learn/courses/30/lessons/64061) | 1     | Stack                    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%81%AC%EB%A0%88%EC%9D%B8%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0%EA%B2%8C%EC%9E%84.java)  | |
-|  2   | [투플](https://programmers.co.kr/learn/courses/30/lessons/64065)             | 2     | Sort, String, Hash Table | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%8A%9C%ED%94%8C.java)                                                             | |
-|  3   | [불량 사용자](https://programmers.co.kr/learn/courses/30/lessons/64064)        | 3     | Hash Table               | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B6%88%EB%9F%89%EC%82%AC%EC%9A%A9%EC%9E%90.java)                                      | |
-|  4   | [징검다리 건너기](https://programmers.co.kr/learn/courses/30/lessons/64062)     | 3     | Binary Search            | [O(NlogN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC%EA%B1%B4%EB%84%88%EA%B8%B0.java)                | |
-|  5   | [호텔 방 배정](https://programmers.co.kr/learn/courses/30/lessons/64063)       | 4     | Union-Find, Hash Table   | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%98%B8%ED%85%94%EB%B0%A9%EB%B0%B0%EC%A0%95.java)                                      | |
-
-### 2020 카카오 인턴십
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                              | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-|  1   | [키 패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256)      | 1     | Graph                    |[O()/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%82%A4%ED%8C%A8%EB%93%9C%EB%88%84%EB%A5%B4%EA%B8%B0.java) | BFS를 이용할 필요가 없을 것 같음 |
-|  2   | [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257)        | 2     | | | |
-|  3   | [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258)          | 3     | Hash Table, Two Pointer  | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B3%B4%EC%84%9D%EC%87%BC%ED%95%91.java)                 | |
-|  4   | [경주로 건설](https://programmers.co.kr/learn/courses/30/lessons/67259)        | 3     | | | |
-|  5   | [동굴 탐험](https://programmers.co.kr/learn/courses/30/lessons/67260)          | 4     | | | |
-
-### 2018 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                       | Level | Category                 | Solution (Time / Space Complexity)                                                                                       | Note |
-| :--: | ------------------------------------------------------------------------------ | ----- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---- |
-|  1   | [\[1차\] 비밀지도](https://programmers.co.kr/learn/courses/30/lessons/17681)      | 1     | |[]() | |
-|  2   | [\[1차\] 다트게임](https://programmers.co.kr/learn/courses/30/lessons/17682)      | 1     | |[]() | |
-|  3   | [\[1차\] 뉴스 클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677) | 2     | |[]() | |
-|  4   | [\[1차\] 프렌즈4블록](https://programmers.co.kr/learn/courses/30/lessons/17679)    | 2     | |[]() | |
-|  5   | [\[1차\] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)         | 2     | |[]() | |
-|  6   | [\[3차\] 방금그곡](https://programmers.co.kr/learn/courses/30/lessons/17683)      | 2     | |[]() | |
-|  7   | [\[3차\] 압축](https://programmers.co.kr/learn/courses/30/lessons/17684)         | 2     | |[]() | |
-|  8   | [\[3차\] 파일명 정렬](https://programmers.co.kr/learn/courses/30/lessons/17686)    | 2     | |[]() | |
-|  9   | [\[3차\] N진수 게임](https://programmers.co.kr/learn/courses/30/lessons/17687)    | 2     | |[]() | |
-|  10  | [\[1차\] 추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676)    | 3     | |[]() | |
-|  11  | [\[1차\] 셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678)      | 3     | |[]() | |
-|  12  | [\[3차\] 자동완성](https://programmers.co.kr/learn/courses/30/lessons/17685)      | 4     | |[]() | |
-
-### 2019 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                       | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---- |
-|  1   | [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889)            | 1     | |[]() | |
-|  2   | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888)         | 2     | |[]() | |
-|  3   | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)            | 2     | |[]() | |
-|  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | |[]() | |
-|  5   | [매칭 점수](https://programmers.co.kr/learn/courses/30/lessons/42893)         | 3     | |[]() | |
-|  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)   | 4     | |[]() | |
-|  7   | [블록 게임](https://programmers.co.kr/learn/courses/30/lessons/42894)         | 4     | |[]() | |
-
-### 2020 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                       | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---- |
-|  1   | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)        | 2     | |[]() | |
-|  2   | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)          | 2     | |[]() | |
-|  3   | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)       | 3     | |[]() | |
-|  4   | [기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)      | 3     | |[]() | |
-|  5   | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)          | 3     | |[]() | |
-|  6   | [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063)       | 3     | |[]() | |
-|  7   | [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)          | 4     | |[]() | |
-
-
+### [모의 SW 역량 테스트]
+| Idx  | Question                                                                                                                                                      | Solution                                                                                                                                                               | Note |
+| :--: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [핀볼 게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo&categoryId=AWXRF8s6ezEDFAUo&categoryType=CODE)        |
+|  2   | [원자 소멸 시뮬레이션](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRFInKex8DFAUo&categoryId=AWXRFInKex8DFAUo&categoryType=CODE)|
+|  3   | [보물 상자 비밀번호](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRUN9KfZ8DFAUo&categoryId=AWXRUN9KfZ8DFAUo&categoryType=CODE) | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_%EB%B3%B4%EB%AC%BC%EC%83%81%EC%9E%90%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8.java)  | |
+|  4   | [벽돌 깨기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo&categoryId=AWXRQm6qfL0DFAUo&categoryType=CODE)        |
+|  5   | [줄기세포배양](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo&categoryId=AWXRJ8EKe48DFAUo&categoryType=CODE)      | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_%EC%A4%84%EA%B8%B0%EC%84%B8%ED%8F%AC%EB%B0%B0%EC%96%91.java)                    | |
+|  6   | [숫자 만들기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeRZV6kBUDFAVH&categoryId=AWIeRZV6kBUDFAVH&categoryType=CODE)       | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_%EC%88%AB%EC%9E%90%EB%A7%8C%EB%93%A4%EA%B8%B0.java)                            | |
+|  7   | [요리사](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeUtVakTMDFAVH&categoryId=AWIeUtVakTMDFAVH&categoryType=CODE)           | | |
+|  8   | [특이한 자석](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeV9sKkcoDFAVH&categoryId=AWIeV9sKkcoDFAVH&categoryType=CODE)       | | |
+|  9   | [활주로 건설](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeW7FakkUDFAVH&categoryId=AWIeW7FakkUDFAVH&categoryType=CODE)       | | |
+|  10  | [홈 방법 서비스](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu&categoryId=AV5V61LqAf8DFAWu&categoryType=CODE)    | | |
+|  11  | [보호 필름](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V1SYKAaUDFAWu&categoryId=AV5V1SYKAaUDFAWu&categoryType=CODE)        | | |
+|  12  | [벌꿀채취](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu&categoryId=AV5V4A46AdIDFAWu&categoryType=CODE)         | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_%EB%B2%8C%EA%BF%80%EC%B1%84%EC%B7%A8.java)                                      | |
+|  13  | [디저트 카페](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu&categoryId=AV5VwAr6APYDFAWu&categoryType=CODE)       | | |
+|  14  | [차량 정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy&categoryId=AV6c6bgaIuoDFAXy&categoryType=CODE)       | | |
+|  15  | [점심 식사시간](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5-BEE6AK0DFAVl&categoryId=AV5-BEE6AK0DFAVl&categoryType=CODE)     | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_%EC%A0%90%EC%8B%AC%EC%8B%9D%EC%82%AC%EC%8B%9C%EA%B0%84.java)                    | |
+|  16  | [미생물 격리](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV597vbqAH0DFAVl&categoryId=AV597vbqAH0DFAVl&categoryType=CODE)       | | |
+|  17  | [탈주범 검거](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq&categoryId=AV5PpLlKAQ4DFAUq&categoryType=CODE)       | | |
+|  18  | [수영장](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpFQaAQMDFAUq&categoryId=AV5PpFQaAQMDFAUq&categoryType=CODE)           | [Sol](https://github.com/SubAkBa/Algorithm_Solution/blob/master/SWEA/Solutions/Solution_%EC%88%98%EC%98%81%EC%9E%A5.java)                                              | |
+|  19  | [등산로 조성](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq&categoryId=AV5PoOKKAPIDFAUq&categoryType=CODE)       | | |
