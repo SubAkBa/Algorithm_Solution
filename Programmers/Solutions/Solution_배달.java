@@ -6,24 +6,24 @@ public class Solution_배달 {
 	public static int Delivery(int[][] adj, int start, int N, int K) {
 		int[] dist = new int[N + 1];
 		boolean[] visited = new boolean[N + 1];
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		PriorityQueue<Edge> pq = new PriorityQueue<>();
 
 		Arrays.fill(dist, INF);
 
-		pq.offer(start);
 		visited[start] = true;
 		dist[start] = 0;
+		pq.offer(new Edge(start, dist[start]));
 
 		while (!pq.isEmpty()) {
-			int from = pq.poll();
+			Edge from = pq.poll();
 
 			for (int to = 1; to <= N; ++to) {
-				if (adj[from][to] == 0 || dist[to] <= dist[from] + adj[from][to])
+				if (adj[from.idx][to] == 0 || dist[to] <= dist[from.idx] + adj[from.idx][to])
 					continue;
 
-				pq.offer(to);
 				visited[to] = true;
-				dist[to] = dist[from] + adj[from][to];
+				dist[to] = dist[from.idx] + adj[from.idx][to];
+				pq.offer(new Edge(to, dist[to]));
 			}
 		}
 
@@ -49,6 +49,19 @@ public class Solution_배달 {
 		}
 
 		return Delivery(adj, 1, N, K);
+	}
+
+	public static class Edge implements Comparable<Edge> {
+		int idx, cost;
+
+		public Edge(int idx, int cost) {
+			this.idx = idx;
+			this.cost = cost;
+		}
+
+		public int compareTo(Edge o) {
+			return this.cost - o.cost;
+		}
 	}
 
 	public static void main(String[] args) {
