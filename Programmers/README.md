@@ -47,20 +47,20 @@
 |  5   | [동굴 탐험](https://programmers.co.kr/learn/courses/30/lessons/67260)          | 4     | | | |
   
 ### 2018 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                       | Level | Category                 | Solution (Time / Space Complexity)                                                                                       | Note |
-| :--: | ------------------------------------------------------------------------------ | ----- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---- |
-|  1   | [\[1차\] 비밀지도](https://programmers.co.kr/learn/courses/30/lessons/17681)      | 1     | |[]() | |
-|  2   | [\[1차\] 다트게임](https://programmers.co.kr/learn/courses/30/lessons/17682)      | 1     | |[]() | |
+| Idx  | Question                                                                       | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                       | Note |
+| :--: | ------------------------------------------------------------------------------ | ----- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [\[1차\] 비밀지도](https://programmers.co.kr/learn/courses/30/lessons/17681)      | 1     | String, Bit Manipulation | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84.java)          | |
+|  2   | [\[1차\] 다트게임](https://programmers.co.kr/learn/courses/30/lessons/17682)      | 1     | Stack                    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%8B%A4%ED%8A%B8%EA%B2%8C%EC%9E%84.java)          | |
 |  3   | [\[1차\] 뉴스 클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677) | 2     | |[]() | |
 |  4   | [\[1차\] 프렌즈4블록](https://programmers.co.kr/learn/courses/30/lessons/17679)    | 2     | |[]() | |
-|  5   | [\[1차\] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)         | 2     | |[]() | |
+|  5   | [\[1차\] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)         | 2     | Queue, List              | [O(N)/O(M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%BA%90%EC%8B%9C.java)                            | |
 |  6   | [\[3차\] 방금그곡](https://programmers.co.kr/learn/courses/30/lessons/17683)      | 2     | |[]() | |
 |  7   | [\[3차\] 압축](https://programmers.co.kr/learn/courses/30/lessons/17684)         | 2     | |[]() | |
 |  8   | [\[3차\] 파일명 정렬](https://programmers.co.kr/learn/courses/30/lessons/17686)    | 2     | |[]() | |
 |  9   | [\[3차\] N진수 게임](https://programmers.co.kr/learn/courses/30/lessons/17687)    | 2     | |[]() | |
 |  10  | [\[1차\] 추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676)    | 3     | |[]() | |
 |  11  | [\[1차\] 셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678)      | 3     | |[]() | |
-|  12  | [\[3차\] 자동완성](https://programmers.co.kr/learn/courses/30/lessons/17685)      | 4     | |[]() | |
+|  12  | [\[3차\] 자동완성](https://programmers.co.kr/learn/courses/30/lessons/17685)      | 4     | String, Trie             | [O(max(N,L))/O(N\*L)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1.java) | |
 
 ### 2019 KAKAO BLIND RECRUITMENT
 | Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                       | Note |
