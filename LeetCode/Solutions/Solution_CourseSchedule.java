@@ -2,16 +2,16 @@ import java.util.*;
 
 public class Solution_CourseSchedule {
 
-	public static boolean Finishing(ArrayList<Integer>[] adj, int[] indeg, int len) {
+	public static boolean Topological_Sort(int numCourses, List<Integer>[] adj, int[] indeg) {
 		Queue<Integer> queue = new LinkedList<>();
 
-		for (int i = 0; i < len; ++i) {
+		for (int i = 0; i < numCourses; ++i) {
 			if (indeg[i] == 0)
 				queue.offer(i);
 		}
 
-		for (int i = 0; i < len; ++i) {
-			if (queue.size() == 0)
+		for (int i = 0; i < numCourses; ++i) {
+			if (queue.isEmpty())
 				return false;
 
 			int from = queue.poll();
@@ -26,8 +26,9 @@ public class Solution_CourseSchedule {
 	}
 
 	public static boolean canFinish(int numCourses, int[][] prerequisites) {
-		ArrayList<Integer>[] adj = new ArrayList[numCourses];
 		int[] indeg = new int[numCourses];
+		List<Integer>[] adj = new ArrayList[numCourses];
+
 		int plen = prerequisites.length;
 
 		for (int i = 0; i < numCourses; ++i)
@@ -38,12 +39,11 @@ public class Solution_CourseSchedule {
 			++indeg[prerequisites[i][0]];
 		}
 
-		return Finishing(adj, indeg, numCourses);
+		return Topological_Sort(numCourses, adj, indeg);
 	}
 
 	public static void main(String[] args) {
-		System.out.println(canFinish(2, new int[][] { { 1, 0 } }));
-		System.out.println(canFinish(2, new int[][] { { 1, 0 }, { 0, 1 } }));
+		System.out.println(canFinish(2, new int[][] { { 1, 0 } })); // true
+		System.out.println(canFinish(2, new int[][] { { 1, 0 }, { 0, 1 } })); // false
 	}
-
 }
