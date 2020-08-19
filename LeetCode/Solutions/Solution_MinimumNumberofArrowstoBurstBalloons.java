@@ -6,7 +6,7 @@ public class Solution_MinimumNumberofArrowstoBurstBalloons {
 		int len = points.length;
 
 		if (len <= 1)
-			return len;
+		    return len;
 
 		Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));
 
@@ -14,15 +14,15 @@ public class Solution_MinimumNumberofArrowstoBurstBalloons {
 		int end = points[0][1];
 
 		for (int i = 1; i < len; ++i) {
-            if(points[i][0] <= end)
-                continue;
-            
-            end = points[i][1];
-            ++count;
+		    if(points[i][0] <= end)
+			continue;
+
+		    end = points[i][1];
+		    ++count;
 		}
 
 		if (points[len - 1][0] <= end)
-			++count;
+		    ++count;
 
 		return count;
 	}
