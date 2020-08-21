@@ -14,7 +14,6 @@
 - List : [List](https://github.com/SubAkBa/Algorithm_Solution/tree/master/Programmers)
 
 ### SWEA (SoftWare Expert Academy) Directory
-- SoftWare Expert Academy Coding Problem Solution.
 - Link : [SWEA](https://swexpertacademy.com/main/main.do)
 - List : [List](https://github.com/SubAkBa/Algorithm_Solution/tree/master/SWEA)
   
