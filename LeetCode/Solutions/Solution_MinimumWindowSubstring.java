@@ -17,9 +17,8 @@ public class Solution_MinimumWindowSubstring {
 
 		while (right < slen) {
 			if (type > 0) {
-				--counts[s.charAt(right)];
 
-				if (counts[s.charAt(right)] >= 0)
+				if ((--counts[s.charAt(right)]) >= 0)
 					--type;
 
 				++right;
@@ -31,9 +30,7 @@ public class Solution_MinimumWindowSubstring {
 					answer = s.substring(left, right);
 				}
 
-				++counts[s.charAt(left)];
-
-				if (counts[s.charAt(left)] > 0)
+				if ((++counts[s.charAt(left)]) > 0)
 					++type;
 
 				++left;
