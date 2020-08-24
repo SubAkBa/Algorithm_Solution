@@ -63,25 +63,25 @@
 |  12  | [\[3차\] 자동완성](https://programmers.co.kr/learn/courses/30/lessons/17685)      | 4     | String, Trie             | [O(max(N,L))/O(N\*L)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1.java) | |
 
 ### 2019 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                       | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---- |
+| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                       | Note |
+| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889)            | 1     | |[]() | |
-|  2   | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888)         | 2     | |[]() | |
+|  2   | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888)         | 2     | Hash Table               | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.java) | |
 |  3   | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)            | 2     | |[]() | |
 |  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | |[]() | |
 |  5   | [매칭 점수](https://programmers.co.kr/learn/courses/30/lessons/42893)         | 3     | |[]() | |
-|  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)   | 4     | |[]() | |
+|  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)  | 4     | |[]() | |
 |  7   | [블록 게임](https://programmers.co.kr/learn/courses/30/lessons/42894)         | 4     | |[]() | |
 
 ### 2020 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                       | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---- |
+| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                               | Note |
+| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
 |  1   | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)        | 2     | |[]() | |
 |  2   | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)          | 2     | |[]() | |
 |  3   | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)       | 3     | |[]() | |
 |  4   | [기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)      | 3     | |[]() | |
 |  5   | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)          | 3     | |[]() | |
 |  6   | [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063)       | 3     | |[]() | |
-|  7   | [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)          | 4     | |[]() | |
+|  7   | [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)          | 4     | String, Trie            | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B0%80%EC%82%AC%EA%B2%80%EC%83%89.java) | Reverse & Length Trie |
 
 
