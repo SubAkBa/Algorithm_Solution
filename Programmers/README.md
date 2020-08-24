@@ -38,11 +38,11 @@
 |  5   | [호텔 방 배정](https://programmers.co.kr/learn/courses/30/lessons/64063)       | 4     | Union-Find, Hash Table   | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%98%B8%ED%85%94%EB%B0%A9%EB%B0%B0%EC%A0%95.java)                                      | |
   
 ### 2020 카카오 인턴십
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                              | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                               | Note |
+| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [키 패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256)      | 1     | Graph                    |[O()/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%82%A4%ED%8C%A8%EB%93%9C%EB%88%84%EB%A5%B4%EA%B8%B0.java) | BFS를 이용할 필요가 없을 것 같음 |
 |  2   | [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257)        | 2     | | | |
-|  3   | [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258)          | 3     | Hash Table, Two Pointer  | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B3%B4%EC%84%9D%EC%87%BC%ED%95%91.java)                 | |
+|  3   | [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258)          | 3     | Hash Table, Two Pointer  | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B3%B4%EC%84%9D%EC%87%BC%ED%95%91.java)                 | 유사 문제 : [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|
 |  4   | [경주로 건설](https://programmers.co.kr/learn/courses/30/lessons/67259)        | 3     | | | |
 |  5   | [동굴 탐험](https://programmers.co.kr/learn/courses/30/lessons/67260)          | 4     | | | |
   
