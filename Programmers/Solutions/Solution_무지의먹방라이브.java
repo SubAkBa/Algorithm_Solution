@@ -17,7 +17,7 @@ public class Solution_무지의먹방라이브 {
 			}
 		};
 
-        List<int[]> list = new ArrayList<>();
+        	List<int[]> list = new ArrayList<>();
         
 		int flen = food_times.length;
 		long sum = 0;
@@ -34,7 +34,7 @@ public class Solution_무지의먹방라이브 {
 		int prevtime = 0, n = flen;
         
 		for (int i = 0; i < flen; ++i) {
-            int time = list.get(i)[0];
+                        int time = list.get(i)[0];
 			long diff = time - prevtime;
 
 			if (diff != 0) {
