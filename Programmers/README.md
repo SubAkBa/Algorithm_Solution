@@ -30,7 +30,7 @@
   
 ### 2019 카카오 개발자 겨울 인턴십
 | Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                                                            | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |                                                                
 |  1   | [크레인 인형뽑기 게임](https://programmers.co.kr/learn/courses/30/lessons/64061) | 1     | Stack                    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%81%AC%EB%A0%88%EC%9D%B8%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0%EA%B2%8C%EC%9E%84.java)  | |
 |  2   | [투플](https://programmers.co.kr/learn/courses/30/lessons/64065)             | 2     | Sort, String, Hash Table | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%8A%9C%ED%94%8C.java)                                                             | |
 |  3   | [불량 사용자](https://programmers.co.kr/learn/courses/30/lessons/64064)        | 3     | Hash Table               | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B6%88%EB%9F%89%EC%82%AC%EC%9A%A9%EC%9E%90.java)                                      | | 
@@ -63,14 +63,14 @@
 |  12  | [\[3차\] 자동완성](https://programmers.co.kr/learn/courses/30/lessons/17685)      | 4     | String, Trie             | [O(max(N,L))/O(N\*L)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1.java) | |
 
 ### 2019 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                       | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                                                      | Note |
+| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889)            | 1     | |[]() | |
-|  2   | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888)         | 2     | Hash Table               | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.java) | |
+|  2   | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888)         | 2     | Hash Table               | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.java)                                | |
 |  3   | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)            | 2     | |[]() | |
 |  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | |[]() | |
 |  5   | [매칭 점수](https://programmers.co.kr/learn/courses/30/lessons/42893)         | 3     | |[]() | |
-|  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)  | 4     | |[]() | |
+|  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)  | 4     | Sort, Heap, Greedy        | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%AC%B4%EC%A7%80%EC%9D%98%EB%A8%B9%EB%B0%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C.java) | 자료형 (int, long) 과 연산 순위 기억하자 (지옥의 k%n) |
 |  7   | [블록 게임](https://programmers.co.kr/learn/courses/30/lessons/42894)         | 4     | |[]() | |
 
 ### 2020 KAKAO BLIND RECRUITMENT
