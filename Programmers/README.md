@@ -51,12 +51,12 @@
 | :--: | ------------------------------------------------------------------------------ | ----- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [\[1차\] 비밀지도](https://programmers.co.kr/learn/courses/30/lessons/17681)      | 1     | String, Bit Manipulation | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84.java)          | |
 |  2   | [\[1차\] 다트게임](https://programmers.co.kr/learn/courses/30/lessons/17682)      | 1     | Stack                    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%8B%A4%ED%8A%B8%EA%B2%8C%EC%9E%84.java)          | |
-|  3   | [\[1차\] 뉴스 클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677) | 2     | |[]() | |
+|  3   | [\[1차\] 뉴스 클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677) | 2     | Math, Hash Table, String | [O(N+M)/O(N+M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81.java) | |
 |  4   | [\[1차\] 프렌즈4블록](https://programmers.co.kr/learn/courses/30/lessons/17679)    | 2     | |[]() | |
 |  5   | [\[1차\] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)         | 2     | Queue, List              | [O(N)/O(M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%BA%90%EC%8B%9C.java)                            | |
 |  6   | [\[3차\] 방금그곡](https://programmers.co.kr/learn/courses/30/lessons/17683)      | 2     | |[]() | |
 |  7   | [\[3차\] 압축](https://programmers.co.kr/learn/courses/30/lessons/17684)         | 2     | |[]() | |
-|  8   | [\[3차\] 파일명 정렬](https://programmers.co.kr/learn/courses/30/lessons/17686)    | 2     | |[]() | |
+|  8   | [\[3차\] 파일명 정렬](https://programmers.co.kr/learn/courses/30/lessons/17686)    | 2     | Sort, String            | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%8C%8C%EC%9D%BC%EB%AA%85%EC%A0%95%EB%A0%AC.java)    | |
 |  9   | [\[3차\] N진수 게임](https://programmers.co.kr/learn/courses/30/lessons/17687)    | 2     | |[]() | |
 |  10  | [\[1차\] 추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676)    | 3     | |[]() | |
 |  11  | [\[1차\] 셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678)      | 3     | |[]() | |
@@ -68,7 +68,7 @@
 |  1   | [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889)            | 1     | |[]() | |
 |  2   | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888)         | 2     | Hash Table               | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.java)                                | |
 |  3   | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)            | 2     | Bit Manipulation         | [O(N\*M)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%9B%84%EB%B3%B4%ED%82%A4.java)                                               | Bit를 이용한 조합 |
-|  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | Tree, DFS                | [O(NlogN/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B8%B8%EC%B0%BE%EA%B8%B0%EA%B2%8C%EC%9E%84.java)                             | Tree Construction |
+|  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | Tree, DFS                | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B8%B8%EC%B0%BE%EA%B8%B0%EA%B2%8C%EC%9E%84.java)                             | Tree Construction |
 |  5   | [매칭 점수](https://programmers.co.kr/learn/courses/30/lessons/42893)         | 3     | | []()                                          | |
 |  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)  | 4     | Sort, Heap, Greedy       | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%AC%B4%EC%A7%80%EC%9D%98%EB%A8%B9%EB%B0%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C.java) | 자료형 (int, long) 과 연산 순위 기억하자 (지옥의 k%n) |
 |  7   | [블록 게임](https://programmers.co.kr/learn/courses/30/lessons/42894)         | 4     | |[]() | |
