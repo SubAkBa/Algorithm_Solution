@@ -67,10 +67,10 @@
 | :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889)            | 1     | |[]() | |
 |  2   | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888)         | 2     | Hash Table               | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.java)                                | |
-|  3   | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)            | 2     | |[]() | |
-|  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | |[]() | |
-|  5   | [매칭 점수](https://programmers.co.kr/learn/courses/30/lessons/42893)         | 3     | |[]() | |
-|  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)  | 4     | Sort, Heap, Greedy        | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%AC%B4%EC%A7%80%EC%9D%98%EB%A8%B9%EB%B0%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C.java) | 자료형 (int, long) 과 연산 순위 기억하자 (지옥의 k%n) |
+|  3   | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)            | 2     | Bit Manipulation         | [O(N\*M)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%9B%84%EB%B3%B4%ED%82%A4.java)                                               | Bit를 이용한 조합 |
+|  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | Tree, DFS                | [O(NlogN/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B8%B8%EC%B0%BE%EA%B8%B0%EA%B2%8C%EC%9E%84.java)                             | Tree Construction |
+|  5   | [매칭 점수](https://programmers.co.kr/learn/courses/30/lessons/42893)         | 3     | | []()                                          | |
+|  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)  | 4     | Sort, Heap, Greedy       | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%AC%B4%EC%A7%80%EC%9D%98%EB%A8%B9%EB%B0%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C.java) | 자료형 (int, long) 과 연산 순위 기억하자 (지옥의 k%n) |
 |  7   | [블록 게임](https://programmers.co.kr/learn/courses/30/lessons/42894)         | 4     | |[]() | |
 
 ### 2020 KAKAO BLIND RECRUITMENT
