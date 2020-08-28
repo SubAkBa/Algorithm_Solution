@@ -68,19 +68,19 @@
 |  1   | [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889)            | 1     | Hash Table, Sort         | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%8B%A4%ED%8C%A8%EC%9C%A8.java)                                              | |
 |  2   | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888)         | 2     | Hash Table               | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.java)                                | |
 |  3   | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)            | 2     | Bit Manipulation         | [O(N\*M)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%9B%84%EB%B3%B4%ED%82%A4.java)                                               | Bit를 이용한 조합 |
-|  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | Tree, DFS                | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B8%B8%EC%B0%BE%EA%B8%B0%EA%B2%8C%EC%9E%84.java)                             | Tree Construction |
+|  4   | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892)       | 3     | Tree, DFS                | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B8%B8%EC%B0%BE%EA%B8%B0%EA%B2%8C%EC%9E%84.java)                            | Tree Construction |
 |  5   | [매칭 점수](https://programmers.co.kr/learn/courses/30/lessons/42893)         | 3     | | []()                                          | |
 |  6   | [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891)  | 4     | Sort, Heap, Greedy       | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%AC%B4%EC%A7%80%EC%9D%98%EB%A8%B9%EB%B0%A9%EB%9D%BC%EC%9D%B4%EB%B8%8C.java) | 자료형 (int, long) 과 연산 순위 기억하자 (지옥의 k%n) |
 |  7   | [블록 게임](https://programmers.co.kr/learn/courses/30/lessons/42894)         | 4     | |[]() | |
 
 ### 2020 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                               | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
+| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
+| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)        | 2     | |[]() | |
 |  2   | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)          | 2     | |[]() | |
 |  3   | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)       | 3     | |[]() | |
 |  4   | [기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)      | 3     | |[]() | |
-|  5   | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)          | 3     | |[]() | |
+|  5   | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)          | 3     | DFS, Permutation        | [O(D!)/O(W^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%99%B8%EB%B2%BD%EC%A0%90%EA%B2%80.java)    | 되도 않는 백트래킹 사용하지 않기 .. (answer -> -1) |
 |  6   | [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063)       | 3     | |[]() | |
 |  7   | [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)          | 4     | String, Trie            | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B0%80%EC%82%AC%EA%B2%80%EC%83%89.java) | Reverse & Length Trie |
 
