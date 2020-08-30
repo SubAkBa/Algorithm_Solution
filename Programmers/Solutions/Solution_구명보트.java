@@ -3,16 +3,17 @@ import java.util.*;
 public class Solution_lifeboat {
 
 	public static int solution(int[] people, int limit) {
-		int answer = 0, idx = 0, i = people.length - 1;
+		int answer = 0, idx = 0, i;
 		Arrays.sort(people);
 
-		for (; i > idx; i--) {
-			if (people[i] + people[idx] > limit) {
+		for (i = people.length - 1; i > idx; --i) {
+			if (people[i] + people[idx] > limit)
 				answer++;
-			} else {
+			else {
 				idx++;
 				answer++;
 			}
+
 		}
 
 		if (i == idx)
