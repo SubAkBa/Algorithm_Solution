@@ -96,15 +96,15 @@
 |  7   | [블록 게임](https://programmers.co.kr/learn/courses/30/lessons/42894)         | 4     | |[]() | |
 
 ### 2020 KAKAO BLIND RECRUITMENT
-| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
-| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                                                 | Note |
+| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)        | 2     | |[]() | |
 |  2   | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)          | 2     | |[]() | |
-|  3   | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)       | 3     | |[]() | |
+|  3   | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)       | 3     |                         | [O(M^2\*(N+M)^2)/O((N+M)^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%9E%90%EB%AC%BC%EC%87%A0%EC%99%80%EC%97%B4%EC%87%A0.java) | |
 |  4   | [기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)      | 3     | |[]() | |
-|  5   | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)          | 3     | DFS, Permutation        | [O(D!)/O(W^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%99%B8%EB%B2%BD%EC%A0%90%EA%B2%80.java)    | 되도 않는 백트래킹 사용하지 않기 .. (answer -> -1) |
+|  5   | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)          | 3     | DFS, Permutation        | [O(D!)/O(W^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%99%B8%EB%B2%BD%EC%A0%90%EA%B2%80.java)                                 | 되도 않는 백트래킹 사용하지 않기 .. (answer -> -1) |
 |  6   | [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063)       | 3     | |[]() | |
-|  7   | [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)          | 4     | String, Trie            | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B0%80%EC%82%AC%EA%B2%80%EC%83%89.java) | Reverse & Length Trie |
+|  7   | [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)          | 4     | String, Trie            | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B0%80%EC%82%AC%EA%B2%80%EC%83%89.java)                              | Reverse & Length Trie |
 
 ### Level 1
 | Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
@@ -145,24 +145,24 @@
 |  34  | [직사각형 별찍기](https://programmers.co.kr/learn/courses/30/lessons/12969)             | | []() | |
 
 ### Level 2
-| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
-| :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-|  1   | [124 나라의 숫자](https://programmers.co.kr/learn/courses/30/lessons/12899)          | | []() | |
-|  2   | [주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)                | | []() | |
-|  3   | [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587)                  | | []() | |
+| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                                   | Note |
+| :--: | --------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [124 나라의 숫자](https://programmers.co.kr/learn/courses/30/lessons/12899)          | Math                     | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_124%EB%82%98%EB%9D%BC%EC%9D%98%EC%88%AB%EC%9E%90.java)          | |
+|  2   | [주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)                | Stack                    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A3%BC%EC%8B%9D%EA%B0%80%EA%B2%A9.java)                       | |
+|  3   | [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587)                  | Sort, Queue              | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%94%84%EB%A6%B0%ED%84%B0.java)                           | |
 |  4   | [다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583)         | | []() | |
 |  5   | [기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586)                 | | []() | |
 |  6   | [조이스틱](https://programmers.co.kr/learn/courses/30/lessons/42860)                 | | []() | |
-|  7   | [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)              | | []() | |
-|  8   | [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)                 | | []() | |
+|  7   | [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)              | Sort, String             | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B0%80%EC%9E%A5%ED%81%B0%EC%88%98.java)                  | 유사한 문제 : [Largest Number](https://leetcode.com/problems/largest-number/) |
+|  8   | [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)                 | Heap                     | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%8D%94%EB%A7%B5%EA%B2%8C.java)                           | |
 |  9   | [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)               | | []() | |
 |  10  | [큰 수 만들기](https://programmers.co.kr/learn/courses/30/lessons/42883)            | | []() | |
-|  11  | [전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)            | | []() | |
-|  12  | [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747)              | | []() | |
-|  13  | [구명보트](https://programmers.co.kr/learn/courses/30/lessons/42885)               | | []() | |
+|  11  | [전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)            | Trie                     | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%EB%AA%A9%EB%A1%9D.java) | |
+|  12  | [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747)              | Sort                      | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_HIndex.java) | |
+|  13  | [구명보트](https://programmers.co.kr/learn/courses/30/lessons/42885)               | Sort, Greedy              | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B5%AC%EB%AA%85%EB%B3%B4%ED%8A%B8.java) | |
 |  14  | [위장](https://programmers.co.kr/learn/courses/30/lessons/42578)                  | | []() | |
-|  15  | [카펫](https://programmers.co.kr/learn/courses/30/lessons/42842)                  | | []() | |
-|  16  | [타겟넘버](https://programmers.co.kr/learn/courses/30/lessons/43165)               | | []() | |
+|  15  | [카펫](https://programmers.co.kr/learn/courses/30/lessons/42842)                  | Math                      | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%B9%B4%ED%8E%AB.java) | |
+|  16  | [타겟넘버](https://programmers.co.kr/learn/courses/30/lessons/43165)               | DFS                       | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%83%80%EA%B2%9F%EB%84%98%EB%B2%84.java) | |
 |  17  | [가장 큰 정사각형 찾기](https://programmers.co.kr/learn/courses/30/lessons/12905)     | | []() | |
 |  18  | [올바른 괄호](https://programmers.co.kr/learn/courses/30/lessons/12909)             | | []() | |
 |  19  | [다음 큰 숫자](https://programmers.co.kr/learn/courses/30/lessons/12911)            | | []() | |
@@ -176,25 +176,25 @@
 |  27  | [N개의 최소공배수](https://programmers.co.kr/learn/courses/30/lessons/12953)         | | []() | |
 
 ### Level 3
-| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
-| :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                                                 | Note |
+| :--: | --------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [N으로 표현](https://programmers.co.kr/learn/courses/30/lessons/42895)              | | []() | |
 |  2   | [2 x N 타일링](https://programmers.co.kr/learn/courses/30/lessons/12900)            | | []() | |
-|  3   | [네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162)                | | []() | |
-|  4   | [디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627)           | | []() | |
+|  3   | [네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162)                | DFS                      | [O(V+E)/O(V^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.java)                                | |
+|  4   | [디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627)           | Heap                     | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%94%94%EC%8A%A4%ED%81%AC%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC.java)     | |
 |  5   | [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189)             | | []() | |
-|  6   | [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861)              | | []() | |
-|  7   | [정수 삼각형](https://programmers.co.kr/learn/courses/30/lessons/43105)              | | []() | |
+|  6   | [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861)              | MST, Graph               | [O(ElogE)/O(E)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%84%AC%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0.java)                       | |
+|  7   | [정수 삼각형](https://programmers.co.kr/learn/courses/30/lessons/43105)              | DP                       | [O(N^2)/O(N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A0%95%EC%88%98%EC%82%BC%EA%B0%81%ED%98%95.java)                       | |
 |  8   | [나누어 떨어지는 숫자 배열](https://programmers.co.kr/learn/courses/30/lessons/12910)   | | []() | |
 |  9   | [단어 변환](https://programmers.co.kr/learn/courses/30/lessons/43163)               | | []() | |
 |  10  | [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884)              | | []() | |
-|  11  | [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)                | | []() | |
-|  12  | [이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)           | | []() | |
+|  11  | [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)                | Binary Search            | [O(NlogN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%9E%85%EA%B5%AD%EC%8B%AC%EC%82%AC.java)                                | |
+|  12  | [이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)           | Linked List               | [O(N^2)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%9D%B4%EC%A4%91%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84%ED%81%90.java)       | |
 |  13  | [여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)               | | []() | |
 |  14  | [베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)              | | []() | |
-|  15  | [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898)                 | | []() | |
-|  16  | [순위](https://programmers.co.kr/learn/courses/30/lessons/49191)                  | | []() | |
-|  17  | [가장 긴 팰린드롬](https://programmers.co.kr/learn/courses/30/lessons/12904)         | | []() | |
+|  15  | [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898)                 | DP                        | [O(N\*M)O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%93%B1%EA%B5%A3%EA%B8%B8.java)                                        | |
+|  16  | [순위](https://programmers.co.kr/learn/courses/30/lessons/49191)                  | Floyd-Warshall, Graph     | [O(N^3)/O(N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%88%9C%EC%9C%84.java) | |
+|  17  | [가장 긴 팰린드롬](https://programmers.co.kr/learn/courses/30/lessons/12904)         | Manacher, String          | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B0%80%EC%9E%A5%EA%B8%B4%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.java) | |
 |  18  | [거스름돈](https://programmers.co.kr/learn/courses/30/lessons/12907)                | | []() | |
 |  19  | [멀리 뛰기](https://programmers.co.kr/learn/courses/30/lessons/12914)               | | []() | |
 |  20  | [야근 지수](https://programmers.co.kr/learn/courses/30/lessons/12927)               | | []() | |
@@ -207,8 +207,8 @@
 | Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
 | :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [3 x N 타일링](https://programmers.co.kr/learn/courses/30/lessons/12902)            | | []() | |
-|  2   | [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236)                | | []() | |
-|  3   | [도둑질](https://programmers.co.kr/learn/courses/30/lessons/42897)                  | | []() | |
+|  2   | [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236)                | Binary Search            | [O(NlogN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC.java)    | |
+|  3   | [도둑질](https://programmers.co.kr/learn/courses/30/lessons/42897)                  | DP                       | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%8F%84%EB%91%91%EC%A7%88.java) | |
 |  4   | [선입 선출 스케줄링](https://programmers.co.kr/learn/courses/30/lessons/12920)         | | []() | |
 |  5   | [숫자 블록](https://programmers.co.kr/learn/courses/30/lessons/12923)               | | []() | |
 |  6   | [올바른 괄호의 갯수](https://programmers.co.kr/learn/courses/30/lessons/12929)        | | []() | |
