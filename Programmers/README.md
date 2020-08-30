@@ -5,6 +5,28 @@
 |  1   | [짝지어 제거하기](https://programmers.co.kr/learn/courses/30/lessons/12973) | 2     | Stack    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A7%9D%EC%A7%80%EC%96%B4%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.java) | |
 |  2   | [예상 대진표](https://programmers.co.kr/learn/courses/30/lessons/12985)    | 2     | Math     | [O(logN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%88%EC%83%81%EB%8C%80%EC%A7%84%ED%91%9C.java)                | |
 |  3   | [단어 퍼즐](https://programmers.co.kr/learn/courses/30/lessons/12983)      | 4     | | | |
+
+### 2017 카카오 코드 예선
+| Idx  | Question                                                                   | Level | Category | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | -------------------------------------------------------------------------- | ----- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [카카오프렌즈 컬러링북](https://programmers.co.kr/learn/courses/30/lessons/1829) | 2     | | []() | |
+|  2   | [브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830)     | 3     | | []() | |
+|  3   | [보행자 천국](https://programmers.co.kr/learn/courses/30/lessons/1832)        | 3     | | []() | |
+|  4   | [4단 고음](https://programmers.co.kr/learn/courses/30/lessons/1831)          | 4     | | []() | |
+|  5   | [캠핑](https://programmers.co.kr/learn/courses/30/lessons/1833)             | 4     | | []() | |
+|  6   | [신비로운 유적 탐험](https://programmers.co.kr/learn/courses/30/lessons/1834)   | 5     | | []() | |
+
+### 2017 카카오 코드 본선
+| Idx  | Question                                                                        | Level | Category | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ------------------------------------------------------------------------------- | ----- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [단체사진 찍기](https://programmers.co.kr/learn/courses/30/lessons/1835)            | 2     | | []() | |
+|  2   | [리틀 프렌즈 사천성](https://programmers.co.kr/learn/courses/30/lessons/1836)        | 3     | | []() | |
+|  3   | [GPS](https://programmers.co.kr/learn/courses/30/lessons/1837)                  | 3     | | []() | |
+|  4   | [몸짱 트레이너 라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1838) | 4     | | []() | |
+|  5   | [튜브의 소개팅](https://programmers.co.kr/learn/courses/30/lessons/1839)           | 5     | | []() | |
+|  6   | [스마트한 프로도](https://programmers.co.kr/learn/courses/30/lessons/1840)          | 5     | | []() | |
+|  7   | [IU와 콘의 보드게임](https://programmers.co.kr/learn/courses/30/lessons/1841)       | 5     | | []() | |
+|  8   | [네오의 귀걸이](https://programmers.co.kr/learn/courses/30/lessons/1842)           | 5     | | []() | |
   
 ### Summer/Winter Coding(~2018)
 | Idx  | Question                                                                  | Level | Category               | Solution (Time / Space Complexity)                                                                                                                                            | Note |
@@ -83,5 +105,119 @@
 |  5   | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)          | 3     | DFS, Permutation        | [O(D!)/O(W^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%99%B8%EB%B2%BD%EC%A0%90%EA%B2%80.java)    | 되도 않는 백트래킹 사용하지 않기 .. (answer -> -1) |
 |  6   | [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063)       | 3     | |[]() | |
 |  7   | [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)          | 4     | String, Trie            | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B0%80%EC%82%AC%EA%B2%80%EC%83%89.java) | Reverse & Length Trie |
+
+### Level 1
+| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
+| :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576)         | | []() | |
+|  2   | [모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840)                 | | []() | |
+|  3   | [체육복](https://programmers.co.kr/learn/courses/30/lessons/42862)                   | | []() | |
+|  4   | [K번째수](https://programmers.co.kr/learn/courses/30/lessons/42748)                  | | []() | |
+|  5   | [2016년](https://programmers.co.kr/learn/courses/30/lessons/12901)                  | | []() | |
+|  6   | [가운데 글자 가져오기](https://programmers.co.kr/learn/courses/30/lessons/12903)         | | []() | |
+|  7   | [같은 숫자는 싫어](https://programmers.co.kr/learn/courses/30/lessons/12906)            | | []() | |
+|  8   | [나누어 떨어지는 숫자 배열](https://programmers.co.kr/learn/courses/30/lessons/12910)     | | []() | |
+|  9   | [두 정수 사이의 합](https://programmers.co.kr/learn/courses/30/lessons/12912)           | | []() | |
+|  10  | [문자열 내 마음대로 정렬하기](https://programmers.co.kr/learn/courses/30/lessons/12915)    | | []() | |
+|  11  | [문자열 내 p와 y의 개수](https://programmers.co.kr/learn/courses/30/lessons/12916)       | | []() | |
+|  12  | [문자열 내림차순으로 배치하기](https://programmers.co.kr/learn/courses/30/lessons/12917)    | | []() | |
+|  13  | [문자열 다루기 기본](https://programmers.co.kr/learn/courses/30/lessons/12918)           | | []() | |
+|  14  | [서울에서 김서방 찾기](https://programmers.co.kr/learn/courses/30/lessons/12919)         | | []() | |
+|  15  | [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/12921)                 | | []() | |
+|  16  | [수박수박수박수박수박수?](https://programmers.co.kr/learn/courses/30/lessons/12922)       | | []() | |
+|  17  | [문자열을 정수로 바꾸기](https://programmers.co.kr/learn/courses/30/lessons/12925)       | | []() | |
+|  18  | [시저 암호](https://programmers.co.kr/learn/courses/30/lessons/12926)                 | | []() | |
+|  19  | [약수의 합](https://programmers.co.kr/learn/courses/30/lessons/12928)                 | | []() | |
+|  20  | [이상한 문자 만들기](https://programmers.co.kr/learn/courses/30/lessons/12930)          | | []() | |
+|  21  | [자릿수 더하기](https://programmers.co.kr/learn/courses/30/lessons/12931)              | | []() | |
+|  22  | [자연수 뒤집어 배열로 만들기](https://programmers.co.kr/learn/courses/30/lessons/12932)    | | []() | |
+|  23  | [정수 내림차순으로 배치하기](https://programmers.co.kr/learn/courses/30/lessons/12933)     | | []() | |
+|  24  | [정수 제곱근 판별](https://programmers.co.kr/learn/courses/30/lessons/12934)            | | []() | |
+|  25  | [제일 작은 수 제거하기](https://programmers.co.kr/learn/courses/30/lessons/12935)        | | []() | |
+|  26  | [짝수와 홀수](https://programmers.co.kr/learn/courses/30/lessons/12937)                | | []() | |
+|  27  | [최대공약수와 최소공배수](https://programmers.co.kr/learn/courses/30/lessons/12940)       | | []() | |
+|  28  | [콜라츠 추측](https://programmers.co.kr/learn/courses/30/lessons/12943)                | | []() | |
+|  29  | [평균 구하기](https://programmers.co.kr/learn/courses/30/lessons/12944)                | | []() | |
+|  30  | [하샤드 수](https://programmers.co.kr/learn/courses/30/lessons/12947)                 | | []() | |
+|  31  | [핸드폰 번호 가리기](https://programmers.co.kr/learn/courses/30/lessons/12948)          | | []() | |
+|  32  | [행렬의 덧셈](https://programmers.co.kr/learn/courses/30/lessons/12950)               | | []() | |
+|  33  | [x만큼 간격이 있는 n개의 숫자](https://programmers.co.kr/learn/courses/30/lessons/12954)  | | []() | |
+|  34  | [직사각형 별찍기](https://programmers.co.kr/learn/courses/30/lessons/12969)             | | []() | |
+
+### Level 2
+| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
+| :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [124 나라의 숫자](https://programmers.co.kr/learn/courses/30/lessons/12899)          | | []() | |
+|  2   | [주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)                | | []() | |
+|  3   | [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587)                  | | []() | |
+|  4   | [다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583)         | | []() | |
+|  5   | [기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586)                 | | []() | |
+|  6   | [조이스틱](https://programmers.co.kr/learn/courses/30/lessons/42860)                 | | []() | |
+|  7   | [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)              | | []() | |
+|  8   | [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)                 | | []() | |
+|  9   | [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)               | | []() | |
+|  10  | [큰 수 만들기](https://programmers.co.kr/learn/courses/30/lessons/42883)            | | []() | |
+|  11  | [전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)            | | []() | |
+|  12  | [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747)              | | []() | |
+|  13  | [구명보트](https://programmers.co.kr/learn/courses/30/lessons/42885)               | | []() | |
+|  14  | [위장](https://programmers.co.kr/learn/courses/30/lessons/42578)                  | | []() | |
+|  15  | [카펫](https://programmers.co.kr/learn/courses/30/lessons/42842)                  | | []() | |
+|  16  | [타겟넘버](https://programmers.co.kr/learn/courses/30/lessons/43165)               | | []() | |
+|  17  | [가장 큰 정사각형 찾기](https://programmers.co.kr/learn/courses/30/lessons/12905)     | | []() | |
+|  18  | [올바른 괄호](https://programmers.co.kr/learn/courses/30/lessons/12909)             | | []() | |
+|  19  | [다음 큰 숫자](https://programmers.co.kr/learn/courses/30/lessons/12911)            | | []() | |
+|  20  | [땅따먹기](https://programmers.co.kr/learn/courses/30/lessons/12913)               | | []() | |
+|  21  | [숫자의 표현](https://programmers.co.kr/learn/courses/30/lessons/12924)             | | []() | |
+|  22  | [최댓값과 최솟값](https://programmers.co.kr/learn/courses/30/lessons/12939)          | | []() | |
+|  23  | [최솟값 만들기](https://programmers.co.kr/learn/courses/30/lessons/12941)           | | []() | |
+|  24  | [피보나치 수](https://programmers.co.kr/learn/courses/30/lessons/12945)            | | []() | |
+|  25  | [행렬의 곱셈](https://programmers.co.kr/learn/courses/30/lessons/12949)            | | []() | |
+|  26  | [JadenCase 문자열 만들기](https://programmers.co.kr/learn/courses/30/lessons/12951) | | []() | |
+|  27  | [N개의 최소공배수](https://programmers.co.kr/learn/courses/30/lessons/12953)         | | []() | |
+
+### Level 3
+| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
+| :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [N으로 표현](https://programmers.co.kr/learn/courses/30/lessons/42895)              | | []() | |
+|  2   | [2 x N 타일링](https://programmers.co.kr/learn/courses/30/lessons/12900)            | | []() | |
+|  3   | [네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162)                | | []() | |
+|  4   | [디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627)           | | []() | |
+|  5   | [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189)             | | []() | |
+|  6   | [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861)              | | []() | |
+|  7   | [정수 삼각형](https://programmers.co.kr/learn/courses/30/lessons/43105)              | | []() | |
+|  8   | [나누어 떨어지는 숫자 배열](https://programmers.co.kr/learn/courses/30/lessons/12910)   | | []() | |
+|  9   | [단어 변환](https://programmers.co.kr/learn/courses/30/lessons/43163)               | | []() | |
+|  10  | [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884)              | | []() | |
+|  11  | [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)                | | []() | |
+|  12  | [이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)           | | []() | |
+|  13  | [여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)               | | []() | |
+|  14  | [베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)              | | []() | |
+|  15  | [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898)                 | | []() | |
+|  16  | [순위](https://programmers.co.kr/learn/courses/30/lessons/49191)                  | | []() | |
+|  17  | [가장 긴 팰린드롬](https://programmers.co.kr/learn/courses/30/lessons/12904)         | | []() | |
+|  18  | [거스름돈](https://programmers.co.kr/learn/courses/30/lessons/12907)                | | []() | |
+|  19  | [멀리 뛰기](https://programmers.co.kr/learn/courses/30/lessons/12914)               | | []() | |
+|  20  | [야근 지수](https://programmers.co.kr/learn/courses/30/lessons/12927)               | | []() | |
+|  21  | [줄 서는 방법](https://programmers.co.kr/learn/courses/30/lessons/12936)             | | []() | |
+|  22  | [최고의 집합](https://programmers.co.kr/learn/courses/30/lessons/12938)              | | []() | |
+|  23  | [하노이의 탑](https://programmers.co.kr/learn/courses/30/lessons/12946)             | | []() | |
+|  24  | [N-Queen](https://programmers.co.kr/learn/courses/30/lessons/12952)              | | []() | |
+
+### Level 4
+| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
+| :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [3 x N 타일링](https://programmers.co.kr/learn/courses/30/lessons/12902)            | | []() | |
+|  2   | [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236)                | | []() | |
+|  3   | [도둑질](https://programmers.co.kr/learn/courses/30/lessons/42897)                  | | []() | |
+|  4   | [선입 선출 스케줄링](https://programmers.co.kr/learn/courses/30/lessons/12920)         | | []() | |
+|  5   | [숫자 블록](https://programmers.co.kr/learn/courses/30/lessons/12923)               | | []() | |
+|  6   | [올바른 괄호의 갯수](https://programmers.co.kr/learn/courses/30/lessons/12929)        | | []() | |
+|  7   | [최적의 행렬 곱셈](https://programmers.co.kr/learn/courses/30/lessons/12942)          | | []() | |
+
+### Level 5
+| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
+| :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [방의 개수](https://programmers.co.kr/learn/courses/30/lessons/49190)               | | []() | |
+|  2   | [직사각형의 넓이](https://programmers.co.kr/learn/courses/30/lessons/12974)           | | []() | |
 
 
