@@ -101,7 +101,7 @@
 |  1   | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057)        | 2     | |[]() | |
 |  2   | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)          | 2     | |[]() | |
 |  3   | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)       | 3     |                         | [O(M^2\*(N+M)^2)/O((N+M)^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%9E%90%EB%AC%BC%EC%87%A0%EC%99%80%EC%97%B4%EC%87%A0.java) | |
-|  4   | [기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)      | 3     | |[]() | |
+|  4   | [기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061)      | 3     | Simulation              | [O(M+N^2)/O(M+N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B8%B0%EB%91%A5%EA%B3%BC%EB%B3%B4%EC%84%A4%EC%B9%98.java)          | 조건 간소화 및 패딩을 통한 경계 확인 생략 |
 |  5   | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062)          | 3     | DFS, Permutation        | [O(D!)/O(W^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%99%B8%EB%B2%BD%EC%A0%90%EA%B2%80.java)                                 | 되도 않는 백트래킹 사용하지 않기 .. (answer -> -1) |
 |  6   | [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063)       | 3     | |[]() | |
 |  7   | [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)          | 4     | String, Trie            | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EA%B0%80%EC%82%AC%EA%B2%80%EC%83%89.java)                              | Reverse & Length Trie |
