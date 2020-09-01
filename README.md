@@ -1,25 +1,21 @@
 # Algorithm Solution
 
 ## Directory
-### BaekJoon
 <img src="./img/baekjoon.png" width="300" height="70">
   
 - Link : [BaekJoon](https://www.acmicpc.net/)
 - List : [List]()
 
-### LeetCode Directory
-<img src="./img/leetcode.png" width="300" height="70">
+<img src="./img/leetcode.png" width="300" height="80">
   
 - Link : [LeetCode](https://leetcode.com/)
 - List : [List](https://github.com/SubAkBa/Algorithm_Solution/tree/master/LeetCode)
 
-### Programmers Directory
 <img src="./img/programmers.png" width="300" height="70">
   
 - Link : [Programmers](https://programmers.co.kr/learn/challenges)
 - List : [List](https://github.com/SubAkBa/Algorithm_Solution/tree/master/Programmers)
-
-### SWEA (SoftWare Expert Academy) Directory
+  
 <img src="./img/swea.png" width="300" height="70">
 
 - Link : [SWEA](https://swexpertacademy.com/main/main.do)
