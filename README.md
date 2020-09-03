@@ -3,7 +3,7 @@
 ## Directory
 <a href="https://www.acmicpc.net/"><img src="./img/baekjoon.png" width="300" height="70" ></a>
   
-- [List]()
+- [List](https://github.com/SubAkBa/Algorithm_Solution/tree/master/BaekJoon)
 <hr>
 
 <a href="https://leetcode.com/"><img src="./img/leetcode.png" width="300" height="100"></a>
