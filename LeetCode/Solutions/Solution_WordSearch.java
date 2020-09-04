@@ -16,7 +16,8 @@ public class Solution_WordSearch {
 		board[x][y] = '.';
 
 		boolean result = DFS(board, word, len, N, M, idx + 1, x + 1, y)
-				|| DFS(board, word, len, N, M, idx + 1, x - 1, y) || DFS(board, word, len, N, M, idx + 1, x, y - 1)
+				|| DFS(board, word, len, N, M, idx + 1, x - 1, y) 
+				|| DFS(board, word, len, N, M, idx + 1, x, y - 1)
 				|| DFS(board, word, len, N, M, idx + 1, x, y + 1);
 
 		board[x][y] = c;
