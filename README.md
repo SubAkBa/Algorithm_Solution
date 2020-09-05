@@ -1,6 +1,5 @@
 # Algorithm Solution
 
-## Directory
 <a href="https://www.acmicpc.net/" target="_blank"><img src="./img/baekjoon.png" width="300" height="70" ></a>
   
 - [List](https://github.com/SubAkBa/Algorithm_Solution/tree/master/BaekJoon)
@@ -22,7 +21,6 @@
 <hr>
   
 ## Blog
-### My Algorithm Solution Blog
 - Link : [Blog](https://soobarkbar.tistory.com/category/Algorithm)
   
 ## Study
