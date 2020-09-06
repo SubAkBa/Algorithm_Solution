@@ -204,14 +204,14 @@
 |  24  | [N-Queen](https://programmers.co.kr/learn/courses/30/lessons/12952)              | | []() | |
 
 ### Level 4
-| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                    | Note |
-| :--: | --------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| Idx  | Question                                                                          | Category                 | Solution (Time / Space Complexity)                                                                                                                                                       | Note |
+| :--: | --------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [3 x N 타일링](https://programmers.co.kr/learn/courses/30/lessons/12902)            | | []() | |
-|  2   | [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236)                | Binary Search            | [O(NlogN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC.java)    | |
-|  3   | [도둑질](https://programmers.co.kr/learn/courses/30/lessons/42897)                  | DP                       | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%8F%84%EB%91%91%EC%A7%88.java) | |
+|  2   | [징검다리](https://programmers.co.kr/learn/courses/30/lessons/43236)                | Binary Search            | [O(NlogN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC.java)                                      | |
+|  3   | [도둑질](https://programmers.co.kr/learn/courses/30/lessons/42897)                  | DP                       | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%8F%84%EB%91%91%EC%A7%88.java)                                                   | |
 |  4   | [선입 선출 스케줄링](https://programmers.co.kr/learn/courses/30/lessons/12920)         | | []() | |
 |  5   | [숫자 블록](https://programmers.co.kr/learn/courses/30/lessons/12923)               | | []() | |
-|  6   | [올바른 괄호의 갯수](https://programmers.co.kr/learn/courses/30/lessons/12929)        | | []() | |
+|  6   | [올바른 괄호의 갯수](https://programmers.co.kr/learn/courses/30/lessons/12929)        | DP, Catalan Number        | [O(2^N)/O(N\*N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%AC%EB%B0%94%EB%A5%B8%EA%B4%84%ED%98%B8%EC%9D%98%EA%B0%AF%EC%88%98.java) | |
 |  7   | [최적의 행렬 곱셈](https://programmers.co.kr/learn/courses/30/lessons/12942)          | | []() | |
 
 ### Level 5
