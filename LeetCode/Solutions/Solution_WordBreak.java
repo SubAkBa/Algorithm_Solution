@@ -1,64 +1,43 @@
 import java.util.*;
 
 public class Solution_WordBreak {
-//	public static boolean wordBreak(String s, List<String> wordDict) {
-//		int slen = s.length();
-//		boolean[] existed = new boolean[slen + 1];
-//		HashSet<String> word_set = new HashSet<>();
-//
-//		word_set.addAll(wordDict);
-//
-//		existed[0] = true;
-//		for (int i = 1; i <= slen; ++i) {
-//			for (int j = 0; j < i; ++j) {
-//				if (existed[j] && word_set.contains(s.substring(j, i))) {
-//					existed[i] = true;
-//					break;
-//				}
-//			}
-//		}
-//
-//		return existed[slen];
-//	}
+	static int size = 26;
 
-	static int slen;
-	static Trie trie;
+	public static boolean isConcatenated(String s, boolean[] visited, Trie trie, TrieNode current, int sidx, int len) {
+		if (sidx == len)
+			return current.isEndofWords;
 
-	public static boolean Find(TrieNode current, String s, int idx, boolean[] visited) {
-		if (idx == slen)
-			return current.isEndofWord;
+		int cidx = s.charAt(sidx) - 'a';
 
-		TrieNode temp = current.children[s.charAt(idx) - 'a'];
-
-		if (temp == null)
+		if (current.children[cidx] == null)
 			return false;
 
-		if (temp.isEndofWord && !visited[idx]) {
-			visited[idx] = true;
-			return Find(trie.root, s, idx + 1, visited) || Find(temp, s, idx + 1, visited);
+		if (!visited[sidx] && current.children[cidx].isEndofWords) {
+			visited[sidx] = true;
+			return isConcatenated(s, visited, trie, current.children[cidx], sidx + 1, len)
+					|| isConcatenated(s, visited, trie, trie.root, sidx + 1, len);
 		}
 
-		return Find(temp, s, idx + 1, visited);
+		return isConcatenated(s, visited, trie, current.children[cidx], sidx + 1, len);
 	}
 
 	public static boolean wordBreak(String s, List<String> wordDict) {
-		int word_count = wordDict.size();
-		slen = s.length();
-		trie = new Trie();
+		Trie trie = new Trie();
+		int len = s.length();
 
-		for (int i = 0; i < word_count; ++i)
-			trie.Insert(wordDict.get(i));
+		for (String word : wordDict)
+			trie.Insert(word);
 
-		return Find(trie.root, s, 0, new boolean[slen]);
+		return isConcatenated(s, new boolean[len], trie, trie.root, 0, len);
 	}
 
 	public static class TrieNode {
 		TrieNode[] children;
-		int ALPHABET_SIZE = 26;
-		boolean isEndofWord;
+		boolean isEndofWords;
 
 		public TrieNode() {
-			this.children = new TrieNode[this.ALPHABET_SIZE];
+			this.children = new TrieNode[size];
+			this.isEndofWords = false;
 		}
 	}
 
@@ -66,16 +45,15 @@ public class Solution_WordBreak {
 		TrieNode root;
 
 		public Trie() {
-			root = new TrieNode();
+			this.root = new TrieNode();
 		}
 
-		public void Insert(String word) {
+		public void Insert(String str) {
 			TrieNode temp = this.root;
-			char[] w = word.toCharArray();
-			int wlen = w.length;
+			int len = str.length();
 
-			for (int i = 0; i < wlen; ++i) {
-				int idx = w[i] - 'a';
+			for (int i = 0; i < len; ++i) {
+				int idx = str.charAt(i) - 'a';
 
 				if (temp.children[idx] == null)
 					temp.children[idx] = new TrieNode();
@@ -83,15 +61,30 @@ public class Solution_WordBreak {
 				temp = temp.children[idx];
 			}
 
-			temp.isEndofWord = true;
+			temp.isEndofWords = true;
 		}
 	}
 
 	public static void main(String[] args) {
-		List<String> test = new ArrayList<>();
-		test.add("leet");
-		test.add("code");
-		System.out.println(wordBreak("leetcode", test));
-	}
+		List<String> list = new ArrayList<>();
 
+		list.add("leet");
+		list.add("code");
+		System.out.println(wordBreak("leetcode", list)); // true
+
+		list.clear();
+
+		list.add("apple");
+		list.add("pen");
+		System.out.println(wordBreak("applepenapple", list)); // true
+
+		list.clear();
+
+		list.add("cats");
+		list.add("dog");
+		list.add("sand");
+		list.add("and");
+		list.add("cat");
+		System.out.println(wordBreak("catsandog", list)); // false
+	}
 }
