@@ -13,7 +13,6 @@ public class Solution_UniqueBinarySearchTrees {
 	}
 
 	public static int numTrees(int n) {
-
 		return Combination(comb, 2 * n, n) - Combination(comb, 2 * n, n + 1);
 	}
 
