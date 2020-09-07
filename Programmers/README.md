@@ -7,11 +7,11 @@
 |  3   | [단어 퍼즐](https://programmers.co.kr/learn/courses/30/lessons/12983)      | 4     | | | |
 
 ### 2017 카카오 코드 예선
-| Idx  | Question                                                                   | Level | Category | Solution (Time / Space Complexity)                                                                                                                                         | Note |
-| :--: | -------------------------------------------------------------------------- | ----- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-|  1   | [카카오프렌즈 컬러링북](https://programmers.co.kr/learn/courses/30/lessons/1829) | 2     | | []() | |
+| Idx  | Question                                                                   | Level | Category | Solution (Time / Space Complexity)                                                                                                                                                                             | Note |
+| :--: | -------------------------------------------------------------------------- | ----- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [카카오프렌즈 컬러링북](https://programmers.co.kr/learn/courses/30/lessons/1829) | 2     | BFS      | [O(M\*N)/O(M\*N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%84%EB%A0%8C%EC%A6%88%EC%BB%AC%EB%9F%AC%EB%A7%81%EB%B6%81.java)    | 입력으로 주어진 int배열을 long배열에 새로 담아서 해결 (input이 잘못 주어지는게 말이 되는건지) |                 
 |  2   | [브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830)     | 3     | | []() | |
-|  3   | [보행자 천국](https://programmers.co.kr/learn/courses/30/lessons/1832)        | 3     | | []() | |
+|  3   | [보행자 천국](https://programmers.co.kr/learn/courses/30/lessons/1832)        | 3     | DP       | [O(M\*N)/O(M\*N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%B3%B4%ED%96%89%EC%9E%90%EC%B2%9C%EA%B5%AD.java)                                                 | TLE : DFS, 방향 신경써서 코드 짜자. |
 |  4   | [4단 고음](https://programmers.co.kr/learn/courses/30/lessons/1831)          | 4     | | []() | |
 |  5   | [캠핑](https://programmers.co.kr/learn/courses/30/lessons/1833)             | 4     | | []() | |
 |  6   | [신비로운 유적 탐험](https://programmers.co.kr/learn/courses/30/lessons/1834)   | 5     | | []() | |
