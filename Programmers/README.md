@@ -4,7 +4,7 @@
 | :--: | ----------------------------------------------------------------------- | ----- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 |  1   | [짝지어 제거하기](https://programmers.co.kr/learn/courses/30/lessons/12973) | 2     | Stack    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%A7%9D%EC%A7%80%EC%96%B4%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.java) | |
 |  2   | [예상 대진표](https://programmers.co.kr/learn/courses/30/lessons/12985)    | 2     | Math     | [O(logN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EC%98%88%EC%83%81%EB%8C%80%EC%A7%84%ED%91%9C.java)                | |
-|  3   | [단어 퍼즐](https://programmers.co.kr/learn/courses/30/lessons/12983)      | 4     | | | |
+|  3   | [단어 퍼즐](https://programmers.co.kr/learn/courses/30/lessons/12983)      | 4     | DP, Trie | [O(N^2)/O(M\*L+N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%EB%8B%A8%EC%96%B4%ED%8D%BC%EC%A6%90.java)                     | 유사한 문제 : [Word Break](https://leetcode.com/problems/word-break/) |
 
 ### 2017 카카오 코드 예선
 | Idx  | Question                                                                   | Level | Category | Solution (Time / Space Complexity)                                                                                                                                                                             | Note |
