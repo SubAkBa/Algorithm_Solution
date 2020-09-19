@@ -1,34 +1,27 @@
 public class Solution_MinimumWindowSubstring {
 
 	public static String minWindow(String s, String t) {
-		int left = 0, right = 0;
-		int slen = s.length(), type = t.length();
+		int slen = s.length(), tlen = t.length();
 
-		if (slen < type || type == 0 || slen == 0)
+		if (slen < tlen || slen == 0 || tlen == 0)
 			return "";
 
 		int[] counts = new int[128];
-
-		for (int i = 0; i < type; ++i)
+		int type = tlen;
+		for (int i = 0; i < tlen; ++i)
 			++counts[t.charAt(i)];
 
-		int len = Integer.MAX_VALUE;
-		String answer = "";
-
+		int left = 0, right = 0;
+		String answer = s;
 		while (right < slen) {
-			if (type > 0) {
+			if ((--counts[s.charAt(right)]) >= 0)
+				--type;
 
-				if ((--counts[s.charAt(right)]) >= 0)
-					--type;
-
-				++right;
-			}
+			++right;
 
 			while (type == 0) {
-				if (len > (right - left)) {
-					len = right - left;
+				if (answer.length() > (right - left))
 					answer = s.substring(left, right);
-				}
 
 				if ((++counts[s.charAt(left)]) > 0)
 					++type;
@@ -46,5 +39,7 @@ public class Solution_MinimumWindowSubstring {
 		System.out.println(minWindow("$$#$$%", "#%")); // "#$$%"
 		System.out.println(minWindow("ADDDDDDDDABC", "AABC")); // "ADDDDDDDDDDDDABC"
 		System.out.println(minWindow("acbbaca", "aba")); // "baca"
+		System.out.println(minWindow("a", "a")); // "a"
+		System.out.println(minWindow("a", "b")); // ""
 	}
 }
