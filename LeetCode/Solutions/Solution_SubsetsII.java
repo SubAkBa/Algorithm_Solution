@@ -4,7 +4,6 @@ public class Solution_SubsetsII {
 
 	public static void DFS(List<List<Integer>> answer, List<Integer> list, int[] nums, int idx, int len) {
 		answer.add(new ArrayList<>(list));
-		System.out.println(answer);
 
 		if (idx == len)
 			return;
