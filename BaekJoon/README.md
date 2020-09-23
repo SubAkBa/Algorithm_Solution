@@ -243,6 +243,7 @@
 | 16438 | [원숭이 스포츠](https://www.acmicpc.net/problem/16438)                            | III | Divide and Conquer                                                        | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_16438.java)                                                           | |
 | 17070 | [파이프 옮기기 1](https://www.acmicpc.net/problem/16235)                          | V   | Graph, DP                                                                 | [O(N^2)/O(N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17070.java)                                                           | |
 | 17136 | [색종이 붙이기](https://www.acmicpc.net/problem/17136)                            | III | Brute Force, Backtracking                                                 | [O()/O()](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17136.java)                                                                 | |
+| 17144 | [미세먼지 안녕!](https://www.acmicpc.net/problem/17144)                           | V   | Implementation, Simulation                                                | [O(T\*N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17144.java)                                                      | |
 
 <img src="../img/platinum.png">
   
