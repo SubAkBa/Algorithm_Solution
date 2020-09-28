@@ -1,20 +1,14 @@
 import java.util.*;
 import java.io.*;
 
-public class floyd_2458_solution {
-	static boolean[][] graph;
-	static int std, comp;
+public class Solution_2458 {
 
-	public static void Floyd_Warshall() {
-		for (int via = 1; via <= std; via++) {
-
-			for (int from = 1; from <= std; from++) {
-
-				for (int to = 1; to <= std; to++) {
-
-					if (graph[from][via] && graph[via][to])
-						graph[from][to] = true;
-
+	public static void Floyd_Warshall(int[][] adj, int N) {
+		for (int via = 1; via <= N; ++via) {
+			for (int from = 1; from <= N; ++from) {
+				for (int to = 1; to <= N; ++to) {
+					if (adj[from][via] == 1 && adj[via][to] == 1)
+						adj[from][to] = 1;
 				}
 			}
 		}
@@ -23,42 +17,40 @@ public class floyd_2458_solution {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		String[] info = br.readLine().split(" ");
-		std = Integer.parseInt(info[0]);
-		comp = Integer.parseInt(info[1]);
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
 
-		graph = new boolean[std + 1][std + 1];
+		int[][] adj = new int[N + 1][N + 1];
 
-		for (int i = 0; i < comp; i++) {
-			String[] info1 = br.readLine().split(" ");
+		for (int i = 0; i < M; ++i) {
+			st = new StringTokenizer(br.readLine());
 
-			int from = Integer.parseInt(info1[0]);
-			int to = Integer.parseInt(info1[1]);
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
 
-			graph[from][to] = true;
+			adj[a][b] = 1;
 		}
 
-		Floyd_Warshall();
+		Floyd_Warshall(adj, N);
 
 		int total = 0;
-		for (int i = 1; i <= std; i++) {
+		for (int i = 1; i <= N; ++i) {
 			int count = 0;
-			
-			for (int j = 1; j <= std; j++) {
-				if(graph[i][j] || graph[j][i])
-					count++;
+
+			for (int j = 1; j <= N; ++j) {
+				if (adj[i][j] == 1 || adj[j][i] == 1)
+					++count;
 			}
-			
-			if(count == std - 1)
-				total++;
+
+			if (count == N - 1)
+				++total;
 		}
-		
-		bw.write(total + "\n");
-		
+
+		bw.write(total + "");
 		bw.flush();
 		bw.close();
 		br.close();
 	}
-
 }
