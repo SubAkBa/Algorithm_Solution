@@ -26,6 +26,9 @@
 | 10988 | [피보나치 함수](https://www.acmicpc.net/problem/10988)                           | I   | Implementation, String                                                     | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_10988.java)                                                               | |
 | 12813 | [이진수 연산](https://www.acmicpc.net/problem/12813)                            | II  |                                                                            | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_12813.java)                                                               | |
 
+<br />
+<br />
+
 <img src="../img/silver.png">
   
 |  Idx  | Question                                                                      | Level | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
@@ -154,6 +157,9 @@
 | 14889 | [스타트와 링크](https://www.acmicpc.net/problem/14889)                            | III | Brute Force, Bit Masking, Backtracking                                      | [O()/O()](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_14889.java)                                                               | |
 | 14891 | [톱니바퀴](https://www.acmicpc.net/problem/14891)                                | I   | Implementation, Simulation                                                  | [O(8\*K)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_14891.java)                                                          | |
 
+<br />
+<br />
+
 <img src="../img/gold.png">
   
 |  Idx  | Question                                                                      | Level | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                       | Note |
@@ -248,6 +254,9 @@
 | 17070 | [파이프 옮기기 1](https://www.acmicpc.net/problem/16235)                          | V   | Graph, DP                                                                 | [O(N^2)/O(N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17070.java)                                                           | |
 | 17136 | [색종이 붙이기](https://www.acmicpc.net/problem/17136)                            | III | Brute Force, Backtracking                                                 | [O()/O()](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17136.java)                                                                 | |
 | 17144 | [미세먼지 안녕!](https://www.acmicpc.net/problem/17144)                           | V   | Implementation, Simulation                                                | [O(T\*N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17144.java)                                                      | |
+
+<br />
+<br />
 
 <img src="../img/platinum.png">
   
