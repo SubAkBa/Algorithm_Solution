@@ -21,8 +21,7 @@ public class Solution_ReverseInteger {
 
 		if (lvalue != ivalue)
 			ivalue = 0;
-
-		if (isMinus)
+        	else if (isMinus)
 			ivalue *= -1;
 
 		return ivalue;
