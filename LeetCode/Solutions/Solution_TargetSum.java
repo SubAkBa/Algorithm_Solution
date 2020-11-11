@@ -1,43 +1,30 @@
 import java.util.*;
 
 public class Solution_TargetSum {
+	static int PLUS = 1000;
 
-	public static int DFS(Map<String, Integer> table, int[] nums, int idx, int len, int curS, int S) {
-		String str = idx + "," + curS;
+	public static int DFS(int[][] dp, int[] nums, int curSum, int S, int idx, int N) {
+		if (idx == N)
+			return curSum == S ? 1 : 0;
 
-		if (table.containsKey(str))
-			return table.get(str);
+		if (dp[idx][curSum + PLUS] != -1)
+			return dp[idx][curSum + PLUS];
 
-		if (idx == len) {
-			if (curS == S)
-				return 1;
-			else
-				return 0;
-		}
-
-		int count = DFS(table, nums, idx + 1, len, curS + nums[idx], S)
-				+ DFS(table, nums, idx + 1, len, curS - nums[idx], S);
-		table.put(str, count);
-
-		return count;
+		return dp[idx][curSum + PLUS] = DFS(dp, nums, curSum + nums[idx], S, idx + 1, N)
+				+ DFS(dp, nums, curSum - nums[idx], S, idx + 1, N);
 	}
 
 	public static int findTargetSumWays(int[] nums, int S) {
-		int len = nums.length;
+		int N = nums.length;
+		int[][] dp = new int[N][2 * PLUS + 1];
 
-		int sum = 0;
-		for (int i = 0; i < len; ++i)
-			sum += nums[i];
+		for (int i = 0; i < N; ++i)
+			Arrays.fill(dp[i], -1);
 
-		if (sum < S)
-			return 0;
-
-		Map<String, Integer> table = new HashMap<>();
-
-		return DFS(table, nums, 0, len, 0, S);
+		return DFS(dp, nums, 0, S, 0, N);
 	}
 
 	public static void main(String[] args) {
-		System.out.println(findTargetSumWays(new int[] { 1, 1, 1, 1, 1 }, 3));
+		System.out.println(findTargetSumWays(new int[] { 1, 1, 1, 1, 1 }, 3)); // 5
 	}
 }
