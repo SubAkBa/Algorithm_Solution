@@ -1,12 +1,21 @@
 # 프로그래머스
 
 ### 월간 코드 챌린지 시즌1
-| Idx  | Question                                                                     | Level | Category     | Solution (Time / Space Complexity)                                                                                                                                | Note |
-| :--: | ---------------------------------------------------------------------------- | ----- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-|  1   | [두 개 뽑아서 더하기](https://programmers.co.kr/learn/courses/30/lessons/68644)   | 1     |              | []() | |
-|  2   | [삼각달팽이](https://programmers.co.kr/learn/courses/30/lessons/68645)          | 2     |              | []() | |
-|  3   | [풍선 터트리기](https://programmers.co.kr/learn/courses/30/lessons/68646)       | 3      |              | []() | |
-|  4   | [짝수 행 세기](https://programmers.co.kr/learn/courses/30/lessons/68647)        | 4     |              | []() | |
+| Idx  | Question                                                                           | Level | Category     | Solution (Time / Space Complexity)                                                                                                                                | Note |
+| :--: | ---------------------------------------------------------------------------------- | ----- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [(9월) 두 개 뽑아서 더하기](https://programmers.co.kr/learn/courses/30/lessons/68644)   | 1     |              | []() | |
+|  2   | [(9월) 삼각달팽이](https://programmers.co.kr/learn/courses/30/lessons/68645)          | 2     |              | []() | |
+|  3   | [(9월) 풍선 터트리기](https://programmers.co.kr/learn/courses/30/lessons/68646)        | 3     |              | []() | |
+|  4   | [(9월) 짝수 행 세기](https://programmers.co.kr/learn/courses/30/lessons/68647)        | 4     |              | []() | |
+|  5   | [(10월) 3진법 뒤집기](https://programmers.co.kr/learn/courses/30/lessons/68935)        | 1    |              | []() | |
+|  6   | [(10월) 쿼드압축 후 개수 세기](https://programmers.co.kr/learn/courses/30/lessons/68936)  | 2    |              | []() | |
+|  7   | [(10월) 트리 트리오 중간값](https://programmers.co.kr/learn/courses/30/lessons/68937)    | 4     |              | []() | |
+|  9   | [(10월) 문자열의 아름다움](https://programmers.co.kr/learn/courses/30/lessons/68938)     | 5     |              | []() | |
+|  10  | [(11월) 내적](https://programmers.co.kr/learn/courses/30/lessons/70128)              | 1     |              | []() | |
+|  11  | [(11월) 이진 변환 반복](https://programmers.co.kr/learn/courses/30/lessons/70129)       | 2     |              | []() | |
+|  12  | [(11월) 스타 수열](https://programmers.co.kr/learn/courses/30/lessons/70130)          | 3      |              | []() | |
+|  13  | [(11월) 가짜 해밀토니안](https://programmers.co.kr/learn/courses/30/lessons/70132)      | 5     |              | []() | |
+
 
 <br />
   
