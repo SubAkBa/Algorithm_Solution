@@ -10,7 +10,7 @@ public class Solution_FindKPairswithSmallestSums {
         if (len1 == 0 || len2 == 0)
             return answer;
 
-        for (int i = 0; i < len1; ++i)
+        for (int i = 0; i < len1 && i < k; ++i)
             pq.offer(new int[]{nums1[i], nums2[0], 0});
 
         while ((--k) >= 0 && !pq.isEmpty()) {
