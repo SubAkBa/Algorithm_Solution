@@ -1,5 +1,9 @@
 # LeetCode
 
+### 1 ~ 200
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
 | Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
 | :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 1    | [Two Sum](https://leetcode.com/problems/two-sum/)                                                                                                                      | Easy   | Array, Hash Table                                                          | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_TwoSum.java)                                                             | Easy로 쓰여 있지만 개인적으로 Easy 하지 않았던  |
@@ -83,6 +87,18 @@
 | 191  | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)                                                                                                    | Easy   | Bit Manipulation                                                           | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_Numberof1Bits.java)                                                      | |
 | 198  | [House Robber](https://leetcode.com/problems/house-robber/)                                                                                                            | Easy   | DP                                                                         | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_HouseRobber.java)                                                        | |
 | 200  | [Number of Islands](https://leetcode.com/problems/number-of-islands/)                                                                                                  | Medium | DFS, BFS, Union Find                                                       | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_NumberofIslands.java)                                              | |
+
+</detail>
+
+<br />
+<br />
+
+### 201 ~ 400
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
+| Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 205  | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)                                                                                                | Easy   | Hash Table                                                                 | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_IsomorphicStrings.java)                                                  | |
 | 207  | [Course Schedule](https://leetcode.com/problems/course-schedule/)                                                                                                      | Medium | DFS, BFS, Graph, Topological Sort                                          | [O(V+E)/O(V+E)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_CourseSchedule.java)                                                 | |
 | 208  | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)                                                                              | Medium | Design, Trie                                                               | [O()/O()](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_ImplementTrie_PrefixTree.java)                                             | |
@@ -128,6 +144,18 @@
 | 389  | [Find the Difference](https://leetcode.com/problems/find-the-difference/)                                                                                              | Easy   | Hash Table, Bit Manipulation                                               | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_FindtheDifference.java)                                                  | |
 | 392  | [Is Subsequence](https://leetcode.com/problems/is-subsequence/)                                                                                                        | Easy   | Binary Search, DP, Greedy                                                  | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_IsSubsequence.java)                                                      | |
 | 394  | [Decode String](https://leetcode.com/problems/decode-string/)                                                                                                          | Medium | Stack, DFS                                                                 | [O(N)/O()](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_DecodeString.java)                                                        | |
+
+</details>
+
+<br />
+<br />
+
+### 401 ~ 600
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
+| Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 402  | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/)                                                                                                      | Medium | Stack, Greedy                                                              | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_RemoveKDigits.java)                                                      | 동일한 문제 : [큰 수 만들기](https://programmers.co.kr/learn/courses/30/lessons/42883) |
 | 407  | [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)                                                                                        | Hard   | Heap, BFS                                                                  | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_TrappingRainWaterII.java)                                          | Heap & BFS Hard Problem |
 | 409  | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/)                                                                                                | Easy   | Hash Table                                                                 | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_LongestPalindrome.java)                                                  | |
@@ -148,6 +176,18 @@
 | 542  | [01 Matrix](https://leetcode.com/problems/01-matrix/)                                                                                                                  | Medium | DFS, BFS                                                                   | [O(N+M)/O(N+M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_01Matrix.java)                                                       | |
 | 547  | [Friend Circles](https://leetcode.com/problems/friend-circles/)                                                                                                        | Medium | DFS, Union-Find                                                            | [O(V+E)/O(V)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_FriendCircles.java)                                                    | |
 | 576  | [Out of Boundary Paths](https://leetcode.com/problems/out-of-boundary-paths/)                                                                                          | Medium | DP, DFS                                                                    | [O(K\*M\*N)/O(K\*M\*N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_OutofBoundaryPaths.java)                                     | |
+
+</details>
+
+<br />
+<br />
+
+### 601 ~ 800
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
+| Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 622  | [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)                                                                                          | Medium | Design, Queue                                                              | [O(1)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_DesignCircularQueue.java)                                                | |
 | 630  | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)                                                                                              | Hard   | Greedy                                                                     | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_CourseScheduleIII.java)                                              | |
 | 648  | [Replace Words](https://leetcode.com/problems/replace-words/)                                                                                                          | Medium | Hash Table, Trie                                                           | [O()/O()](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_ReplaceWords.java)                                                         | |
@@ -166,6 +206,18 @@
 | 787  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)                                                                      | Medium | DP, Heap, BFS                                                              | [O(V^K\*K\*logV)/O(E+V^K)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_CheapestFlightsWithinKStops.java)                         | |
 | 794  | [Valid Tic-Tac-Toe State](https://leetcode.com/problems/valid-tic-tac-toe-state/)                                                                                      | Medium | Math, Recursion                                                            | [O(1)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_ValidTicTacToeState.java)                                                | |
 | 797  | [All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)                                                                      | Medium | Backtracking, DFS, Graph                                                   | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_AllPathsFromSourcetoTarget.java)                                         | |
+
+</details>
+
+<br />
+<br />
+
+### 801 ~ 1000
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
+| Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 811  | [Subdomain Visit Count](https://leetcode.com/problems/subdomain-visit-count/)                                                                                          | Easy   | Hash Table                                                                 | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_SubdomainVisitCount.java)                                                | |
 | 826  | [Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/)                                                                                | Medium | Two Pointers                                                               | [O(N+M)/O(M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_MostProfitAssigningWork.java)                                          | 정렬을 사용하지 않고 최대값을 잘 활용한 문제 |
 | 845  | [Longest Mountain in Array](https://leetcode.com/problems/longest-mountain-in-array/)                                                                                  | Medium | Two Pointers                                                               | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_LongestMountaininArray.java)                                             | |
@@ -183,6 +235,18 @@
 | 981  | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)                                                                                | Medium | Hash Table, Binary Search                                                  | [O(1)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_TimeBasedKeyValueStore.java)                                             | |
 | 983  | [Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/)                                                                                    | Medium | DP                                                                         | [O(D)/O(D)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_MinimumCostForTickets.java)                                              | D = 최대일수 (365) |
 | 994  | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)                                                                                                      | Medium | BFS                                                                        | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_RottingOranges.java)                                               | |
+
+</details>
+
+<br />
+<br />
+
+### 1001 ~ 1200
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
+| Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 1002 | [Find Common Characters](https://leetcode.com/problems/find-common-characters/)                                                                                        | Easy   | Array, Hash Table                                                          | [O(N\*M)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_FindCommonCharacters.java)                                            | |
 | 1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)                                                      | Medium | Array, Binary Search                                                       | [O(NlogN)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_CapacityToShipPackagesWithinDDays.java)                              | |
 | 1031 | [Maximum Sum of Two Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)                                            | Medium | Array                                                                      | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_MaximumSumofTwoNon_OverlappingSubarrays.java)                            | |
@@ -194,6 +258,18 @@
 | 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)                                                                                | Medium | DP                                                                         | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_LongestCommonSubsequence.java)                                     | 추후에 메모리 최적화도 해보자 (nm -> m) |
 | 1160 | [Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/)                                              | Easy   | Array, Hash Table                                                          | [O(N+M)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_FindWordsThatCanBeFormedbyCharacters.java)                             | |
 | 1189 | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)                                                                                | Easy   | Hash Table, String                                                         | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_MaximumNumberofBalloons.java)                                            | |
+
+</details>
+
+<br />
+<br />
+
+### 1201 ~ 1400
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
+| Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 1207 | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                                                            | Easy   | Hash Table                                                                 | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_UniqueNumberofOccurrences.java)                                          | |
 | 1208 | [Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget/)                                                                | Medium | Array, Sliding Window                                                      | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_GetEqualSubstringsWithinBudget.java)                                     | 비슷한 유형이 많다. 노력해서 익숙해지자. |
 | 1219 | [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/)                                                                                        | Medium | Backtracking                                                               | [O(4\*3^K)/O(M\*N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_PathwithMaximumGold.java)                                        | |
@@ -213,6 +289,18 @@
 | 1365 | [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)                            | Easy   | Array, Hash Table                                                          | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_HowManyNumbersAreSmallerThantheCurrentNumber.java)                       | |
 | 1367 | [Linked List in Binary Tree](https://leetcode.com/problems/linked-list-in-binary-tree/)                                                                                | Medium | Linked List, DP, Tree                                                      | [O(M\*N)/O(M\*N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_LinkedListinBinaryTree.java)                                       | |
 | 1387 | [Sort Integers by The Power Value](https://leetcode.com/problems/sort-integers-by-the-power-value/)                                                                    | Medium | Sort, Graph                                                                | [O()/O()](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_SortIntegersbyThePowerValue.java)                                          | |
+
+</details>
+
+<br />
+<br />
+
+### 1401 ~ 1600
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
+| Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 1451 | [Rearrange Words in a Sentence](https://leetcode.com/problems/rearrange-words-in-a-sentence/)                                                                          | Medium | String, Sort                                                               | [O(NlogN)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_RearrangeWordsinaSentence.java)                                      | |
 | 1486 | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/)                                                                                  | Easy   | Array, Bit Manipulation                                                    | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_XOROperationinanArray.java)                                              | |
 | 1508 | [Range Sum of Sorted Subarray Sums](https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/)                                                                  | Medium | Array, Sort                                                                | [O(N^2)/O(N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_RangeSumofSortedSubarraySums.java)                                   | |
@@ -221,3 +309,4 @@
 | 1542 | [Find Longest Awesome Substring](https://leetcode.com/problems/find-longest-awesome-substring/)                                                                        | Hard   | String, Bit Manipulation                                                   | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_FindLongestAwesomeSubstring.java)                                        | |
 | 1654 | [Minimum Jumps to Reach Home](https://leetcode.com/problems/minimum-jumps-to-reach-home/)                                                                              | Medium | DP, BFS                                                                    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_MinimumJumpstoReachHome.java)                                            | |
 
+</details>
