@@ -2,6 +2,8 @@
   
 <img src="../img/bronze.png">
   
+<details open> <summary> 접기 / 펼치기 </summary>
+
 |  Idx  | Question                                                                      | Level | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
 | :---: | ----------------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
 | 1157  | [단어 공부](https://www.acmicpc.net/problem/1157)                               | I   | Implementation, String                                                     | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_1157.java)                                                                | |
@@ -27,10 +29,14 @@
 | 10988 | [피보나치 함수](https://www.acmicpc.net/problem/10988)                           | I   | Implementation, String                                                     | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_10988.java)                                                               | |
 | 12813 | [이진수 연산](https://www.acmicpc.net/problem/12813)                            | II  |                                                                            | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_12813.java)                                                               | |
 
+</details>
+
 <br />
 <br />
 
 <img src="../img/silver.png">
+  
+<details open> <summary> 접기 / 펼치기 </summary>
   
 |  Idx  | Question                                                                      | Level | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
 | :---: | ----------------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -185,10 +191,14 @@
 | 15988 | [1, 2, 3 더하기 3](https://www.acmicpc.net/problem/15988)                        | II  | DP                                                                          | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_15988.java)                                                            | |
 | 18258 | [큐 2](https://www.acmicpc.net/problem/18258)                                   | IV  | Data Structure, Queue                                                       | [O(1)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_18258.java)                                                            | |
 
+</details>
+
 <br />
 <br />
 
 <img src="../img/gold.png">
+  
+<details open> <summary> 접기 / 펼치기 </summary>
   
 |  Idx  | Question                                                                      | Level | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                       | Note |
 | :---: | ----------------------------------------------------------------------------- | --- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -311,10 +321,14 @@
 | 17141 | [연구소 2](https://www.acmicpc.net/problem/17141)                               | V   | Graph, Brute Force, DFS, BFS                                              | [O(M^2\*N^2)/O(M^2\*N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17141.java)                                                 | |
 | 17144 | [미세먼지 안녕!](https://www.acmicpc.net/problem/17144)                           | V   | Implementation, Simulation                                                | [O(T\*N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17144.java)                                                      | |
 
+</details>
+
 <br />
 <br />
 
 <img src="../img/platinum.png">
+  
+<details open> <summary> 접기 / 펼치기 </summary>
   
 |  Idx  | Question                                                                      | Level | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
 | :---: | ----------------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -360,7 +374,7 @@
 | 17412 | [도시 왕복하기 1](https://www.acmicpc.net/problem/17412)                          | V    | Maximum Flow                                                              | [O(N\*P^2)/O(N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17412.java)                                                        | |
 | 17831 | [대기업 승범이네](https://www.acmicpc.net/problem/17831)                          | V    | DP, Tree, Tree DP                                                          | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_17831.java)                                                               | |
 
-
+</details>
 
 
 
