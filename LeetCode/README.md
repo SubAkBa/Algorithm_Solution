@@ -88,7 +88,7 @@
 | 198  | [House Robber](https://leetcode.com/problems/house-robber/)                                                                                                            | Easy   | DP                                                                         | [O(N)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_HouseRobber.java)                                                        | |
 | 200  | [Number of Islands](https://leetcode.com/problems/number-of-islands/)                                                                                                  | Medium | DFS, BFS, Union Find                                                       | [O(N\*M)/O(N\*M)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_NumberofIslands.java)                                              | |
 
-</detail>
+</details>
 
 <br />
 <br />
