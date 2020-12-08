@@ -24,8 +24,6 @@ public class Solution_KConcatenationMaximumSum {
             }
         }
 
-        System.out.println("sum * k : " + (sum * k) + " oneMax : " + oneMax + " twoMax : " + twoMax);
-
         return (int) Math.max(Math.max(sum * k, oneMax), Math.max(twoMax, (k - 2) * sum + twoMax) % MOD);
     }
 
