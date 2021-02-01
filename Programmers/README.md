@@ -67,6 +67,19 @@
 
 <br />
 
+### 2021 KAKAO BLIND RECRUITMENT
+| Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                                                      | Note |
+| :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1   | [신규 아이디 추천](https://programmers.co.kr/learn/courses/30/lessons/72410)    | 1     |          | []()                                  | |
+|  2   | [메뉴 리뉴얼](https://programmers.co.kr/learn/courses/30/lessons/72411)        | 2     |          | []()                                | |
+|  3   | [순위검색](https://programmers.co.kr/learn/courses/30/lessons/72412)          | 2     |          | []()                                               |  |
+|  4   | [합승 택시 요금](https://programmers.co.kr/learn/courses/30/lessons/72413)     | 3     | Floyd-Warshall, Graph    | [O(N^3)/O(N^2)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Programmers/Solutions/Solution_%ED%95%A9%EC%8A%B9%ED%83%9D%EC%8B%9C%EC%9A%94%EA%B8%88.java)                    | |
+|  5   | [광고 삽입](https://programmers.co.kr/learn/courses/30/lessons/72414)         | 3     |      | []()                                          | |
+|  6   | [카드 짝 맞추기](https://programmers.co.kr/learn/courses/30/lessons/72415)     | 3     |      | []() |  |
+|  7   | [매출 하락 최소화](https://programmers.co.kr/learn/courses/30/lessons/72416)    | 4     |      | []() |  |
+
+<br />
+
 ### 2020 KAKAO BLIND RECRUITMENT
 | Idx  | Question                                                                    | Level | Category                 | Solution (Time / Space Complexity)                                                                                                                                                 | Note |
 | :--: | --------------------------------------------------------------------------- | ----- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
