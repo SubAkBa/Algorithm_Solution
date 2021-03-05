@@ -210,6 +210,7 @@
 | 15990 | [1, 2, 3 더하기 5](https://www.acmicpc.net/problem/15990)                        | III | DP                                                                          | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_15990.java)                                                            | 재귀를 언제까지 돌릴지 순서 잘 파악하고 기저 조건 설정 잘하기 |
 | 16194 | [카드 구매하기 2](https://www.acmicpc.net/problem/16194)                           | I   | DP                                                                          | [O(N^2)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_16194.java)                                                          | |
 | 18258 | [큐 2](https://www.acmicpc.net/problem/18258)                                   | IV  | Data Structure, Queue                                                       | [O(1)/O(1)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_18258.java)                                                            | |
+| 18352 | [특정 거리의 도시 찾기](https://www.acmicpc.net/problem/18352)                       | II  | Dijkstra, Graph, BFS                                                        | [O(ElogV)/O(V+E)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/BaekJoon/Solutions/Solution_18352.java)                                                      | |
 
 </details>
 
