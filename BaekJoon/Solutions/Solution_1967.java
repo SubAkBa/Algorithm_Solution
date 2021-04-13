@@ -2,58 +2,66 @@ import java.util.*;
 import java.io.*;
 
 public class Solution_1967 {
-	static int end_point, max_weight;
+    static List<Element>[] adj;
+    static int[] dist;
+    static int n, end_point, diameter;
 
-	public static void DFS(int n, List<Node>[] adj, int[] dist, int node, int curWeight) {
-		dist[node] = curWeight;
+    public static class Element {
+        int idx, d;
 
-		if (dist[node] > max_weight) {
-			max_weight = dist[node];
-			end_point = node;
-		}
+        public Element(int idx, int d) {
+            this.idx = idx;
+            this.d = d;
+        }
+    }
 
-		for (Node to : adj[node]) {
-			if (dist[to.idx] == 0)
-				DFS(n, adj, dist, to.idx, curWeight + to.weight);
-		}
-	}
+    public static void DFS(int here, int d) {
+        dist[here] = d;
 
-	public static class Node {
-		int idx, weight;
+        if (dist[here] > diameter) {
+            diameter = dist[here];
+            end_point = here;
+        }
 
-		public Node(int idx, int weight) {
-			this.idx = idx;
-			this.weight = weight;
-		}
-	}
+        for (Element node : adj[here]) {
+            if (dist[node.idx] == -1)
+                DFS(node.idx, d + node.d);
+        }
+    }
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int n = Integer.parseInt(br.readLine());
-		List<Node>[] adj = new ArrayList[n + 1];
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        n = Integer.parseInt(br.readLine());
+        StringTokenizer st = null;
+        diameter = 0;
 
-		for (int i = 0; i <= n; ++i)
-			adj[i] = new ArrayList<>();
+        adj = new ArrayList[n + 1];
+        dist = new int[n + 1];
 
-		for (int i = 1; i < n; ++i) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
+        for (int i = 0; i <= n; ++i)
+            adj[i] = new ArrayList<>();
 
-			int from = Integer.parseInt(st.nextToken());
-			int to = Integer.parseInt(st.nextToken());
-			int weight = Integer.parseInt(st.nextToken());
+        for (int i = 0; i < n - 1; ++i) {
+            st = new StringTokenizer(br.readLine());
 
-			adj[from].add(new Node(to, weight));
-			adj[to].add(new Node(from, weight));
-		}
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            int c = Integer.parseInt(st.nextToken());
 
-		DFS(n, adj, new int[n + 1], 1, 0);
+            adj[a].add(new Element(b, c));
+            adj[b].add(new Element(a, c));
+        }
 
-		DFS(n, adj, new int[n + 1], end_point, 0);
+        Arrays.fill(dist, -1);
+        DFS(1, 0);
 
-		bw.write(max_weight + "");
-		bw.flush();
-		bw.close();
-		br.close();
-	}
+        Arrays.fill(dist, -1);
+        DFS(end_point, 0);
+
+        bw.write(diameter + "");
+        bw.flush();
+        bw.close();
+        br.close();
+    }
 }
