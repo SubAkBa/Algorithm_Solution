@@ -12,7 +12,7 @@ public class Solution_IntersectionofTwoLinkedLists {
         }
     }
 
-    // O(N) / O(N)
+    // O(N+M) / O(N)
     public static ListNode getIntersectionNodeV1(ListNode headA, ListNode headB) {
         Set<ListNode> table = new HashSet<>();
 
@@ -32,7 +32,7 @@ public class Solution_IntersectionofTwoLinkedLists {
         return null;
     }
 
-    // O(N) / O(1)
+    // O(N+M) / O(1)
     public static ListNode getIntersectionNodeV2(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
             return null;
