@@ -1,39 +1,50 @@
+import java.util.*;
 
 public class Solution_IntersectionofTwoLinkedLists {
-	public class ListNode {
-		int val;
-		ListNode next;
 
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
-	}
+    public static class ListNode {
+        int val;
+        ListNode next;
 
-	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-		if (headA == null || headB == null)
-			return null;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
 
-		ListNode curA = headA, curB = headB;
-		ListNode EndA = null, EndB = null;
+    // O(N) / O(N)
+    public static ListNode getIntersectionNodeV1(ListNode headA, ListNode headB) {
+        Set<ListNode> table = new HashSet<>();
 
-		while (curA != curB) {
-			if (EndA != null && EndB != null && EndA != EndB)
-				return null;
+        while (headA != null) {
+            table.add(headA);
+            headA = headA.next;
+        }
 
-			if (curA.next == null) {
-				EndA = curA;
-				curA = headB;
-			} else
-				curA = curA.next;
+        while (headB != null) {
+            if (table.contains(headB)) {
+                return headB;
+            }
 
-			if (curB.next == null) {
-				EndB = curB;
-				curB = headA;
-			} else
-				curB = curB.next;
-		}
+            headB = headB.next;
+        }
 
-		return curA;
-	}
+        return null;
+    }
+
+    // O(N) / O(1)
+    public static ListNode getIntersectionNodeV2(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+
+        ListNode cpA = headA, cpB = headB;
+
+        while (cpA != cpB) {
+            cpA = cpA == null ? headB : cpA.next;
+            cpB = cpB == null ? headA : cpB.next;
+        }
+
+        return cpA;
+    }
 }
