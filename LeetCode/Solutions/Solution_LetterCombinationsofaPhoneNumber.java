@@ -2,46 +2,40 @@ import java.util.*;
 
 public class Solution_LetterCombinationsofaPhoneNumber {
 
-	public static List<String> letterCombinations(String digits) {
-		List<String> answer = new ArrayList<>();
-		int dlen = digits.length();
+    static char[][] letters = {{}, {}, {'a', 'b', 'c'},
+            {'d', 'e', 'f'}, {'g', 'h', 'i'}, {'j', 'k', 'l'},
+            {'m', 'n', 'o'}, {'p', 'q', 'r', 's'}, {'t', 'u', 'v'},
+            {'w', 'x', 'y', 'z'}};
 
-		if (dlen == 0)
-			return answer;
+    static List<String> answer;
+    static int dLen;
 
-		String[] pn = new String[] { "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+    public static void Combination(String digits, char[] digit, int idx) {
+        if (idx == dLen) {
+            answer.add(new String(digit));
+            return;
+        }
 
-		int[] idx = new int[dlen];
+        int letterIdx = digits.charAt(idx) - '0';
+        for (int i = 0; i < letters[letterIdx].length; ++i) {
+            digit[idx] = letters[letterIdx][i];
+            Combination(digits, digit, idx + 1);
+        }
+    }
 
-		int total_counts = 1;
+    public static List<String> letterCombinations(String digits) {
+        answer = new ArrayList<>();
+        dLen = digits.length();
 
-		for (int i = 0; i < dlen; ++i)
-			total_counts *= pn[digits.charAt(i) - '1'].length();
+        if (dLen > 0)
+            Combination(digits, new char[dLen], 0);
 
-		for (int i = 0; i < total_counts; ++i) {
-			StringBuilder sb = new StringBuilder();
+        return answer;
+    }
 
-			for (int j = 0; j < dlen; ++j)
-				sb.append(pn[digits.charAt(j) - '1'].charAt(idx[j]));
-
-			answer.add(sb.toString());
-
-			++idx[dlen - 1];
-			for (int j = dlen - 1; j > 0; --j) {
-				if (idx[j] == pn[digits.charAt(j) - '1'].length()) {
-					idx[j] = 0;
-					++idx[j - 1];
-					continue;
-				} else
-					break;
-			}
-		}
-
-		return answer;
-	}
-
-	public static void main(String[] args) {
-		System.out.println(letterCombinations("23")); // ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
-		System.out.println(letterCombinations("13")); // []
-	}
+    public static void main(String[] args) {
+        System.out.println(letterCombinations("23")); // ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+        System.out.println(letterCombinations("")); // []
+        System.out.println(letterCombinations("2")); // ["a","b","c"]
+    }
 }
