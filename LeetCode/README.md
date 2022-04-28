@@ -316,3 +316,16 @@
 | 1654 | [Minimum Jumps to Reach Home](https://leetcode.com/problems/minimum-jumps-to-reach-home/)                                                                              | Medium | DP, BFS                                                                    | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_MinimumJumpstoReachHome.java)                                            | |
 
 </details>
+
+<br />
+<br />
+
+### 1801 ~ 2000
+
+<details open> <summary> 접기 / 펼치기 </summary>
+
+| Idx  | Question                                                                                                                                                               | Level  | Category                                                                   | Solution (Time / Space Complexity)                                                                                                                                         | Note |
+| :--: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| 1823 | [Find the Winner of the Circular Game](https://leetcode.com/problems/find-the-winner-of-the-circular-game/)                                                            | Medium | Array, Math, Recursion, Queue, Simulation                                  | [O(N)/O(N)](https://github.com/SubAkBa/Algorithm_Solution/blob/master/LeetCode/Solutions/Solution_FindtheWinneroftheCircularGame.java)                                     | |
+
+</details>
