@@ -20,21 +20,10 @@ public class Solution_MaximumDepthofBinaryTree {
 		}
 	}
 
-	public int DFS(TreeNode temp, int depth) {
-		if (temp == null)
-			return depth;
-
-		return Math.max(DFS(temp.left, depth + 1), DFS(temp.right, depth + 1));
-	}
-
 	public int maxDepth(TreeNode root) {
 		if (root == null)
 			return 0;
 
-		return DFS(root, 0);
+		return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 	}
-
-	public static void main(String[] args) {
-	}
-
 }
