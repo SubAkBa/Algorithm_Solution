@@ -26,11 +26,9 @@ public class Solution_MergeTwoBinaryTrees {
         if (root2 == null)
             return root1;
 
-        TreeNode root = new TreeNode(root1.val + root2.val);
-        root.left = DFS(root1.left, root2.left);
-        root.right = DFS(root1.right, root2.right);
-
-        return root;
+        return new TreeNode(root1.val + root2.val, 
+                        DFS(root1.left, root2.left), 
+                        DFS(root1.right, root2.right));
     }
 
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
