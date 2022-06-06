@@ -20,8 +20,6 @@ public class Solution_MinimumCostForTickets {
 			++idx;
 		}
 
-		System.out.println(Arrays.toString(dp));
-
 		return dp[days[dlen - 1]];
 	}
 
