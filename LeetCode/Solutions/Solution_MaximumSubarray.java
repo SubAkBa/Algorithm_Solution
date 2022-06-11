@@ -1,19 +1,21 @@
 
 public class Solution_MaximumSubarray {
 
-	public static int maxSubArray(int[] nums) {
-		int max = nums[0], len = nums.length, calc = nums[0];
+        public static int maxSubArray(int[] nums) {
+	    int sum = 0, result = Integer.MIN_VALUE;
 
-		for (int i = 1; i < len; ++i) {
-			calc = Math.max(nums[i], calc + nums[i]);
-			max = Math.max(max, calc);
-		}
+    	    for (int n : nums) {
+	        sum = Math.max(sum + n, n);
+	        result = Math.max(result, sum);
+  	    }
 
-		return max;
-	}
+	    return result;
+        }
 
 	public static void main(String[] args) {
-		System.out.println(maxSubArray(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
+            System.out.println(maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4})); // 6
+            System.out.println(maxSubArray(new int[]{1})); // 1
+            System.out.println(maxSubArray(new int[]{5, 4, -1, 7, 8})); // 23
 	}
 
 }
