@@ -28,12 +28,12 @@ public class Solution_BinaryTreePaths {
 		paths.add(temp.val);
 
 		if (temp.left == null && temp.right == null) {
-			StringBuilder sb = new StringBuilder();
-			sb.append(paths.get(0));
-			for (int i = 1; i < paths.size(); ++i)
-				sb.append("->" + paths.get(i));
+			StringJoiner sj = new StringJoiner("->");
+			
+			for (int path : paths)
+				sj.add(Integer.toString(path));
 
-			answer.add(sb.toString());
+			answer.add(sj.toString());
 			return;
 		}
 
