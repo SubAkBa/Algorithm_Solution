@@ -1,47 +1,44 @@
-import java.util.*;
+package org.example;
 
-public class stack_1874_solution {
+import java.io.*;
+import java.util.Stack;
+import java.util.StringTokenizer;
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Stack<Integer> stack = new Stack<Integer>();
-		
-		int testcase = sc.nextInt();
-		int current = 0, pops = 0;
-		StringBuffer sb = new StringBuffer();
-		String result = "";
-		boolean noflag = false;
+public class Solution_1874 {
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	static StringTokenizer st;
+	static StringBuilder sb = new StringBuilder();
 
-		for (int i = 0; i < testcase; i++) {
-			int num = sc.nextInt();
+	public static void main(String[] args) throws IOException {
+		int n = Integer.parseInt(br.readLine());
+		int[] input = new int[n];
 
-			if (!noflag) {
-				if (current < num) {
-					while (current != num) {
-						stack.push(++current);
-						sb.append("+\n");
-					}
-
-					stack.pop();
-					sb.append("-\n");
-				} else if (current >= num) {
-					if (stack.peek() > num) {
-						result = "NO";
-						noflag = true;
-					} else {
-						while ((pops = stack.pop()) != num)
-							sb.append("-\n");
-
-						sb.append("-\n");
-					}
-				}
-			}
+		for (int i = 0; i < n; ++i) {
+			input[i] = Integer.parseInt(br.readLine());
 		}
-		
-		if(result.equals(""))
-			result = sb.toString();
-		
-		System.out.println(result);
-	}
 
+		int num = 0;
+		Stack<Integer> stack = new Stack<>();
+		for (int i = 0; i < n; ++i) {
+			while (stack.isEmpty() || num < input[i]) {
+				stack.push(++num);
+				sb.append("+\n");
+			}
+
+			if (stack.peek() > input[i]) {
+				sb.setLength(0);
+				sb.append("NO");
+				break;
+			}
+
+			stack.pop();
+			sb.append("-\n");
+		}
+
+		bw.write(sb.toString());
+		bw.flush();
+		bw.close();
+		br.close();
+	}
 }
