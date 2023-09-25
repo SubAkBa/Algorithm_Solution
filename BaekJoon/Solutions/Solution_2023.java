@@ -1,47 +1,57 @@
+package org.example;
+
 import java.io.*;
 
 public class Solution_2023 {
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static int[] types = new int[] {1, 2, 3, 5, 7, 9};
 
-    public static boolean isPrime(int num) {
-        if (num == 1)
-            return false;
+	public static void main(String[] args) throws IOException {
+		int N = Integer.parseInt(br.readLine());
 
-        if (num == 2)
-            return true;
+		for (int type : types) {
+			DFS(type, 1, N);
+		}
 
-        if (num % 2 == 0)
-            return false;
+		br.close();
+	}
 
-        int sqrt_n = (int) Math.sqrt(num);
-        for (int i = 3; i <= sqrt_n; i += 2) {
-            if (num % i == 0)
-                return false;
-        }
+	public static void DFS(int num, int pos, int N) {
+		if (!isPrime(num)) {
+			return;
+		}
 
-        return true;
-    }
+		if (pos == N) {
+			System.out.println(num);
+			return;
+		}
 
-    public static void DFS(int N, int len, int num) {
-        if (!isPrime(num))
-            return;
+		for (int type : types) {
+			DFS(num * 10 + type, pos + 1, N);
+		}
+	}
 
-        if (len == N) {
-            System.out.println(num);
-            return;
-        }
+	public static boolean isPrime(int n) {
+		if (n <= 1) {
+			return false;
+		}
 
-        for (int i = 1; i < 10; ++i) {
-            DFS(N, len + 1, num * 10 + i);
-        }
-    }
+		if (n == 2) {
+			return true;
+		}
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
+		if (n % 2 == 0) {
+			return false;
+		}
 
-        for (int i = 1; i < 10; ++i)
-            DFS(N, 1, i);
+		int sqrtN = (int)Math.sqrt(n);
 
-        br.close();
-    }
+		for (int div = 3; div <= sqrtN; div += 2) {
+			if (n % div == 0) {
+				return false;
+			}
+		}
+
+		return true;
+	}
 }
