@@ -1,51 +1,60 @@
-import java.util.*;
+package org.example;
+
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
-public class dfs_11724_solution {
-	static int vertex, edge;
-	static int[] visited;
-	static int[][] matrix;
-
-	public static void DFS(int x) {
-		
-		visited[x] = 1;
-
-		for (int i = 1; i <= vertex; i++) {
-			if(matrix[x][i] == 1 && visited[i] == 0)
-				DFS(i);
-		}
-	}
+public class Solution_11724 {
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	static StringTokenizer st;
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		List<Integer>[] adjList = new ArrayList[N + 1];
+		boolean[] visited = new boolean[N + 1];
 
-		String[] infos = br.readLine().split(" ");
-
-		vertex = Integer.parseInt(infos[0]);
-		edge = Integer.parseInt(infos[1]);
-
-		matrix = new int[vertex + 1][vertex + 1];
-		visited = new int[vertex + 1];
-
-		int connect = 0;
-
-		for (int i = 1; i <= edge; i++) {
-			String[] edgeinfo = br.readLine().split(" ");
-			int n1 = Integer.parseInt(edgeinfo[0]);
-			int n2 = Integer.parseInt(edgeinfo[1]);
-
-			matrix[n1][n2] = matrix[n2][n1] = 1;
+		for (int i = 1; i <= N; ++i) {
+			adjList[i] = new ArrayList<>();
 		}
 
-		for (int i = 1; i <= vertex; i++) {
+		for (int i = 0; i < M; ++i) {
+			st = new StringTokenizer(br.readLine());
+			int u = Integer.parseInt(st.nextToken());
+			int v = Integer.parseInt(st.nextToken());
 
-			if (visited[i] == 0) {
-				DFS(i);
-				connect++;
+			adjList[u].add(v);
+			adjList[v].add(u);
+		}
+
+		int result = 0;
+		for (int i = 1; i <= N; ++i) {
+			if (visited[i]) {
+				continue;
 			}
+
+			DFS(adjList, visited, i);
+			++result;
 		}
-		
-		System.out.println(connect);
+
+		bw.write(String.valueOf(result));
+		bw.flush();
+		bw.close();
+		br.close();
 	}
 
+	public static void DFS(List<Integer>[] adjList, boolean[] visited, int node) {
+		if (visited[node]) {
+			return;
+		}
+
+		visited[node] = true;
+
+		for (int next : adjList[node]) {
+			DFS(adjList, visited, next);
+		}
+	}
 }
