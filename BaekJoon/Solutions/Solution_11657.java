@@ -1,78 +1,77 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Solution_11657 {
-	static int N, M;
-	static Edge[] edgelist;
-	static long[] dist;
+	static int INF = 987654321;
 
-	public static boolean Time_Machine() {
-		boolean updated = false;
+	public static class Edge {
+		int from, to, weight;
 
-		dist[1] = 0;
+		public Edge(int from, int to, int weight) {
+			this.from = from;
+			this.to = to;
+			this.weight = weight;
+		}
+	}
 
-		for (int iter = 0; iter < N; iter++) {
-			for (int i = 1; i <= M; i++) {
-				Edge edge = edgelist[i];
+	public static boolean bellmanFord(int N, int M, Edge[] edges, long[] weights) {
+		weights[1] = 0;
 
-				if (dist[edge.from] == Integer.MAX_VALUE)
-					continue;
-
-				if (dist[edge.to] > dist[edge.from] + edge.cost) {
-					dist[edge.to] = dist[edge.from] + edge.cost;
-
-					if (iter == N - 1)
-						updated = true;
+		for (int n = 1; n < N; ++n) {
+			for (int m = 1; m <= M; ++m) {
+				Edge edge = edges[m];
+				if (weights[edge.from] != INF && weights[edge.to] > weights[edge.from] + edge.weight) {
+					weights[edge.to] = weights[edge.from] + edge.weight;
 				}
 			}
 		}
 
-		return updated;
-	}
-
-	public static class Edge {
-		int from, to, cost;
-
-		public Edge(int from, int to, int cost) {
-			this.from = from;
-			this.to = to;
-			this.cost = cost;
+		for (int m = 1; m <= M; ++m) {
+			Edge edge = edges[m];
+			if (weights[edge.from] != INF && weights[edge.to] > weights[edge.from] + edge.weight) {
+				return true;
+			}
 		}
+
+		return false;
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		N = Integer.parseInt(st.nextToken());
-		M = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		Edge[] edges = new Edge[M + 1];
+		long[] weights = new long[N + 1];
 
-		dist = new long[N + 1];
-		edgelist = new Edge[M + 1];
+		Arrays.fill(weights, INF);
 
-		Arrays.fill(dist, Integer.MAX_VALUE);
-
-		for (int i = 1; i <= M; i++) {
+		for (int i = 1; i <= M; ++i) {
 			st = new StringTokenizer(br.readLine());
 
-			int from = Integer.parseInt(st.nextToken());
-			int to = Integer.parseInt(st.nextToken());
-			int cost = Integer.parseInt(st.nextToken());
+			int A = Integer.parseInt(st.nextToken());
+			int B = Integer.parseInt(st.nextToken());
+			int C = Integer.parseInt(st.nextToken());
 
-			edgelist[i] = new Edge(from, to, cost);
+			edges[i] = new Edge(A, B, C);
 		}
 
-		if (Time_Machine())
-			bw.write("-1\n");
-		else {
-			for (int i = 2; i <= N; i++)
-				bw.write((dist[i] == Integer.MAX_VALUE ? -1 : dist[i]) + "\n");
-		}
+		boolean existCycle = bellmanFord(N, M, edges, weights);
 
-		bw.flush();
-		bw.close();
-		br.close();
+		if (existCycle) {
+			System.out.println(-1);
+		} else {
+			for (int i = 2; i <= N; ++i) {
+				if (weights[i] == INF) {
+					System.out.println(-1);
+				} else {
+					System.out.println(weights[i]);
+				}
+			}
+		}
 	}
-
 }
