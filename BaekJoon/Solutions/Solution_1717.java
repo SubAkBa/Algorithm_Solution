@@ -1,75 +1,66 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Solution_1717 {
-	static int[] parent, rank;
+	static int[] parent;
+	static int[] size;
 
-	public static void Initialize(int n) {
-		for (int i = 0; i <= n; i++)
-			parent[i] = i;
+	public static int find(int node) {
+		if (node == parent[node]) {
+			return node;
+		}
+		return parent[node] = find(parent[node]);
 	}
 
-	public static void Swap(int n1, int n2) {
-		int temp = n1;
-		n1 = n2;
-		n2 = temp;
-	}
+	public static void union(int a, int b) {
+		int aParent = find(a);
+		int bParent = find(b);
 
-	public static int Find(int u) {
-		if (parent[u] == u)
-			return u;
-
-		return parent[u] = Find(parent[u]);
-	}
-
-	public static void Union(int u, int v) {
-		int uR = Find(u);
-		int vR = Find(v);
-
-		if (uR == vR)
+		if (aParent == bParent) {
 			return;
+		}
 
-		if (rank[uR] > rank[vR])
-			Swap(uR, vR);
-
-		parent[uR] = vR;
-
-		if (rank[uR] == rank[vR])
-			rank[vR]++;
+		if (size[aParent] < size[bParent]) {
+			parent[aParent] = bParent;
+		} else if (size[aParent] > size[bParent]) {
+			parent[bParent] = aParent;
+		} else {
+			parent[bParent] = aParent;
+			++size[aParent];
+		}
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
 		StringTokenizer st = new StringTokenizer(br.readLine());
+
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
-		
 		parent = new int[n + 1];
-		rank = new int[n + 1];
-		
-		Initialize(n);
+		size = new int[n + 1];
 
-		for (int i = 0; i < m; i++) {
+		for (int i = 1; i <= n; ++i) {
+			parent[i] = i;
+			size[i] = 1;
+		}
+
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < m; ++i) {
 			st = new StringTokenizer(br.readLine());
-			String str = st.nextToken();			
-			int n1 = Integer.parseInt(st.nextToken());
-			int n2 = Integer.parseInt(st.nextToken());
-			
-			switch(str){
-			case "0":
-				Union(n1, n2);
-				break;
-			case "1":
-				bw.write(Find(n1) == Find(n2) ? "YES\n" : "NO\n");
-				break;
+
+			int x = Integer.parseInt(st.nextToken());
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
+
+			if (x == 1) {
+				sb.append(find(a) == find(b) ? "YES\n" : "NO\n");
+			} else {
+				union(a, b);
 			}
 		}
-		
-		bw.flush();
-		bw.close();
-		br.close();
-	}
 
+		System.out.println(sb);
+	}
 }

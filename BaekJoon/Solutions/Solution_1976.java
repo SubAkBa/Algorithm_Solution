@@ -1,88 +1,74 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Solution_1976 {
-	static int N, M;
-	static int[][] graph;
-	static int[] parent, rank;
+	static int[] parent;
+	static int[] size;
 
-	public static void Swap(int n1, int n2) {
-		int temp = n1;
-		n1 = n2;
-		n2 = temp;
+	public static int find(int node) {
+		if (node == parent[node]) {
+			return node;
+		}
+
+		return parent[node] = find(parent[node]);
 	}
 
-	public static int Find(int u) {
-		if (parent[u] == u)
-			return u;
+	public static void union(int a, int b) {
+		int aParent = find(a);
+		int bParent = find(b);
 
-		return parent[u] = Find(parent[u]);
-	}
-
-	public static void Union(int u, int v) {
-		int uR = Find(u);
-		int vR = Find(v);
-
-		if (uR == vR)
+		if (aParent == bParent) {
 			return;
+		}
 
-		if (rank[uR] > rank[vR])
-			Swap(uR, vR);
-
-		parent[uR] = vR;
-
-		if (rank[uR] == rank[vR])
-			rank[vR]++;
-	}
-
-	public static void Initialize() {
-		for (int i = 1; i <= N; i++)
-			parent[i] = i;
+		if (size[aParent] < size[bParent]) {
+			parent[aParent] = bParent;
+		} else if (size[aParent] > size[bParent]) {
+			parent[bParent] = aParent;
+		} else {
+			parent[bParent] = aParent;
+			++size[aParent];
+		}
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		N = Integer.parseInt(br.readLine());
-		M = Integer.parseInt(br.readLine());
+		StringTokenizer st;
 
-		graph = new int[N + 1][N + 1];
+		int N = Integer.parseInt(br.readLine());
+		int M = Integer.parseInt(br.readLine());
 		parent = new int[N + 1];
-		rank = new int[N + 1];
+		size = new int[N + 1];
 
-		Initialize();
-		
-		for (int i = 1; i <= N; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			
-			for (int j = 1; j <= N; j++) {
-				graph[i][j] = Integer.parseInt(st.nextToken());
-				
-				if(graph[i][j] == 1)
-					Union(i, j);
+		for (int i = 1; i <= N; ++i) {
+			parent[i] = i;
+			size[i] = 1;
+		}
+
+		for (int i = 1; i <= N; ++i) {
+			st = new StringTokenizer(br.readLine());
+
+			for (int j = 1; j <= N; ++j) {
+				int value = Integer.parseInt(st.nextToken());
+
+				if (value == 1) {
+					union(i, j);
+				}
 			}
 		}
-		
 
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int pre = Integer.parseInt(st.nextToken());
-		int cur = Integer.parseInt(st.nextToken());
-
-		while (Find(pre) == Find(cur)) {
-			if (st.hasMoreTokens())
-				cur = Integer.parseInt(st.nextToken());
-			else
+		st = new StringTokenizer(br.readLine());
+		int root1 = find(Integer.parseInt(st.nextToken()));
+		int root2 = -1;
+		for (int i = 2; i <= M; ++i) {
+			root2 = find(Integer.parseInt(st.nextToken()));
+			if (root1 != root2) {
 				break;
+			}
 		}
 
-		if (st.hasMoreTokens())
-			bw.write("NO");
-		else
-			bw.write("YES");
-
-		bw.flush();
-		bw.close();
-		br.close();
+		System.out.println(root1 == root2 ? "YES" : "NO");
 	}
-
 }
