@@ -1,103 +1,97 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Solution_1197 {
-	static int[] parent, rank;
-	static PriorityQueue<Edge> edgelist;
-	static int V;
-
-	public static void Initialize() {
-		for (int i = 1; i <= V; i++)
-			parent[i] = i;
-	}
+	static int[] parent;
+	static int[] size;
 
 	public static class Edge implements Comparable<Edge> {
-		int x, y, cost;
+		int from, to, cost;
 
-		public Edge(int x, int y, int cost) {
-			this.x = x;
-			this.y = y;
+		public Edge(int from, int to, int cost) {
+			this.from = from;
+			this.to = to;
 			this.cost = cost;
 		}
 
 		@Override
-		public int compareTo(Edge e) {
-			return this.cost - e.cost;
+		public int compareTo(Edge o) {
+			return this.cost - o.cost;
 		}
 	}
 
-	public static int Find(int u) {
-		if (parent[u] == u)
-			return u;
+	public static int find(int node) {
+		if (node == parent[node]) {
+			return node;
+		}
 
-		return parent[u] = Find(parent[u]);
+		return parent[node] = find(parent[node]);
 	}
 
-	public static void Swap(int n1, int n2) {
-		int temp = n1;
-		n1 = n2;
-		n2 = temp;
-	}
+	public static void union(int a, int b) {
+		int aParent = find(a);
+		int bParent = find(b);
 
-	public static void Union(int u, int v) {
-		int uR = Find(u);
-		int vR = Find(v);
-
-		if (uR == vR)
+		if (aParent == bParent) {
 			return;
+		}
 
-		if (rank[uR] > rank[vR])
-			Swap(uR, vR);
-
-		parent[uR] = vR;
-
-		if (rank[uR] == rank[vR])
-			rank[vR]++;
+		if (size[aParent] < size[bParent]) {
+			parent[aParent] = bParent;
+		} else if (size[aParent] > size[bParent]) {
+			parent[bParent] = aParent;
+		} else {
+			parent[bParent] = aParent;
+			++size[aParent];
+		}
 	}
 
-	public static int Kruskal() {
-		int mst = 0;
+	public static int kruskal(int V, Edge[] edges) {
+		Arrays.sort(edges);
 
-		while (!edgelist.isEmpty()) {
-			Edge edge = edgelist.poll();
+		int total = 0, count = 0;
+		for (Edge edge : edges) {
+			if (find(edge.from) != find(edge.to)) {
+				union(edge.from, edge.to);
+				++count;
+				total += edge.cost;
+			}
 
-			if (Find(edge.x) != Find(edge.y)) {
-				Union(edge.x, edge.y);
-				mst += edge.cost;
+			if (count == V - 1) {
+				break;
 			}
 		}
 
-		return mst;
+		return total;
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		V = Integer.parseInt(st.nextToken());
+		int V = Integer.parseInt(st.nextToken());
 		int E = Integer.parseInt(st.nextToken());
-
-		edgelist = new PriorityQueue<>();
+		Edge[] edges = new Edge[E];
 		parent = new int[V + 1];
-		rank = new int[V + 1];
+		size = new int[V + 1];
 
-		Initialize();
-
-		for (int i = 0; i < E; i++) {
-			st = new StringTokenizer(br.readLine());
-
-			int from = Integer.parseInt(st.nextToken());
-			int to = Integer.parseInt(st.nextToken());
-			int cost = Integer.parseInt(st.nextToken());
-
-			edgelist.add(new Edge(from, to, cost));
+		for (int i = 1; i <= V; ++i) {
+			parent[i] = i;
+			size[i] = 1;
 		}
 
-		bw.write(Kruskal() + " ");
-		bw.flush();
-		bw.close();
-		br.close();
-	}
+		for (int i = 0; i < E; ++i) {
+			st = new StringTokenizer(br.readLine());
 
+			int A = Integer.parseInt(st.nextToken());
+			int B = Integer.parseInt(st.nextToken());
+			int C = Integer.parseInt(st.nextToken());
+			edges[i] = new Edge(A, B, C);
+		}
+
+		System.out.println(kruskal(V, edges));
+	}
 }
