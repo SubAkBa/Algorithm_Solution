@@ -2,93 +2,97 @@ import java.util.*;
 import java.io.*;
 
 public class Solution_1948 {
-	static int n, count;
-	static int[] indeg, time;
-	static ArrayList<Edge>[] edgelist, rev_edgelist;
+	static int[] costs;
 
-	public static void Topological_Sort(int start, int end) {
-		Queue<Integer> queue = new LinkedList<>();
-		queue.offer(start);
+	public static class Edge {
+		int to, dist;
 
-		while (!queue.isEmpty()) {
-			int from = queue.poll();
-
-			for (Edge to : edgelist[from]) {
-				time[to.idx] = Math.max(time[to.idx], to.cost + time[from]);
-
-				if ((--indeg[to.idx]) == 0)
-					queue.offer(to.idx);
-
-			}
+		public Edge(int to, int dist) {
+			this.to = to;
+			this.dist = dist;
 		}
+	}
 
-		boolean[] visited = new boolean[n + 1];
-		queue.offer(end);
+	public static void topologicalSort(int start, List<Edge>[] adjList, int[] inDeg) {
+		Queue<Edge> queue = new ArrayDeque<>();
+
+		queue.offer(new Edge(start, 0));
 
 		while (!queue.isEmpty()) {
-			int from = queue.poll();
+			Edge current = queue.poll();
 
-			for (Edge to : rev_edgelist[from]) {
-				if (time[to.idx] == time[from] - to.cost) {
-					count++;
-					
-					if (!visited[to.idx]) {
-						queue.offer(to.idx);
-						visited[to.idx] = true;
-					}
+			for (Edge next : adjList[current.to]) {
+				--inDeg[next.to];
+
+				costs[next.to] = Math.max(costs[next.to], costs[current.to] + next.dist);
+
+				if (inDeg[next.to] == 0) {
+					queue.offer(new Edge(next.to, next.dist));
 				}
 			}
 		}
 	}
 
-	public static class Edge {
-		int idx, cost;
+	public static int reverseTopologicalSort(int n, int end, List<Edge>[] revAdjList) {
+		Queue<Edge> queue = new ArrayDeque<>();
+		int count = 0;
+		boolean[] visited = new boolean[n + 1];
 
-		public Edge(int idx, int cost) {
-			this.idx = idx;
-			this.cost = cost;
+		queue.offer(new Edge(end, 0));
+
+		while (!queue.isEmpty()) {
+			Edge current = queue.poll();
+
+			for (Edge next : revAdjList[current.to]) {
+				if (costs[current.to] == costs[next.to] + next.dist) {
+					++count;
+
+					if (!visited[next.to]) {
+						queue.offer(new Edge(next.to, next.dist));
+						visited[next.to] = true;
+					}
+				}
+			}
 		}
+
+		return count;
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		n = Integer.parseInt(br.readLine());
+		StringTokenizer st;
+
+		int n = Integer.parseInt(br.readLine());
 		int m = Integer.parseInt(br.readLine());
+		List<Edge>[] adjList = new ArrayList[n + 1];
+		List<Edge>[] revAdjList = new ArrayList[n + 1];
+		int[] inDeg = new int[n + 1];
+		costs = new int[n + 1];
 
-		count = 0;
-		indeg = new int[n + 1];
-		time = new int[n + 1];
-		edgelist = new ArrayList[n + 1];
-		rev_edgelist = new ArrayList[n + 1];
-
-		for (int i = 1; i <= n; i++) {
-			edgelist[i] = new ArrayList<>();
-			rev_edgelist[i] = new ArrayList<>();
+		for (int i = 1; i <= n; ++i) {
+			adjList[i] = new ArrayList<>();
+			revAdjList[i] = new ArrayList<>();
 		}
 
-		for (int i = 0; i < m; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
+		for (int i = 0; i < m; ++i) {
+			st = new StringTokenizer(br.readLine());
 
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
 			int c = Integer.parseInt(st.nextToken());
 
-			indeg[b]++;
-			edgelist[a].add(new Edge(b, c));
-			rev_edgelist[b].add(new Edge(a, c));
+			adjList[a].add(new Edge(b, c));
+			revAdjList[b].add(new Edge(a, c));
+			++inDeg[b];
 		}
 
-		StringTokenizer st = new StringTokenizer(br.readLine());
+		st = new StringTokenizer(br.readLine());
 		int start = Integer.parseInt(st.nextToken());
 		int end = Integer.parseInt(st.nextToken());
 
-		Topological_Sort(start, end);
+		topologicalSort(start, adjList, inDeg);
 
-		bw.write(time[end] + "\n" + count);
-		bw.flush();
-		bw.close();
-		br.close();
+		System.out.println(costs[end]);
+		System.out.println(reverseTopologicalSort(n, end, revAdjList));
 	}
-
 }

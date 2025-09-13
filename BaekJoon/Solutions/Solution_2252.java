@@ -1,64 +1,64 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
 public class Solution_2252 {
-	static int N;
-	static int[] indeg;
-	static ArrayList<Integer>[] edgelist;
 
-	public static ArrayList<Integer> TopologicalSort() {
-		ArrayList<Integer> sortedList = new ArrayList<>();
-		Queue<Integer> queue = new LinkedList<>();
+	public static String topologicalSort(int N, List<Integer>[] adjList, int[] inDeg) {
+		Queue<Integer> queue = new ArrayDeque<>();
+		StringBuilder sb = new StringBuilder();
 
-		for (int i = 1; i <= N; i++) {
-			if (indeg[i] == 0)
+		for (int i = 1; i <= N; ++i) {
+			if (inDeg[i] == 0) {
 				queue.offer(i);
-		}
-
-		while (!queue.isEmpty()) {
-			int cur = queue.poll();
-			sortedList.add(cur);
-
-			for (int next : edgelist[cur]) {
-				indeg[next]--;
-
-				if (indeg[next] == 0)
-					queue.offer(next);
+				sb.append(i + " ");
 			}
 		}
 
-		return sortedList;
+		while (!queue.isEmpty()) {
+			int current = queue.poll();
+
+			for (int next : adjList[current]) {
+				--inDeg[next];
+
+				if (inDeg[next] == 0) {
+					queue.offer(next);
+					sb.append(next + " ");
+				}
+			}
+		}
+
+		return sb.toString();
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		N = Integer.parseInt(st.nextToken());
+
+		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
+		List<Integer>[] adjList = new ArrayList[N + 1];
+		int[] inDeg = new int[N + 1];
 
-		indeg = new int[N + 1];
-		edgelist = new ArrayList[N + 1];
+		for (int i = 1; i <= N; ++i) {
+			adjList[i] = new ArrayList<>();
+		}
 
-		for (int i = 1; i <= N; i++)
-			edgelist[i] = new ArrayList<>();
-
-		for (int i = 0; i < M; i++) {
+		for (int i = 0; i < M; ++i) {
 			st = new StringTokenizer(br.readLine());
 
 			int A = Integer.parseInt(st.nextToken());
 			int B = Integer.parseInt(st.nextToken());
 
-			edgelist[A].add(B);
-			indeg[B]++;
+			adjList[A].add(B);
+			++inDeg[B];
 		}
 
-		for (int num : TopologicalSort())
-			bw.write(num + " ");
-
-		bw.flush();
-		bw.close();
-		br.close();
+		System.out.println(topologicalSort(N, adjList, inDeg));
 	}
-
 }

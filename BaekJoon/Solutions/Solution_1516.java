@@ -1,68 +1,74 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
 public class Solution_1516 {
-	static int[] indeg, time, result;
-	static int N;
-	static ArrayList<Integer>[] edgelist;
 
-	public static void TopologicalSort() {
-		Queue<Integer> queue = new LinkedList<>();
+	public static int[] topologicalSort(int N, List<Integer>[] adjList, int[] inDeg, int[] costs) {
+		int[] maxCosts = new int[N + 1];
+		Queue<Integer> queue = new ArrayDeque<>();
 
-		for (int i = 1; i <= N; i++) {
-			if (indeg[i] == 0)
+		for (int i = 1; i <= N; ++i) {
+			if (inDeg[i] == 0) {
 				queue.offer(i);
+				maxCosts[i] = costs[i];
+			}
 		}
 
 		while (!queue.isEmpty()) {
-			int cur = queue.poll();
+			int current = queue.poll();
 
-			for (int next : edgelist[cur]) {
-				indeg[next]--;
-				result[next] = Math.max(result[next], result[cur] + time[cur]);
+			for (int next : adjList[current]) {
+				maxCosts[next] = Math.max(maxCosts[next], maxCosts[current] + costs[next]);
+				--inDeg[next];
 
-				if (indeg[next] == 0)
+				if (inDeg[next] == 0) {
 					queue.offer(next);
-			}
-		}
-	}
-
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		N = Integer.parseInt(br.readLine());
-
-		indeg = new int[N + 1];
-		time = new int[N + 1];
-		result = new int[N + 1];
-		edgelist = new ArrayList[N + 1];
-
-		for (int i = 1; i <= N; i++)
-			edgelist[i] = new ArrayList<>();
-
-		for (int i = 1; i <= N; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			int t = Integer.parseInt(st.nextToken());
-			time[i] = t;
-
-			while (st.hasMoreTokens()) {
-				int num = Integer.parseInt(st.nextToken());
-
-				if (num != -1) {
-					edgelist[num].add(i);
-					indeg[i]++;
 				}
 			}
 		}
 
-		TopologicalSort();
-
-		for (int i = 1; i <= N; i++)
-			bw.write((time[i] + result[i]) + "\n");
-
-		bw.flush();
-		bw.close();
-		br.close();
+		return maxCosts;
 	}
 
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st;
+
+		int N = Integer.parseInt(br.readLine());
+		int[] inDeg = new int[N + 1];
+		int[] costs = new int[N + 1];
+		List<Integer>[] adjList = new ArrayList[N + 1];
+
+		for (int i = 1; i <= N; ++i) {
+			adjList[i] = new ArrayList<>();
+		}
+
+		for (int i = 1; i <= N; ++i) {
+			st = new StringTokenizer(br.readLine());
+			costs[i] = Integer.parseInt(st.nextToken());
+
+			while (true) {
+				int preNode = Integer.parseInt(st.nextToken());
+
+				if (preNode == -1) {
+					break;
+				}
+
+				adjList[preNode].add(i);
+				++inDeg[i];
+			}
+		}
+
+		int[] maxCosts = topologicalSort(N, adjList, inDeg, costs);
+
+		for (int i = 1; i <= N; ++i) {
+			System.out.println(maxCosts[i]);
+		}
+	}
 }
