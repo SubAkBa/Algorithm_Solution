@@ -1,58 +1,60 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class Solution_1068 {
-	static int count;
+	static int N, count;
+	static List<Integer>[] adjList;
 
-	public static void DFS(int N, List<Integer>[] adj, int R, int node) {
-		int temp_count = 0;
+	public static void dfs(int node, int del) {
+		int child = 0;
 
-		for (int to : adj[node]) {
-			if (to == R)
-				continue;
-
-			++temp_count;
-			DFS(N, adj, R, to);
+		for (int next : adjList[node]) {
+			if (next != del) {
+				dfs(next, del);
+				++child;
+			}
 		}
 
-		if (temp_count == 0)
+		if (child == 0) {
 			++count;
+		}
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int N = Integer.parseInt(br.readLine());
+		StringTokenizer st;
+
 		count = 0;
+		N = Integer.parseInt(br.readLine());
+		adjList = new ArrayList[N];
+		st = new StringTokenizer(br.readLine());
 
-		int[] parent = new int[N];
-		List<Integer>[] adj = new ArrayList[N];
-		StringTokenizer st = new StringTokenizer(br.readLine());
-
-		int root = -1;
 		for (int i = 0; i < N; ++i) {
-			adj[i] = new ArrayList<>();
-			parent[i] = Integer.parseInt(st.nextToken());
+			adjList[i] = new ArrayList<>();
+		}
 
-			if (parent[i] == -1)
+		int root = 0;
+		for (int i = 0; i < N; ++i) {
+			int a = Integer.parseInt(st.nextToken());
+
+			if (a == -1) {
 				root = i;
-		}
-
-		for (int i = 0; i < N; ++i) {
-			if (parent[i] == -1)
 				continue;
+			}
 
-			adj[parent[i]].add(i);
+			adjList[a].add(i);
 		}
 
-		int R = Integer.parseInt(br.readLine());
+		int del = Integer.parseInt(br.readLine());
 
-		if (root != R)
-			DFS(N, adj, R, root);
+		if (del != root) {
+			dfs(root, del);
+		}
 
-		bw.write(count + "");
-		bw.flush();
-		bw.close();
-		br.close();
+		System.out.println(count);
 	}
 }

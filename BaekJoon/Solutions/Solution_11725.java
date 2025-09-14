@@ -1,48 +1,54 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class Solution_11725 {
+	static int N;
+	static int[] parents;
+	static boolean[] visited;
+	static List<Integer>[] adjList;
 
-	public static void DFS(int N, List<Integer>[] adj, int[] parent, boolean[] visited, int prev, int current) {
-		parent[current] = prev;
-		visited[current] = true;
+	public static void setParents(int node, int prev) {
+		parents[node] = prev;
+		visited[node] = true;
 
-		for (int to : adj[current]) {
-			if (visited[to])
-				continue;
-
-			DFS(N, adj, parent, visited, current, to);
+		for (int next : adjList[node]) {
+			if (!visited[next]) {
+				setParents(next, node);
+			}
 		}
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int N = Integer.parseInt(br.readLine());
-		List<Integer>[] adj = new ArrayList[N + 1];
+		StringTokenizer st;
 
-		for (int i = 1; i <= N; ++i)
-			adj[i] = new ArrayList<>();
+		N = Integer.parseInt(br.readLine());
+		adjList = new ArrayList[N + 1];
+		parents = new int[N + 1];
+		visited = new boolean[N + 1];
 
-		for (int i = 1; i < N; ++i) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
-
-			int A = Integer.parseInt(st.nextToken());
-			int B = Integer.parseInt(st.nextToken());
-
-			adj[A].add(B);
-			adj[B].add(A);
+		for (int i = 1; i <= N; ++i) {
+			adjList[i] = new ArrayList<>();
 		}
 
-		int[] parent = new int[N + 1];
+		for (int i = 1; i < N; ++i) {
+			st = new StringTokenizer(br.readLine());
 
-		DFS(N, adj, parent, new boolean[N + 1], 1, 1);
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
 
-		for (int i = 2; i <= N; ++i)
-			bw.write(parent[i] + "\n");
+			adjList[a].add(b);
+			adjList[b].add(a);
+		}
 
-		bw.flush();
-		bw.close();
-		br.close();
+		setParents(1, 1);
+
+		for (int i = 2; i <= N; ++i) {
+			System.out.println(parents[i]);
+		}
 	}
 }
