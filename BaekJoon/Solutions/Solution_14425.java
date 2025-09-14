@@ -2,59 +2,57 @@ import java.util.*;
 import java.io.*;
 
 public class Solution_14425 {
-//	static int size = 26;
-//
-//	public static class TrieNode {
-//		TrieNode[] children;
-//		boolean isEndofWords;
-//
-//		public TrieNode() {
-//			this.children = new TrieNode[size];
-//			this.isEndofWords = false;
-//		}
-//	}
-//
-//	public static class Trie {
-//		TrieNode root;
-//
-//		public Trie() {
-//			this.root = new TrieNode();
-//		}
-//
-//		public void Insert(String str) {
-//			TrieNode temp = this.root;
-//
-//			int len = str.length();
-//
-//			for (int i = 0; i < len; ++i) {
-//				int idx = str.charAt(i) - 'a';
-//
-//				if (temp.children[idx] == null)
-//					temp.children[idx] = new TrieNode();
-//
-//				temp = temp.children[idx];
-//			}
-//
-//			temp.isEndofWords = true;
-//		}
-//
-//		public boolean Search(String str) {
-//			TrieNode temp = this.root;
-//
-//			int len = str.length();
-//
-//			for (int i = 0; i < len; ++i) {
-//				int idx = str.charAt(i) - 'a';
-//
-//				if (temp.children[idx] == null)
-//					return false;
-//
-//				temp = temp.children[idx];
-//			}
-//
-//			return temp.isEndofWords && temp != null;
-//		}
-//	}
+	// static int size = 26;
+	//
+	// public static class Node {
+	// 	boolean isTerminal;
+	// 	Node[] nodes;
+	//
+	// 	public Node() {
+	// 		this.isTerminal = false;
+	// 		nodes = new Node[size];
+	// 	}
+	// }
+	//
+	// public static class Trie {
+	// 	Node root;
+	//
+	// 	public Trie() {
+	// 		this.root = new Node();
+	// 	}
+	//
+	// 	public void insert(String str) {
+	// 		Node current = root;
+	//
+	// 		for (int i = 0; i < str.length(); ++i) {
+	// 			int idx = str.charAt(i) - 'a';
+	//
+	// 			if (current.nodes[idx] == null) {
+	// 				current.nodes[idx] = new Node();
+	// 			}
+	//
+	// 			current = current.nodes[idx];
+	// 		}
+	//
+	// 		current.isTerminal = true;
+	// 	}
+	//
+	// 	public boolean existString(String str) {
+	// 		Node current = root;
+	//
+	// 		for (int i = 0; i < str.length(); ++i) {
+	// 			int idx = str.charAt(i) - 'a';
+	//
+	// 			if (current.nodes[idx] == null) {
+	// 				return false;
+	// 			}
+	//
+	// 			current = current.nodes[idx];
+	// 		}
+	//
+	// 		return current != null && current.isTerminal;
+	// 	}
+	// }
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -64,16 +62,17 @@ public class Solution_14425 {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		int count = 0;
-
-//		Trie trie = new Trie();
-//
-//		for (int i = 0; i < N; ++i)
-//			trie.Insert(br.readLine());
-//
-//		for (int i = 0; i < M; ++i) {
-//			if (trie.Search(br.readLine()))
-//				++count;
-//		}
+		// Trie trie = new Trie();
+		//
+		// for (int i = 0; i < N; ++i) {
+		// 	trie.insert(br.readLine());
+		// }
+		//
+		// for (int i = 0; i < M; ++i) {
+		// 	if (trie.existString(br.readLine())) {
+		// 		++count;
+		// 	}
+		// }
 
 		Set<String> cache = new HashSet<>();
 
