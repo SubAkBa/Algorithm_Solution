@@ -1,103 +1,76 @@
 import java.io.*;
+import java.util.StringTokenizer;
 
-public class tree_1991_solution {
+public class Solution_1991 {
+	static int[][] treeArr;
+
+	public static void preOrder(int node) {
+		System.out.print((char) (node + 'A'));
+
+		if (treeArr[node][0] != -1) {
+			preOrder(treeArr[node][0]);
+		}
+
+		if (treeArr[node][1] != -1) {
+			preOrder(treeArr[node][1]);
+		}
+	}
+
+	public static void inOrder(int node) {
+		if (treeArr[node][0] != -1) {
+			inOrder(treeArr[node][0]);
+		}
+
+		System.out.print((char)(node + 'A'));
+
+		if (treeArr[node][1] != -1) {
+			inOrder(treeArr[node][1]);
+		}
+	}
+
+	public static void postOrder(int node) {
+		if (treeArr[node][0] != -1) {
+			postOrder(treeArr[node][0]);
+		}
+
+		if (treeArr[node][1] != -1) {
+			postOrder(treeArr[node][1]);
+		}
+
+		System.out.print((char)(node + 'A'));
+	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int treecount = Integer.parseInt(br.readLine());
+		StringTokenizer st;
 
-		char[] treedata = br.readLine().replaceAll(" ", "").toCharArray();
+		int N = Integer.parseInt(br.readLine());
+		treeArr = new int[N + 1][2];
 
-		Tree tree = new Tree(treedata[0], treedata[1], treedata[2]);
+		for (int i = 1; i <= N; ++i) {
+			st = new StringTokenizer(br.readLine());
 
-		for (int i = 1; i < treecount; i++) {
-			treedata = br.readLine().replaceAll(" ", "").toCharArray();
-			tree.Add(treedata[0], treedata[1], treedata[2]);
+			int node = st.nextToken().charAt(0) - 'A';
+			char left = st.nextToken().charAt(0);
+			char right = st.nextToken().charAt(0);
+
+			if (left != '.') {
+				treeArr[node][0] = left - 'A';
+			} else {
+				treeArr[node][0] = -1;
+			}
+
+			if (right != '.') {
+				treeArr[node][1] = right - 'A';
+			} else {
+				treeArr[node][1] = -1;
+			}
 		}
 
-		tree.PreOrder(tree.root);
+		preOrder(0);
 		System.out.println();
-		tree.InOrder(tree.root);
+		inOrder(0);
 		System.out.println();
-		tree.PostOrder(tree.root);
-
-		br.close();
-	}
-
-}
-
-class TreeNode {
-	TreeNode leftnode, rightnode;
-	private char data;
-
-	public TreeNode(char data) {
-		this.leftnode = null;
-		this.rightnode = null;
-		this.data = data;
-	}
-
-	public char getData() {
-		return data;
-	}
-}
-
-
-
-class Tree {
-	TreeNode root;
-
-	public Tree(char data, char left, char right) {
-		root = new TreeNode(data);
-
-		if (data != '.')
-			root = new TreeNode(data);
-		if (left != '.')
-			root.leftnode = new TreeNode(left);
-		if (right != '.')
-			root.rightnode = new TreeNode(right);
-	}
-
-	public void Add(char data, char left, char right) {
-		SearchNode(root.leftnode, data, left, right);
-		SearchNode(root.rightnode, data, left, right);
-	}
-
-	public void SearchNode(TreeNode node, char data, char left, char right) {
-		if (node == null)
-			return;
-
-		if (node.getData() == data) {
-			if (left != '.')
-				node.leftnode = new TreeNode(left);
-			if (right != '.')
-				node.rightnode = new TreeNode(right);
-		} else {
-			SearchNode(node.leftnode, data, left, right);
-			SearchNode(node.rightnode, data, left, right);
-		}
-	}
-
-	public void PreOrder(TreeNode root) {
-		System.out.print(root.getData());
-		if (root.leftnode != null)
-			PreOrder(root.leftnode);
-		if (root.rightnode != null)
-			PreOrder(root.rightnode);
-	}
-
-	public void InOrder(TreeNode root) {
-		if (root.leftnode != null)
-			InOrder(root.leftnode);
-		System.out.print(root.getData());
-		if (root.rightnode != null)
-			InOrder(root.rightnode);
-	}
-
-	public void PostOrder(TreeNode root) {
-		if (root.leftnode != null)
-			PostOrder(root.leftnode);
-		if (root.rightnode != null)
-			PostOrder(root.rightnode);
-		System.out.print(root.getData());
+		postOrder(0);
 	}
 }
