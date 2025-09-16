@@ -1,78 +1,95 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Solution_2042 {
+    static long[] nums;
+    static long[] tree;
 
-    public static long Init(long[] nums, long[] tree, int left, int right, int node) {
-        if (left == right)
-            return tree[node] = nums[left];
+    public static long build(int start, int end, int node) {
+        if (start == end) {
+            return tree[node] = nums[start];
+        }
 
-        int mid = (left + right) / 2;
-        return tree[node] = Init(nums, tree, left, mid, node * 2) + Init(nums, tree, mid + 1, right, node * 2 + 1);
+        int mid = (start + end) >>> 1;
+        int L = node << 1;
+        int R = L | 1;
+
+        return tree[node] = build(start, mid, L) + build(mid + 1, end, R);
     }
 
-    public static void Update(long[] tree, int left, int right, int idx, long diff, int node) {
-        if (!(left <= idx && idx <= right))
+    public static long query(int start, int end, int node, int left, int right) {
+        if (right < start || end < left) {
+            return 0;
+        }
+
+        if (left <= start && end <= right) {
+            return tree[node];
+        }
+
+        int mid = (start + end) >>> 1;
+        int L = node << 1;
+        int R = L | 1;
+
+        return query(start, mid, L, left, right) + query(mid + 1, end, R, left, right);
+    }
+
+    public static void update(int start, int end, int node, int idx, long diff) {
+        if (idx < start || end < idx) {
             return;
+        }
 
         tree[node] += diff;
 
-        if (left == right)
+        if (start == end) {
             return;
+        }
 
-        int mid = (left + right) / 2;
-        Update(tree, left, mid, idx, diff, node * 2);
-        Update(tree, mid + 1, right, idx, diff, node * 2 + 1);
-    }
+        int mid = (start + end) >>> 1;
+        int L = node << 1;
+        int R = L | 1;
 
-    public static long Query(long[] tree, int left, int right, int start, int end, int node) {
-        if (start > right || end < left)
-            return 0;
-
-        if (start <= left && right <= end)
-            return tree[node];
-
-        int mid = (left + right) / 2;
-
-        return Query(tree, left, mid, start, end, node * 2) + Query(tree, mid + 1, right, start, end, node * 2 + 1);
+        if (idx <= mid) {
+            update(start, mid, L, idx, diff);
+        } else {
+            update(mid + 1, end, R, idx, diff);
+        }
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
+        nums = new long[N + 1];
 
-        int h = (int) (Math.log(N) / Math.log(2));
-        long[] nums = new long[N + 1];
-        long[] tree = new long[1 << (h + 1) + 1];
-        for (int i = 1; i <= N; ++i)
-            nums[i] = Integer.parseInt(br.readLine());
+        for (int i = 1; i <= N; ++i) {
+            nums[i] = Long.parseLong(br.readLine());
+        }
 
-        Init(nums, tree, 1, N, 1);
+        tree = new long[N * 4];
+        build(1, N, 1);
 
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < M + K; ++i) {
             st = new StringTokenizer(br.readLine());
 
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
+            long c = Long.parseLong(st.nextToken());
 
             if (a == 1) {
-                long c = Long.parseLong(st.nextToken());
                 long diff = c - nums[b];
                 nums[b] = c;
-                Update(tree, 1, N, b, diff, 1);
-            } else {
-                int c = Integer.parseInt(st.nextToken());
-                bw.write(Query(tree, 1, N, b, c, 1) + "\n");
+                update(1, N, 1, b, diff);
+            } else if (a == 2) {
+                sb.append(query(1, N, 1, b, (int)c)).append("\n");
             }
         }
 
-        bw.flush();
-        bw.close();
-        br.close();
+        System.out.println(sb);
     }
 }
