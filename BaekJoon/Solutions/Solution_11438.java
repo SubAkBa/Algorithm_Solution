@@ -1,91 +1,121 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
 public class Solution_11438 {
-    static int MAX, MAX_N, N;
+    static List<Integer>[] adjList;
     static int[] depth;
-    static int[][] ac;
-    static List<Integer>[] adj;
+    static int[][] up;
+    static int N, size;
 
-    public static void getTree(int here, int parent) {
-        depth[here] = depth[parent] + 1;
-        ac[here][0] = parent;
+    public static int getSize() {
+        return 32 - Integer.numberOfLeadingZeros(N);
+    }
 
-        for (int i = 1; i <= MAX; ++i)
-            ac[here][i] = ac[ac[here][i - 1]][i - 1];
+    public static void build(int root) {
+        Arrays.fill(depth, -1);
 
-        for (int node : adj[here]) {
-            if (node != parent)
-                getTree(node, here);
+        Queue<Integer> queue = new ArrayDeque<>();
+
+        depth[root] = 0;
+        up[0][root] = 0;
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            int current = queue.poll();
+
+            for (int next : adjList[current]) {
+                if (depth[next] != -1) {
+                    continue;
+                }
+
+                depth[next] = depth[current] + 1;
+                up[0][next] = current;
+                queue.offer(next);
+            }
         }
+
+        for (int i = 1; i < size; ++i) {
+            for (int j = 1; j <= N; ++j) {
+                up[i][j] = up[i - 1][up[i - 1][j]];
+            }
+        }
+    }
+
+    public static int lift(int node, int dist) {
+        while (node != 0 && dist != 0) {
+            int i = Integer.numberOfTrailingZeros(dist);
+            node = up[i][node];
+            dist &= dist - 1;
+        }
+
+        return node;
+    }
+
+    public static int lca(int a, int b) {
+        if (depth[a] > depth[b]) {
+            a = lift(a, depth[a] - depth[b]);
+        } else if (depth[a] < depth[b]) {
+            b = lift(b, depth[b] - depth[a]);
+        }
+
+        if (a == b) {
+            return a;
+        }
+
+        for (int i = size - 1; i >= 0; --i) {
+            if (up[i][a] != up[i][b]) {
+                a = up[i][a];
+                b = up[i][b];
+            }
+        }
+
+        return up[0][a];
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st;
 
         N = Integer.parseInt(br.readLine());
-        MAX = (int) Math.floor(Math.log(N) / Math.log(2));
-        MAX_N = 100000;
-        depth = new int[MAX_N + 1];
-        ac = new int[MAX_N + 1][20];
+        size = getSize();
+        adjList = new ArrayList[N + 1];
+        depth = new int[N + 1];
+        up = new int[size][N + 1];
 
-        depth[0] = -1;
-        adj = new ArrayList[N + 1];
-        for (int i = 1; i <= N; ++i)
-            adj[i] = new ArrayList<>();
-
-        for (int i = 0; i < N - 1; ++i) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-
-            int A = Integer.parseInt(st.nextToken());
-            int B = Integer.parseInt(st.nextToken());
-
-            adj[A].add(B);
-            adj[B].add(A);
+        for (int i = 1; i <= N; ++i) {
+            adjList[i] = new ArrayList<>();
         }
 
-        getTree(1, 0);
-
-        int M = Integer.parseInt(br.readLine());
-
-        while ((--M) >= 0) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < N - 1; ++i) {
+            st = new StringTokenizer(br.readLine());
 
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            if (depth[a] != depth[b]) {
-                if (depth[a] > depth[b]) {
-                    int temp = a;
-                    a = b;
-                    b = temp;
-                }
-
-                for (int i = MAX; i >= 0; --i) {
-                    if (depth[a] <= depth[ac[b][i]])
-                        b = ac[b][i];
-                }
-            }
-
-            int lca = a;
-
-            if (a != b) {
-                for (int i = MAX; i >= 0; --i) {
-                    if (ac[a][i] != ac[b][i]) {
-                        a = ac[a][i];
-                        b = ac[b][i];
-                    }
-
-                    lca = ac[a][i];
-                }
-            }
-
-            bw.write(lca + "\n");
+            adjList[a].add(b);
+            adjList[b].add(a);
         }
 
-        bw.flush();
-        bw.close();
-        br.close();
+        build(1);
+
+        int M = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < M; ++i) {
+            st = new StringTokenizer(br.readLine());
+
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            sb.append(lca(a, b)).append("\n");
+        }
+
+        System.out.println(sb);
     }
 }
