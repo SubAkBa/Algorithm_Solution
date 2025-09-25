@@ -1,17 +1,36 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Solution_2417 {
 
-    public static long Binary_Search(long n) {
-        long left = 0, right = n;
+    public static long binarySearch(long n) {
+        long left = 0, right = Long.MAX_VALUE;
 
         while (left < right) {
-            long mid = left + (right - left) / 2;
+            long mid = left + ((right - left) >>> 1);
 
-            if (mid >= Math.sqrt(n))
+            if (mid == 0) {
+                if (n <= 0) {
+                    right = 0;
+                } else {
+                    left = 1;
+                }
+
+                continue;
+            }
+
+            long q = n / mid;
+
+            if (n % mid != 0) {
+                ++q;
+            }
+
+            if (mid >= q) {
                 right = mid;
-            else
+            } else {
                 left = mid + 1;
+            }
         }
 
         return right;
@@ -19,13 +38,9 @@ public class Solution_2417 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         long n = Long.parseLong(br.readLine());
 
-        bw.write(Binary_Search(n) + "");
-        bw.flush();
-        bw.close();
-        br.close();
+        System.out.println(binarySearch(n));
     }
 }
