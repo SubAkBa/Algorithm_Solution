@@ -3,26 +3,28 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_2805 {
+public class Solution_16401 {
 
-	public static long binarySearch(long M, int[] trees, long maxHeight) {
-		long left = 0, right = maxHeight;
+	public static long binarySearch(int M, int[] cookies, long maxCookie) {
+		if (maxCookie == 0) {
+			return 0;
+		}
+
+		long left = 0, right = maxCookie;
 
 		while (left < right) {
 			long mid = left + ((right - left + 1) >>> 1);
+			long count = 0;
 
-			long total = 0;
-			for (int tree : trees) {
-				if (tree > mid) {
-					total += tree - mid;
-				}
+			for (int cookie : cookies) {
+				count += cookie / mid;
 
-				if (total >= M) {
+				if (count >= M) {
 					break;
 				}
 			}
 
-			if (total >= M) {
+			if (count >= M) {
 				left = mid;
 			} else {
 				right = mid - 1;
@@ -36,17 +38,17 @@ public class Solution_2805 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
+		int M = Integer.parseInt(st.nextToken());
 		int N = Integer.parseInt(st.nextToken());
-		long M = Long.parseLong(st.nextToken());
-		long maxHeight = 0;
-		int[] trees = new int[N];
+		int[] cookies = new int[N];
 
+		long maxCookie = 0;
 		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < N; ++i) {
-			trees[i] = Integer.parseInt(st.nextToken());
-			maxHeight = Math.max(maxHeight, trees[i]);
+			cookies[i] = Integer.parseInt(st.nextToken());
+			maxCookie = Math.max(maxCookie, cookies[i]);
 		}
 
-		System.out.println(binarySearch(M, trees, maxHeight));
+		System.out.println(binarySearch(M, cookies, maxCookie));
 	}
 }

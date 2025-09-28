@@ -1,55 +1,56 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Solution_2110 {
-	static int N, C;
 
-	public static int Install_Wifi(int[] home) {
-		int left = 1, right = home[N - 1] - home[0], answer = 0;
+	public static int binarySearch(int C, int[] positions, int dist) {
+		int left = 0, right = dist;
 
-		while (left <= right) {
-			int mid = (left + right) / 2;
-			int start = home[0], count = 1;
+		while (left < right) {
+			int mid = left + ((right - left + 1) >>> 1);
+			int start = positions[0];
+			int count = 1;
 
-			for (int i = 1; i < N; i++) {
-				int dist = home[i] - start;
+			for (int pos : positions) {
+				if (mid <= pos - start) {
+					start = pos;
+					++count;
+				}
 
-				if (mid <= dist) {
-					count++;
-					start = home[i];
+				if (count >= C) {
+					break;
 				}
 			}
-			
-			if(count >= C) {
-				answer = mid;
-				left = mid + 1;
-			}
-			else
+
+			if (count >= C) {
+				left = mid;
+			} else {
 				right = mid - 1;
+			}
 		}
-		
-		return answer;
+
+		return left;
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		N = Integer.parseInt(st.nextToken());
-		C = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());
+		int C = Integer.parseInt(st.nextToken());
+		int maxPos = 0;
+		int[] positions = new int[N];
 
-		int[] home = new int[N];
+		for (int i = 0; i < N; ++i) {
+			positions[i] = Integer.parseInt(br.readLine());
+			maxPos = Math.max(positions[i], maxPos);
+		}
 
-		for (int i = 0; i < N; i++)
-			home[i] = Integer.parseInt(br.readLine());
-		
-		Arrays.sort(home);
+		Arrays.sort(positions);
 
-		bw.write(Install_Wifi(home) + "");
-		bw.flush();
-		bw.close();
-		br.close();
+		System.out.println(binarySearch(C, positions, positions[N - 1] - positions[0]));
 	}
-
 }
