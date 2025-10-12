@@ -1,0 +1,29 @@
+WITH Temptable AS (
+    SELECT ID
+         , CUME_DIST() OVER (ORDER BY SIZE_OF_COLONY DESC) AS PERCENT
+    FROM ECOLI_DATA
+)
+SELECT ID
+     , CASE WHEN PERCENT <= 0.25 THEN 'CRITICAL'
+            WHEN PERCENT <= 0.5  THEN 'HIGH'
+            WHEN PERCENT <= 0.75 THEN 'MEDIUM'
+            ELSE 'LOW'
+        END AS 'COLONY_NAME'
+FROM Temptable
+ORDER BY ID;
+
+
+
+WITH Temptable AS (
+    SELECT ID
+         , NTILE(4) OVER (ORDER BY SIZE_OF_COLONY DESC) AS TILE_VALUE
+    FROM ECOLI_DATA
+)
+SELECT ID
+     , CASE TILE_VALUE WHEN 1 THEN 'CRITICAL'
+                       WHEN 2 THEN 'HIGH'
+                       WHEN 3 THEN 'MEDIUM'
+                       ELSE 'LOW'
+        END AS 'COLONY_NAME'
+FROM Temptable
+ORDER BY ID;

@@ -282,3 +282,28 @@
 |  2   | [직사각형의 넓이](https://programmers.co.kr/learn/courses/30/lessons/12974)           | | []() | |
 
 
+<br />
+
+## SQL 고득점 Kit
+### SELECT
+### LEVEL 1
+| Idx | Question                                                                                | Category | Solution                                                                                                                  | Note |
+|:---:|-----------------------------------------------------------------------------------------|----------| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1  | [조건에 부합하는 중고거래 댓글 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/164673) | DATBASE  | []() | |
+|  2  | [과일로 만든 아이스크림 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/133025)    | DATBASE  | []() | |
+|  3  | [상위 n개 레코드](https://school.programmers.co.kr/learn/courses/30/lessons/59405)        | DATBASE  | []() | |
+
+### LEVEL 2
+| Idx | Question                                                                                  | Category | Solution                                                                                                                  | Note |
+|:---:|-------------------------------------------------------------------------------------------|----------| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1  | [특정 물고기를 잡은 총 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/298518)    | DATBASE  | []() | |
+|  2  | [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120) | DATBASE  | []() | |
+
+### LEVEL 3
+| Idx | Question                                                                                  | Category | Solution                                                                                                                  | Note |
+|:---:|-------------------------------------------------------------------------------------------|----------| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|  1  | [대장균들의 자식의 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/299305)       | DATBASE  | []() | |
+|  2  | [대장균 크기에 따라 분류하기 1](https://school.programmers.co.kr/learn/courses/30/lessons/299307)     | DATBASE  | []() | |
+|  3  | [대장균 크기에 따라 분류하기 2](https://school.programmers.co.kr/learn/courses/30/lessons/301649)     | DATBASE  | []() | |
+
+### LEVEL 4
