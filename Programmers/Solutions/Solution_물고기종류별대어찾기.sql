@@ -1,0 +1,14 @@
+WITH Temptable AS (
+    SELECT ROW_NUMBER() OVER (PARTITION BY FISH_TYPE ORDER BY LENGTH DESC) AS rn
+         , ID
+         , LENGTH
+         , FISH_TYPE
+    FROM FISH_INFO
+)
+SELECT t.ID
+     , f.FISH_NAME
+     , t.LENGTH
+FROM Temptable t
+JOIN FISH_NAME_INFO f ON t.FISH_TYPE = f.FISH_TYPE
+WHERE rn = 1
+ORDER BY t.ID;
