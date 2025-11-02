@@ -1,0 +1,18 @@
+WITH RECURSIVE CTE AS (
+    SELECT 1 AS N
+         , ID
+         , PARENT_ID
+    FROM ECOLI_DATA
+    WHERE PARENT_ID IS NULL
+    UNION ALL
+    SELECT N + 1 AS N
+         , E.ID
+         , C.ID
+    FROM CTE C
+    JOIN ECOLI_DATA E ON C.ID = E.PARENT_ID
+    WHERE N < 3
+)
+SELECT ID
+FROM CTE
+WHERE N = 3
+ORDER BY ID;
