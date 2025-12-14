@@ -41,7 +41,7 @@ def parse_meta_from_file(abs_path: Path, rel_path: str) -> LcMeta:
                 line = line.strip()
                 if line.startswith(f"@lc.{key}:"):
                     return line.split(":", 1)[1].strip()
-            return ""
+        return ""
 
     idx_s = pick("idx")
     if not idx_s.isdigit():
