@@ -1,7 +1,7 @@
 /*
 @lc.idx: 67
 @lc.slug: add-binary
-@lc.title: add binary
+@lc.title: Add Binary
 @lc.level: Easy
 @lc.tags: Math, String, Bit Manipulation, Simulation
 @lc.complexity: O(N)/O(1)
