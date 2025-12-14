@@ -1,3 +1,13 @@
+/*
+@boj.idx: 1275
+@boj.tier: platinum
+@boj.title: 커피숍 2
+@boj.level: V
+@boj.tags: Data Structure, Segment Tree
+@boj.complexity: O(MlogN)/O(N)
+@boj.note:
+*/
+
 import java.util.*;
 import java.io.*;
 

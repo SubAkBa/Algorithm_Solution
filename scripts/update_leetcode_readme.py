@@ -37,8 +37,11 @@ def parse_meta_from_file(abs_path: Path, rel_path: str) -> LcMeta:
     text = abs_path.read_text(encoding="utf-8", errors="ignore")
 
     def pick(key: str) -> str:
-        m = re.search(rf"@lc\.{re.escape(key)}\s*:\s*(.*)\s*$", text, re.MULTILINE)
-        return (m.group(1).strip() if m else "")
+        for line in text.splitlines():
+                line = line.strip()
+                if line.startswith(f"@lc.{key}:"):
+                    return line.split(":", 1)[1].strip()
+            return ""
 
     idx_s = pick("idx")
     if not idx_s.isdigit():

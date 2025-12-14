@@ -37,8 +37,11 @@ def parse_meta(abs_path: Path, rel_path: str) -> BjMeta:
     text = abs_path.read_text(encoding="utf-8", errors="ignore")
 
     def pick(key: str) -> str:
-        m = re.search(rf"@boj\.{re.escape(key)}\s*:\s*(.*)\s*$", text, re.MULTILINE)
-        return (m.group(1).strip() if m else "")
+        for line in text.splitlines():
+                line = line.strip()
+                if line.startswith(f"@boj.{key}:"):
+                    return line.split(":", 1)[1].strip()
+            return ""
 
     idx_s = pick("idx")
     if not idx_s.isdigit():
