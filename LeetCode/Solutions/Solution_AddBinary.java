@@ -1,3 +1,13 @@
+/*
+@lc.idx: 67
+@lc.slug: add-binary
+@lc.title: add binary
+@lc.level: Easy
+@lc.tags: Math, String, Bit Manipulation, Simulation
+@lc.complexity: O(N)/O(1)
+@lc.note:
+*/
+
 public class Solution_AddBinary {
 	public static String addBinary(String a, String b) {
 		int aIdx = a.length() - 1;

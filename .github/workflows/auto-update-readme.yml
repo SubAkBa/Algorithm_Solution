@@ -1,0 +1,69 @@
+name: Auto Update README
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - "BaekJoon/**"
+      - "LeetCode/**"
+
+permissions:
+  contents: write       # Actions가 commit/push 가능
+
+jobs:
+  update: # Job 이름
+    if: github.actor != 'github-actions[bot]' # Actions가 만든 커밋은 무시되도록 하여 무한루프 방지
+    runs-on: ubuntu-latest                    # GitHub가 제공하는 리눅스 VM (Python, git 기본 내장)
+    steps:
+      - uses: actions/checkout@v4             # 레포 체크아웃
+        with:
+          fetch-depth: 0                      # before..after diff가 정확히 계산
+
+      - uses: actions/setup-python@v5         # Python 세팅
+        with:
+          python-version: "3.11"
+
+      - name: Detect changed areas
+        id: changes
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER:  ${{ github.sha }}
+        run: |
+          echo "lc=false" >> $GITHUB_OUTPUT
+          echo "bj=false" >> $GITHUB_OUTPUT
+
+          files=$(git diff --name-only "$BEFORE..$AFTER")
+
+          if echo "$files" | grep -q '^LeetCode/'; then
+            echo "lc=true" >> $GITHUB_OUTPUT
+          fi
+
+          if echo "$files" | grep -q '^BaekJoon/'; then
+            echo "bj=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update BaekJoon README
+        if: steps.changes.outputs.bj == 'true'
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER:  ${{ github.sha }}
+        run: |
+          python scripts/update_baekjoon_readme.py --before "$BEFORE" --after "$AFTER"
+
+      - name: Update LeetCode README
+        if: steps.changes.outputs.lc == 'true'
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER:  ${{ github.sha }}
+        run: |
+          python scripts/update_leetcode_readme.py --before "$BEFORE" --after "$AFTER"
+
+      - name: Commit & push if changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then                              # README가 바뀌었을 때만 커밋
+            git config user.name "github-actions[bot]"                             # GitHub 공식 bot 계정으로 커밋
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add LeetCode/README.md BaekJoon/README.md
+            git commit -m "chore: auto update READMEs"
+            git push
+          fi

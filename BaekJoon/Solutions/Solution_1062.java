@@ -1,3 +1,13 @@
+/*
+@boj.idx: 1062
+@boj.tier: gold
+@boj.title: 가르침
+@boj.level: IV
+@boj.tags: Brute Force, Bit Masking, Backtracking
+@boj.complexity: O()/O()
+@boj.note: 백트래킹은 항상 예외 케이스들을 잘 생각하고 조건 처리하자.
+*/
+
 import java.util.*;
 import java.io.*;
 
