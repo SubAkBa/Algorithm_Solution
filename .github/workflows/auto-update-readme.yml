@@ -32,6 +32,7 @@ jobs:
         run: |
           echo "lc=false" >> $GITHUB_OUTPUT
           echo "bj=false" >> $GITHUB_OUTPUT
+          echo "ss=false" >> $GITHUB_OUTPUT
 
           files=$(git diff --name-only "$BEFORE..$AFTER")
 
@@ -41,6 +42,10 @@ jobs:
 
           if echo "$files" | grep -q '^BaekJoon/'; then
             echo "bj=true" >> $GITHUB_OUTPUT
+          fi
+          
+          if echo "$files" | grep -q '^Solvesql/'; then
+            echo "ss=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Update BaekJoon README
@@ -60,7 +65,7 @@ jobs:
           python scripts/update_leetcode_readme.py --before "$BEFORE" --after "$AFTER"
 
       - name: Update Solvesql README
-        if: steps.changes.outputs.bj == 'true'
+        if: steps.changes.outputs.ss == 'true'
         env:
           BEFORE: ${{ github.event.before }}
           AFTER:  ${{ github.sha }}
@@ -72,7 +77,7 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then                              # README가 바뀌었을 때만 커밋
             git config user.name "github-actions[bot]"                             # GitHub 공식 bot 계정으로 커밋
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add LeetCode/README.md BaekJoon/README.md
+            git add LeetCode/README.md BaekJoon/README.md Solvesql/README.md
             git commit -m "chore: auto update READMEs"
             git push
           fi
