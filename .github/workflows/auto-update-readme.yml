@@ -6,6 +6,7 @@ on:
     paths:
       - "BaekJoon/**"
       - "LeetCode/**"
+      - "Solvesql/**"
 
 permissions:
   contents: write       # Actions가 commit/push 가능
@@ -57,6 +58,14 @@ jobs:
           AFTER:  ${{ github.sha }}
         run: |
           python scripts/update_leetcode_readme.py --before "$BEFORE" --after "$AFTER"
+
+      - name: Update Solvesql README
+        if: steps.changes.outputs.bj == 'true'
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER:  ${{ github.sha }}
+        run: |
+          python scripts/update_solvesql_readme.py --before "$BEFORE" --after "$AFTER"
 
       - name: Commit & push if changed
         run: |
