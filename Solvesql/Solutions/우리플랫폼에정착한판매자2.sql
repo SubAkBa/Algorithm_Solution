@@ -3,7 +3,7 @@
 -- @ss.title: 우리 플랫폼에 정착한 판매자 2
 -- @ss.slug: settled-sellers-2
 -- @ss.category: Aggregate
--- @ss.note:
+-- @ss.note: test
 
 SELECT temp.seller_id
      , COUNT(*) AS orders
