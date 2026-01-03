@@ -1,7 +1,7 @@
 -- @ss.idx: 3
 -- @ss.level: 2
--- @ss.title: 레스토랑 웨이터의 팁 분석
--- @ss.slug: tip-analysis
+-- @ss.title: 일별 블로그 방문자 수 집계
+-- @ss.slug: blog-counter
 -- @ss.category: Aggregate
 -- @ss.note:
 
