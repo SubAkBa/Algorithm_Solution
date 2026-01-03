@@ -28,25 +28,35 @@ jobs:
         id: changes
         env:
           BEFORE: ${{ github.event.before }}
-          AFTER:  ${{ github.sha }}
+          AFTER: ${{ github.sha }}
+        shell: bash
         run: |
-          echo "lc=false" >> $GITHUB_OUTPUT
-          echo "bj=false" >> $GITHUB_OUTPUT
-          echo "ss=false" >> $GITHUB_OUTPUT
+          set -euo pipefail
 
-          files=$(git diff --name-only "$BEFORE..$AFTER")
+          echo "BEFORE=$BEFORE"
+          echo "AFTER=$AFTER"
 
-          if echo "$files" | grep -q '^LeetCode/'; then
-            echo "lc=true" >> $GITHUB_OUTPUT
+          # BEFORE가 all-zero면 fallback (첫 push/force push 대응)
+          if [[ "$BEFORE" =~ ^0+$ ]]; then
+            BEFORE="$(git rev-parse HEAD~1)"
+            echo "FALLBACK BEFORE=$BEFORE"
           fi
 
-          if echo "$files" | grep -q '^BaekJoon/'; then
-            echo "bj=true" >> $GITHUB_OUTPUT
-          fi
-          
-          if echo "$files" | grep -q '^Solvesql/'; then
-            echo "ss=true" >> $GITHUB_OUTPUT
-          fi
+          files="$(git diff --name-only "$BEFORE" "$AFTER" || true)"
+          echo "CHANGED FILES:"
+          echo "$files"
+
+          echo "lc=false" >> "$GITHUB_OUTPUT"
+          echo "bj=false" >> "$GITHUB_OUTPUT"
+          echo "ss=false" >> "$GITHUB_OUTPUT"
+
+          if echo "$files" | grep -q '^LeetCode/'; then echo "lc=true" >> "$GITHUB_OUTPUT"; fi
+          if echo "$files" | grep -q '^BaekJoon/'; then echo "bj=true" >> "$GITHUB_OUTPUT"; fi
+          if echo "$files" | grep -q '^Solvesql/'; then echo "ss=true" >> "$GITHUB_OUTPUT"; fi
+
+          # 아래 step에서 fallback된 BEFORE를 쓰도록 outputs로 전달
+          echo "before=$BEFORE" >> "$GITHUB_OUTPUT"
+          echo "after=$AFTER"   >> "$GITHUB_OUTPUT"
 
       - name: Update BaekJoon README
         if: steps.changes.outputs.bj == 'true'
@@ -54,7 +64,7 @@ jobs:
           BEFORE: ${{ github.event.before }}
           AFTER:  ${{ github.sha }}
         run: |
-          python scripts/update_baekjoon_readme.py --before "$BEFORE" --after "$AFTER"
+          python scripts/update_baekjoon_readme.py --before "${{ steps.changes.outputs.before }}" --after "${{ steps.changes.outputs.after }}"
 
       - name: Update LeetCode README
         if: steps.changes.outputs.lc == 'true'
@@ -62,15 +72,13 @@ jobs:
           BEFORE: ${{ github.event.before }}
           AFTER:  ${{ github.sha }}
         run: |
-          python scripts/update_leetcode_readme.py --before "$BEFORE" --after "$AFTER"
+          python scripts/update_leetcode_readme.py --before "${{ steps.changes.outputs.before }}" --after "${{ steps.changes.outputs.after }}"
 
       - name: Update Solvesql README
         if: steps.changes.outputs.ss == 'true'
-        env:
-          BEFORE: ${{ github.event.before }}
-          AFTER:  ${{ github.sha }}
         run: |
-          python scripts/update_solvesql_readme.py --before "$BEFORE" --after "$AFTER"
+          python scripts/update_solvesql_readme.py --before "${{ steps.changes.outputs.before }}" --after "${{ steps.changes.outputs.after }}"
+      
 
       - name: Commit & push if changed
         run: |
