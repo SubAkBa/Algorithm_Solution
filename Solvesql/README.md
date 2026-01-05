@@ -14,6 +14,9 @@
 | 6 | [버뮤다 삼각지대에 들어가버린 택배](https://solvesql.com/problems/shipment-in-bermuda/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/shipment-in-bermuda.sql) |  |
 | 7 | [쇼핑몰의 일일 매출액](https://solvesql.com/problems/olist-daily-revenue/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/olist-daily-revenue.sql) |  |
 | 8 | [점검이 필요한 자전거 찾기](https://solvesql.com/problems/inspection-needed-bike/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/inspection-needed-bike.sql) |  |
+| 9 | [레스토랑의 대목](https://solvesql.com/problems/high-season-of-restaurant/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/high-season-of-restaurant.sql) |  |
+| 10 | [레스토랑의 요일별 VIP](https://solvesql.com/problems/restaurant-vip/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/restaurant-vip.sql) |  |
+| 11 | [다음날도 서울숲의 미세먼지 농도는 나쁨 😢](https://solvesql.com/problems/bad-finedust-measure/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/bad-finedust-measure.sql) |  |
 
 </details>
 
