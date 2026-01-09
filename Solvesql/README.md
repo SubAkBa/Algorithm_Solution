@@ -17,6 +17,10 @@
 | 9 | [레스토랑의 대목](https://solvesql.com/problems/high-season-of-restaurant/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/high-season-of-restaurant.sql) |  |
 | 10 | [레스토랑의 요일별 VIP](https://solvesql.com/problems/restaurant-vip/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/restaurant-vip.sql) |  |
 | 11 | [다음날도 서울숲의 미세먼지 농도는 나쁨 😢](https://solvesql.com/problems/bad-finedust-measure/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/bad-finedust-measure.sql) |  |
+| 12 | [제목이 모음으로 끝나지 않는 영화](https://solvesql.com/problems/film-ending-with-consonant/) | String/Date | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/film-ending-with-consonant.sql) | 정규표현식 REGEXP 또는 RIGHT 사용 |
+| 13 | [언더스코어(_)가 포함되지 않은 데이터 찾기](https://solvesql.com/problems/data-without-underscore/) | String/Date | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/data-without-underscore.sql) | 정규표현식 REGEXP 또는 INSTR 사용 |
+| 14 | [게임을 10개 이상 발매한 게임 배급사 찾기](https://solvesql.com/problems/publisher-with-many-games/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/publisher-with-many-games.sql) |  |
+| 15 | [최대값을 가진 행 찾기](https://solvesql.com/problems/max-row/) | Subquery/CTE | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/max-row.sql) |  |
 
 </details>
 
