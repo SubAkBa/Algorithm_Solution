@@ -21,6 +21,10 @@
 | 13 | [언더스코어(_)가 포함되지 않은 데이터 찾기](https://solvesql.com/problems/data-without-underscore/) | String/Date | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/data-without-underscore.sql) | 정규표현식 REGEXP 또는 INSTR 사용 |
 | 14 | [게임을 10개 이상 발매한 게임 배급사 찾기](https://solvesql.com/problems/publisher-with-many-games/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/publisher-with-many-games.sql) |  |
 | 15 | [최대값을 가진 행 찾기](https://solvesql.com/problems/max-row/) | Subquery/CTE | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/max-row.sql) |  |
+| 16 | [3년간 들어온 소장품 집계하기](https://solvesql.com/problems/summary-of-artworks-in-3-years/) | CASE/IF | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/summary-of-artworks-in-3-years.sql) | IF, CASE WHEN |
+| 17 | [12월 우수 고객 찾기](https://solvesql.com/problems/whales-of-december/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/whales-of-december.sql) |  |
+| 18 | [스탬프를 찍어드려요](https://solvesql.com/problems/count-stamps/) | CASE/IF | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/count-stamps.sql) |  |
+| 19 | [DVD 대여점 우수 고객 찾기](https://solvesql.com/problems/dvdrental-vip/) | Subquery/CTE | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/dvdrental-vip.sql) |  |
 
 </details>
 
