@@ -25,6 +25,10 @@
 | 17 | [12월 우수 고객 찾기](https://solvesql.com/problems/whales-of-december/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/whales-of-december.sql) |  |
 | 18 | [스탬프를 찍어드려요](https://solvesql.com/problems/count-stamps/) | CASE/IF | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/count-stamps.sql) |  |
 | 19 | [DVD 대여점 우수 고객 찾기](https://solvesql.com/problems/dvdrental-vip/) | Subquery/CTE | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/dvdrental-vip.sql) |  |
+| 20 | [레스토랑의 주중, 주말 매출액 비교하기](https://solvesql.com/problems/revenue-weekday-weekend/) | CASE/IF | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/revenue-weekday-weekend.sql) |  |
+| 21 | [매출이 높은 배우 찾기](https://solvesql.com/problems/top-revenue-actors/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/top-revenue-actors.sql) |  |
+| 22 | [한국 감독의 영화 찾기](https://solvesql.com/problems/find-movies-by-korean-artists/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/find-movies-by-korean-artists.sql) |  |
+| 23 | [연도별 배송 업체 이용 내역 분석하기](https://solvesql.com/problems/yearly-shipping-usage/) | CASE/IF | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/yearly-shipping-usage.sql) |  |
 
 </details>
 
