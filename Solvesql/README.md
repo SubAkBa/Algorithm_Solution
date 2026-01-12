@@ -41,6 +41,8 @@
 
 | Idx | Question                                              | Category                                                                   | Solution                                                                                                    | Note |
 |:---:|-------------------------------------------------------| -------------------------------------------------------------------------- |-------------------------------------------------------------------------------------------------------------| ---- |
+| 1 | [복수 국적 메달 수상한 선수 찾기](https://solvesql.com/problems/multiple-medalist/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/multiple-medalist.sql) |  |
+| 2 | [할부는 몇 개월로 해드릴까요](https://solvesql.com/problems/installment-month/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/installment-month.sql) |  |
 
 </details>
 
