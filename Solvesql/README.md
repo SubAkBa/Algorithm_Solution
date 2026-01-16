@@ -43,6 +43,8 @@
 |:---:|-------------------------------------------------------| -------------------------------------------------------------------------- |-------------------------------------------------------------------------------------------------------------| ---- |
 | 1 | [복수 국적 메달 수상한 선수 찾기](https://solvesql.com/problems/multiple-medalist/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/multiple-medalist.sql) |  |
 | 2 | [할부는 몇 개월로 해드릴까요](https://solvesql.com/problems/installment-month/) | Aggregate | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/installment-month.sql) |  |
+| 3 | [지역별 주문의 특징](https://solvesql.com/problems/characteristics-of-orders/) | CASE/IF | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/characteristics-of-orders.sql) |  |
+| 4 | [(Unknown Title)](https://solvesql.com/problems/estimated-delivery-date/) |  | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/estimated-delivery-date.sql) |  |
 
 </details>
 
