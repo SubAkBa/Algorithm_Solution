@@ -47,6 +47,8 @@
 | 4 | [(Unknown Title)](https://solvesql.com/problems/estimated-delivery-date/) |  | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/estimated-delivery-date.sql) |  |
 | 5 | [작품이 없는 작가 찾기](https://solvesql.com/problems/artists-without-artworks/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/artists-without-artworks.sql) |  |
 | 6 | [멘토링 짝꿍 리스트](https://solvesql.com/problems/mentor-mentee-list/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/mentor-mentee-list.sql) |  |
+| 7 | [쇼핑몰의 일일 매출액과 ARPPU](https://solvesql.com/problems/daily-arppu/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/daily-arppu.sql) |  |
+| 8 | [온라인 쇼핑몰의 월 별 매출액 집계](https://solvesql.com/problems/shoppingmall-monthly-summary/) | JOIN/UNION | [Solution](https://github.com/SubAkBa/Algorithm_Solution/blob/master/Solvesql/Solutions/shoppingmall-monthly-summary.sql) | union all |
 
 </details>
 
